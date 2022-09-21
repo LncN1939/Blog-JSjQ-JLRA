@@ -1,0 +1,36 @@
+.nav-menu-container {
+  position: sticky;
+  top: 0;
+
+  background-color: #ffffffcc;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+nav.nav-menu {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-left: 1em;
+  margin-right: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  box-sizing: border-box;
+
+  border-bottom: 1px solid #0f172a1a;
+}
+
+nav.nav-menu li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.nav-menu-title {
+  font-weight: bold;
+  text-decoration: none;
+}
+.nav-menu-title:visited {
+  color: inherit;
+}

@@ -1,0 +1,30 @@
+article {
+  margin: auto;
+  max-width: 500px;
+}
+
+@media screen and (min-width: 640px) {
+  article {
+    max-width: 500px;
+  }
+}
+@media screen and (min-width: 768px) {
+  article {
+    max-width: 700px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  article {
+    max-width: 800px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  article {
+    max-width: 900px;
+  }
+}
+@media screen and (min-width: 1536px) {
+  article {
+    max-width: 1000px;
+  }
+}
