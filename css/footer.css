@@ -1,0 +1,15 @@
+footer {
+  border-top: 1px solid #0f172a1a;
+
+  margin: 0em 1em;
+  padding: 0.5em 0em;
+}
+
+footer ul {
+  padding: 0em 2em;
+}
+
+footer li {
+  display: block;
+  list-style-type: none;
+}
