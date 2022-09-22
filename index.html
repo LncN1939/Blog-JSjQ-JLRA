@@ -19,7 +19,7 @@
       </nav>
     </div>
 
-    <div class="main-container">
+    <main class="main-container">
       <!-- El sidebar-->
       <div class="sidebar">
         <aside>
@@ -34,14 +34,30 @@
       </div>
 
       <!-- El artículo o entrada del blog -->
-      <article>
-        <h1>El título</h1>
+      <article itemscope itemtype="https://schema.org/Article">
+        <header>
+          <h1 itemprop="name">El título</h1>
+
+          <div>
+            Publicado el
+            <time
+              datetime="2022-09-21T09:41-6:00"
+              pubdate
+              itemprop="datePublished"
+            >
+              21 de septiembre de 2022
+            </time>
+            por
+            <span itemprop="author" class="author">Autor</span>
+          </div>
+        </header>
+
         <p>
           Aquí iría el artículo, la entrada del blog con sus distintas
           secciones.
         </p>
       </article>
-    </div>
+    </main>
 
     <!-- El pie de página-->
     <footer>
