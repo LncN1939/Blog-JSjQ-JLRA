@@ -3,3 +3,8 @@ article {
   max-width: 90vw;
   min-height: 70vh;
 }
+
+.article-date,
+.article-author {
+  display: inline;
+}
