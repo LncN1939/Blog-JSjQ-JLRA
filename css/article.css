@@ -2,9 +2,19 @@ article {
   margin: 2em;
   max-width: 90vw;
   min-height: 70vh;
+  line-height: 1.5;
 }
 
 .article-date,
 .article-author {
   display: inline;
+}
+
+article pre {
+  padding: 2em;
+  background-color: #f2f1f1;
+  border-radius: 1em;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 2em 0.2em;
 }
