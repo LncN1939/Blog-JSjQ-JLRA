@@ -11,7 +11,7 @@
   position: sticky;
   top: 5em;
 
-  border-right: 1px solid #0f172a1a;
+  border-right: 1px solid var(--border-color);
   padding: 1em 0em;
 }
 

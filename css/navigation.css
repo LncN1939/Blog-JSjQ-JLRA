@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
 
-  background-color: #ffffffcc;
+  background-color: var(--menu-background-color);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
@@ -17,7 +17,7 @@ nav.nav-menu {
   padding: 0.5em 0em;
   box-sizing: border-box;
 
-  border-bottom: 1px solid #0f172a1a;
+  border-bottom: 1px solid var(--border-color);
 }
 
 nav.nav-menu li {

@@ -12,7 +12,7 @@ article {
 
 article pre {
   padding: 2em;
-  background-color: #f2f1f1;
+  background-color: var(--code-background-color);
   border-radius: 1em;
   max-width: 100%;
   box-sizing: border-box;

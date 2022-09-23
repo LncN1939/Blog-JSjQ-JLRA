@@ -6,7 +6,13 @@
 @import "css/Inter/inter.css";
 
 :root {
+  --background-color: #ffffff;
+  --menu-background-color: #ffffffcc;
+  --code-background-color: #f2f1f1;
+  --border-color: #0f172a1a;
+
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  background-color: var(--background-color);
 }
 
 body {
@@ -17,4 +23,15 @@ body {
 .main-container {
   display: flex;
   flex-direction: row;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1b1b1b;
+    --menu-background-color: #1b1b1bcc;
+    --code-background-color: #343434;
+    --border-color: #ffffff4a;
+
+    color: #ffffff;
+  }
 }
