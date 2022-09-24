@@ -4,8 +4,9 @@
   width: 12em;
   /*float: left;*/
   margin: 2em;
-  display: none;
+  display: block;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 .sidebar aside {
   position: sticky;
@@ -16,9 +17,16 @@
 }
 
 /* sm breakpoint */
-@media screen and (min-width: 640px) {
+@media screen and (max-width: 640px) {
   .sidebar {
-    display: block;
+    width: 100%;
+    margin: 2em 0em 0em;
+    padding: 1em;
+  }
+  .sidebar aside {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 0em 1em;
   }
 }
 /* md breakpoint */

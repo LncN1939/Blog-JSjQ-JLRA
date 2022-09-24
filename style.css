@@ -22,7 +22,14 @@ body {
 
 .main-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+/* sm breakpoint */
+@media screen and (min-width: 640px) {
+  .main-container {
+    flex-direction: row;
+  }
 }
 
 @media screen and (prefers-color-scheme: dark) {
@@ -36,24 +43,27 @@ body {
   }
 }
 
-.jsli{
+.jsli {
   display: inline;
   margin-left: 25px;
 }
 
-.jsfo{
+.jsfo {
   text-align: center;
 }
 
-table, tr, th{
-  border:2px solid white;
+table,
+tr,
+th {
+  border: 2px solid white;
   border-collapse: collapse;
 }
 
-th, tr{
+th,
+tr {
   padding: 5px;
 }
 
-th{
+th {
   text-align: left;
 }
