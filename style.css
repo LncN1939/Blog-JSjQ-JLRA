@@ -44,3 +44,16 @@ body {
 .jsfo{
   text-align: center;
 }
+
+table, tr, th{
+  border:2px solid white;
+  border-collapse: collapse;
+}
+
+th, tr{
+  padding: 5px;
+}
+
+th{
+  text-align: left;
+}
