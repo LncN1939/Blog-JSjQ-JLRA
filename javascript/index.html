@@ -8,13 +8,51 @@
     <title>JavaScript</title>
 </head>
 <body>
-    <ul>
-        <li>
-            <a href="./2022-09-20-J/">2022-09-20-J</a>
-        </li>
-        <li>
-            <a href="./2022-09-24-L/">2022-09-24-L</a>
-        </li>
-    </ul>
+    <div class="nav-menu-container">
+        <nav class="nav-menu">
+          <a class="nav-menu-title" href="./">JavaScript Menu</a>
+          <ul>
+            <li>2022</li>
+          </ul>
+        </nav>
+    </div>
+
+    <main class="main-container">
+        <!-- El sidebar-->
+        <div class="sidebar">
+          <aside>
+            <section>
+              <header>Menu</header>
+              <ul>
+                <li><a href="../index.html">Página principal</a></li>
+              </ul>
+            </section>
+          </aside>
+        </div>
+  
+        <!-- El artículo o entrada del blog -->
+        <article itemscope itemtype="https://schema.org/Article">
+          <header>
+            <h1 itemprop="name">Entradas</h1>
+          </header>
+
+          <h3>2022-09-24</h3>
+            <ul>
+            <li><a href="./2022-09-20-J/">JSMaht-L</a></li>
+            </ul>
+
+            <h3>2022-09-22</h3>
+            <ul>
+                <li><a href="./2022-09-24-L/">Ejemplo-J</a></li>
+            </ul>
+        </article>
+      </main>
+
+
+    <footer class="jsfo">
+        <ul>
+          <li class="jsli"><a href="../index.html">Página principal</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
