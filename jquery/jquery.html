@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".././style.css"/>
     <title>JQuery</title>
 </head>
 <body>
-    
+    <div class="nav-menu-container">
+        <nav class="nav-menu">
+          <a class="nav-menu-title" href="./">JQuery Menu</a>
+          <ul>
+            <li>2022</li>
+          </ul>
+        </nav>
+    </div>
+
+    <main class="main-container">
+        <!-- El sidebar-->
+        <div class="sidebar">
+          <aside>
+            <section>
+              <header>Menu</header>
+              <ul>
+                <li><a href="../index.html">Página principal</a></li>
+              </ul>
+            </section>
+          </aside>
+        </div>
+  
+        <!-- El artículo o entrada del blog -->
+        <article itemscope itemtype="https://schema.org/Article">
+          <header>
+            <h1 itemprop="name">Entradas</h1>
+          </header>
+        </article>
+      </main>
+
+
+    <footer class="jsfo">
+        <ul>
+          <li class="jsli"><a href="../index.html">Página principal</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
