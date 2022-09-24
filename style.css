@@ -35,3 +35,12 @@ body {
     color: #ffffff;
   }
 }
+
+.jsli{
+  display: inline;
+  margin-left: 25px;
+}
+
+.jsfo{
+  text-align: center;
+}
