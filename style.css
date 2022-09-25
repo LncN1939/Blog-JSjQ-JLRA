@@ -2,6 +2,8 @@
 @import "css/article.css";
 @import "css/footer.css";
 @import "css/sidebar.css";
+@import "css/highlight.css";
+@import "css/highlight-dark.css" screen and (prefers-color-scheme: dark);
 
 @import "css/Inter/inter.css";
 
@@ -22,7 +24,14 @@ body {
 
 .main-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+/* sm breakpoint */
+@media screen and (min-width: 640px) {
+  .main-container {
+    flex-direction: row;
+  }
 }
 
 @media screen and (prefers-color-scheme: dark) {
@@ -34,4 +43,29 @@ body {
 
     color: #ffffff;
   }
+}
+
+.jsli {
+  display: inline;
+  margin-left: 25px;
+}
+
+.jsfo {
+  text-align: center;
+}
+
+table,
+tr,
+th {
+  border: 2px solid white;
+  border-collapse: collapse;
+}
+
+th,
+tr {
+  padding: 5px;
+}
+
+th {
+  text-align: left;
 }
