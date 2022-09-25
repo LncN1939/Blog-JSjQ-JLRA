@@ -2,6 +2,8 @@
 @import "css/article.css";
 @import "css/footer.css";
 @import "css/sidebar.css";
+@import "css/highlight.css";
+@import "css/highlight-dark.css" screen and (prefers-color-scheme: dark);
 
 @import "css/Inter/inter.css";
 
