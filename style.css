@@ -77,3 +77,9 @@ tr {
 th {
   text-align: left;
 }
+
+.fb-comments{
+  border-style: solid;
+  background-color: white;
+  border-color: gray;
+}
