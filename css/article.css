@@ -17,5 +17,5 @@ article pre {
   max-width: 100%;
   box-sizing: border-box;
   margin: 2em 0.2em;
-  white-space: pre-line;
+  white-space: pre-wrap;
 }
