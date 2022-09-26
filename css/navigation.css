@@ -30,6 +30,12 @@ nav.nav-menu li {
   font-weight: bold;
   text-decoration: none;
 }
+.nav-menu-title {
+  color: inherit;
+}
 .nav-menu-title:visited {
   color: inherit;
+}
+.nav-menu-title:hover {
+  text-decoration: none;
 }

@@ -16,6 +16,18 @@
   padding: 1em 0em;
 }
 
+.sidebar li {
+  list-style-type: none;
+  line-height: 1.75;
+}
+.sidebar section > ul {
+  padding-inline-start: 1em;
+}
+.sidebar ul {
+  padding-inline-start: 1em;
+  border-left: 1px solid var(--border-color);
+}
+
 /* sm breakpoint */
 @media screen and (max-width: 640px) {
   .sidebar {

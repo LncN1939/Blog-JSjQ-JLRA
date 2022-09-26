@@ -12,6 +12,9 @@
   --menu-background-color: #ffffffcc;
   --code-background-color: #f2f1f1;
   --border-color: #0f172a1a;
+  --link-color: #008b8b;
+  --link-visited-color: #1e4044;
+  --link-hover-color: #3388de;
 
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   background-color: var(--background-color);
@@ -27,6 +30,18 @@ body {
   flex-direction: column;
 }
 
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+a:visited {
+  color: var(--link-visited-color);
+}
+a:hover {
+  text-decoration-line: underline;
+  color: var(--link-hover-color);
+}
+
 /* sm breakpoint */
 @media screen and (min-width: 640px) {
   .main-container {
@@ -40,16 +55,11 @@ body {
     --menu-background-color: #1b1b1bcc;
     --code-background-color: #343434;
     --border-color: #ffffff4a;
+    --link-color: #62a777;
+    --link-visited-color: #d3eed3;
+    --link-hover-color: #3388de;
 
     color: #ffffff;
-  }
-
-  a {
-    color: #3aa0fa;
-  }
-
-  a:visited {
-    color: #9374ea;
   }
 }
 
@@ -78,7 +88,7 @@ th {
   text-align: left;
 }
 
-.fb-comments{
+.fb-comments {
   border-style: solid;
   background-color: white;
   border-color: gray;

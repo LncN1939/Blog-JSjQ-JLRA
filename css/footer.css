@@ -12,4 +12,5 @@ footer ul {
 footer li {
   display: block;
   list-style-type: none;
+  line-height: 1.75;
 }
