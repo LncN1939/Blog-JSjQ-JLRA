@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <title>Javascript Arrays</title>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <div class="nav-menu-container">
+      <nav class="nav-menu">
+        <a class="nav-menu-title" href="../../"
+          >Tutorial JavaScript &amp; jQuery</a
+        >
+
+        <ul>
+          <li>UwU</li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="main-container">
+      <!-- El sidebar-->
+      <div class="sidebar">
+        <aside>
+          <section>
+            <header>Menú</header>
+            <ul>
+              <li><a href="../../javascript/">JavaScript</a></li>
+              <li><a href="../../jquery/">jQuery</a></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+
+      <!-- El artículo o entrada del blog -->
+      <article itemscope itemtype="https://schema.org/Article">
+        <header>
+          <h1 itemprop="name">Javascript Arrays</h1>
+          <div class="article-date">
+            Publicado el
+            <time
+              datetime="2022-09-21T09:41-6:00"
+              pubdate
+              itemprop="datePublished"
+            >
+              25 de septiembre de 2022
+            </time>
+          </div>
+          <p
+            class="article-author"
+            itemscope
+            itemtype="http://schema.org/Person"
+          >
+            por
+            <span itemprop="author">Armando Meza</span>
+          </p>
+        </header>
+
+        <p>
+          Los Arrays en javascript son usados para guardar múltiples valores en
+          una sola variable.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+        </pre>
+        </div>
+
+        <h2>Métodos y propiedades de los Arrays</h2>
+
+        <!-- CONCAT -->
+        <h3>concat()</h3>
+        <p>
+          Junta varios arrays y los retorna en uno solo, sin modificar ninguno
+          de los existentes.
+        </p>
+
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajesFrontend</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">];</span>
+          <span class="kd">const</span> <span class="nx">lenguajesBackend</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;PHP&quot;</span><span class="p">,</span> <span class="s2">&quot;Java&quot;</span><span class="p">,</span> <span class="s2">&quot;Ruby&quot;</span><span class="p">];</span>
+          <span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> <span class="nx">lenguajesFrontend</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">lenguajesBackend</span><span class="p">);</span>
+          <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> <span class="s2">&quot;PHP&quot;</span><span class="p">,</span> <span class="s2">&quot;Java&quot;</span><span class="p">,</span> <span class="s2">&quot;Ruby&quot;</span><span class="p">]</span>     
+          </pre>
+        </div>
+
+        <!-- COPYWITHIN -->
+        <h3>copyWithin()</h3>
+        <p>
+          Copia elementos del array dentro de este mismo, desde y a posiciones
+          específicas.
+        </p>
+
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">copyWithin</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span> <span class="mf">0</span><span class="p">);</span>
+          <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">];</span>
+          </pre>
+        </div>
+
+        <!-- ENTRIES -->
+        <h3>entries()</h3>
+        <p>Retorna un objeto de llave/valor para ser iterado.</p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> 
+          <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="kd">const</span> <span class="nx">len</span> <span class="o">=</span> <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">entries</span><span class="p">();</span>
+          <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">x</span> <span class="k">of</span> <span class="nx">len</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+          <span class="p">}</span>
+          <span class="c1">// HTML, CSS, Javascript, PHP.</span>
+          </pre>
+        </div>
+
+        <!-- EVERY -->
+        <h3>every()</h3>
+        <p>
+          Chequea si todos los elementos en un array cumplen cierta condición
+        </p>
+
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> 
+          <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">every</span><span class="p">((</span><span class="nx">l</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">l</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">3</span><span class="p">);</span>      
+          <span class="c1">// False</span>
+          </pre>
+        </div>
+
+        <!-- FILL -->
+        <h3>fill()</h3>
+        <p>Llena los elementos de un array con un valor estático</p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> 
+          <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s2">&quot;Ruby&quot;</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="mf">4</span><span class="p">);</span>
+          <span class="c1">// [&quot;HTML&quot;, &quot;CSS&quot;, &quot;Ruby&quot;, &quot;Ruby&quot;]</span>
+          </pre>
+        </div>
+
+        <!-- FILTER -->
+        <h3>filter()</h3>
+        <p>
+          Crea un nuevo array con los elementos que cumplen cierta condición
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> 
+          <span class="s2">&quot;PHP&quot;</span><span class="p">,</span> <span class="s2">&quot;Ruby&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span 
+          class="nx">l</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">l</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">3</span><span class="p">);</span>     
+          <span class="c1">// [&quot;HTML&quot;, &quot;Javascript&quot;, &quot;Ruby&quot;]</span>
+          </pre>
+        </div>
+        <!-- FIND -->
+        <h3>find()</h3>
+        <p>
+          Retorna el valor del primer elemento en un array que cumple cierta
+          condición
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> 
+          <span class="s2">&quot;PHP&quot;</span><span class="p">,</span> <span class="s2">&quot;Ruby&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">find</span><span class="p">((</span><span class="nx">l</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">l</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mf">4</span><span class="p">);</span>       
+          <span class="c1">// &quot;CSS&quot;</span>
+          </pre>
+        </div>
+        <!-- FINDINDEX -->
+        <h3>findIndex()</h3>
+        <p>
+          Retorna el índice del primer elemento en un array que cumple cierta
+          condición
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> 
+          <span class="s2">&quot;PHP&quot;</span><span class="p">,</span> <span class="s2">&quot;Ruby&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">((</span><span class="nx">l</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">l</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mf">4</span><span class="p">);</span>  
+          <span class="c1">// 1</span>
+          </pre>
+        </div>
+        <!-- FOREACH -->
+        <h3>forEach()</h3>
+        <p>Llama una función por cada elemento de un array.</p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> 
+          <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">l</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">l</span><span class="si">}</span><span class="sb"> es un lenguaje para programación web`</span><span class="p">);</span>
+          <span class="p">});</span>
+          <span class="c1">// HTML es un lenguaje para programación web.</span>
+          <span class="c1">// CSS es un lenguaje para programación web.</span>
+          <span class="c1">// Javascript es un lenguaje para programación web.</span>
+          <span class="c1">// PHP es un lenguaje para programación web.</span>
+          </pre>
+        </div>
+        <!-- FROM -->
+        <h3>from()</h3>
+        <p>Crea un array a partir de un string.</p>
+        <div class="highlight">
+          <pre><span></span><span class="nb">Array</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="s2">&quot;Hola&quot;</span><span class="p">);</span>
+          <span class="c1">// [&quot;H&quot;, &quot;o&quot;, &quot;l&quot;, &quot;a&quot;]</span>
+          </pre>
+        </div>
+        <!-- INCLUDES -->
+        <h3>includes()</h3>
+        <p>Chequea si un elemento existe dentro de un array.</p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> 
+          <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s2">&quot;C++&quot;</span><span class="p">);</span>
+          <span class="c1">// False</span>
+          </pre>
+        </div>
+        <!-- INDEXOF -->
+        <h3>indexOf()</h3>
+        <p>
+          Busca un elemento en el arreglo y retorna su posición, o -1 si no
+          existe.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> 
+          <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s2">&quot;C++&quot;</span><span class="p">);</span>
+          <span class="c1">// False</span>
+          </pre>
+        </div>
+        <!-- ISARRAY -->
+        <h3>isArray()</h3>
+        <p>Chequea si un objeto es de tipo array.</p>
+        <div class="highlight">
+          <pre><span></span><span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">([</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">]);</span>   
+          <span class="c1">// true</span>
+          <span class="nb">Array</span><span class="p">.</span><span class="nx">isArray</span><span class="p">(</span><span class="s2">&quot;HTML, CSS, Javascript&quot;</span><span class="p">);</span>
+          <span class="c1">// false</span>
+          </pre>
+        </div>
+        <!-- JOIN -->
+        <h3>join()</h3>
+        <p>Junta todos los elementos de un array en una cadena.</p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> 
+          <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">join</span><span class="p">();</span>       
+          <span class="c1">// &quot;HTML,CSS,Javascript,PHP&quot;</span>
+          </pre>
+        </div>
+        <!-- KEYS -->
+        <h3>keys()</h3>
+        <p>
+          Retorna un objeto de iteración de array conteniendo las llaves del
+          array original.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> 
+          <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="nx">keys</span> <span class="o">=</span> <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">keys</span><span class="p">();</span>
+          <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">x</span> <span class="k">of</span> <span class="nx">keys</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span>
+          <span class="p">}</span>
+          <span class="c1">// 0</span>
+          <span class="c1">// 1</span>
+          <span class="c1">// 2</span>
+          <span class="c1">// 3</span>
+          </pre>
+        </div>
+        <!-- LASTINDEXOF -->
+        <h3>lastIndexOf()</h3>
+        <p>
+          Busca un elemento en el array, empezando por el fin, y retorna su
+          posición.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> 
+          <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> <span class="s2">&quot;PHP&quot;</span><span class="p">,</span> <span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="s2">&quot;HTML&quot;</span><span class="p">);</span>
+          <span class="c1">// 4</span>
+          </pre>
+        </div>
+        <!-- LENGTH -->
+        <h3>length</h3>
+        <p>Retorna el número de elementos de un array.</p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> 
+          <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">lastIndexOf</span><span class="p">(</span><span class="s2">&quot;HTML&quot;</span><span class="p">);</span>
+          <span class="c1">// 4</span>
+          </pre>
+        </div>
+
+        <!-- MAP -->
+        <h3>map()</h3>
+        <p>
+          Crea un nuevo array en base a una función que se llama por cada
+          elemento.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> 
+          <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">l</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">l</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">());</span>
+          <span class="c1">// [&quot;html&quot;, &quot;css&quot;, &quot;javascript&quot;, &quot;php&quot;]</span>
+          </pre>
+        </div>
+
+        <!-- POP -->
+        <h3>pop()</h3>
+        <p>Elimina el último elemento de un arreglo y lo retorna.</p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> 
+          <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">pop</span><span class="p">(</span><span class="mf">1</span><span class="p">);</span>
+          <span class="c1">// &quot;CSS&quot;</span>
+          </pre>
+        </div>
+
+        <!-- PUSH -->
+        <h3>push()</h3>
+        <p>
+          Agrega un nuevo elemento al final del arreglo y retorna su nuevo
+          tamaño
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> 
+          <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">&quot;Ruby&quot;</span><span class="p">);</span>
+          <span class="c1">// 5</span>
+          </pre>
+        </div>
+        <!-- REDUCE -->
+        <h3>reduce()</h3>
+        <p>
+          Reduce los valores de un array a un solo valor. Recorre el array de
+          izquierda a derecha.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">numeros</span> <span class="o">=</span> <span class="p">[</span><span class="mf">80</span><span class="p">,</span> <span class="mf">24</span><span class="p">,</span> <span 
+          class="mf">129</span><span class="p">];</span>
+          <span class="nx">numeros</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">total</span><span class="p">,</span> <span class="nx">num</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">total</span> <span class="o">-</span> <span class="nx">num</span><span class="p">);</span>
+          <span class="c1">// -73</span>
+          </pre>
+        </div>
+
+        <!-- REDUCERIGHT -->
+        <h3>reduceRight()</h3>
+        <p>
+          Reduce los valores de un array a un solo valor. Recorre el array de
+          derecha a izquierda.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">numeros</span> <span class="o">=</span> <span class="p">[</span><span class="mf">80</span><span class="p">,</span> <span class="mf">24</span><span class="p">,</span> <span 
+          class="mf">129</span><span class="p">];</span>
+          <span class="nx">numeros</span><span class="p">.</span><span class="nx">reduceRight</span><span class="p">((</span><span class="nx">total</span><span class="p">,</span> <span class="nx">num</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">total</span> <span class="o">-</span> <span class="nx">num</span><span class="p">);</span>
+          <span class="c1">// 25</span>
+          </pre>
+        </div>
+        <!-- REVERSE -->
+        <h3>reverse()</h3>
+        <p>Revierte el orden de los valores en un arreglo.</p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> 
+          <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">reverse</span><span class="p">();</span>
+          <span class="c1">// [&quot;PHP&quot;, &quot;Javasript&quot;, &quot;CSS&quot;, &quot;HTML&quot;]</span>
+          </pre>
+        </div>
+
+        <!-- SHIFT -->
+        <h3>shift()</h3>
+        <p>Elimina el primer elemento de un array, y retorna ese elemento.</p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> 
+          <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">shift</span><span class="p">();</span>
+          <span class="c1">// &quot;HTML&quot;</span>
+          </pre>
+        </div>
+
+        <!-- SLICE -->
+        <h3>slice()</h3>
+        <p>Selecciona una parte de un array y retorna un nuevo array.</p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> 
+          <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span> <span class="mf">2</span><span class="p">);</span>
+          <span class="c1">// [&quot;HTML&quot;, &quot;CSS&quot;]</span>
+          </pre>
+        </div>
+        <!-- SOME -->
+        <h3>some()</h3>
+        <p>Chequea si algún elemento del array cumple con cierta condición</p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> 
+          <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">some</span><span class="p">((</span><span class="nx">l</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">l</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="mf">3</span><span class="p">);</span>
+          <span class="c1">// true</span>
+          </pre>
+        </div>
+
+        <!-- SORT -->
+        <h3>sort()</h3>
+        <p>Ordena los elementos en un array.</p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> 
+          <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">sort</span><span class="p">();</span>
+          <span class="p">[</span><span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          </pre>
+        </div>
+        <!-- SPLICE -->
+        <h3>splice()</h3>
+        <p>
+          Añade o elimina elementos de un array. Modifica el array original y
+          retorna un array con los elementos eliminados.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="s2">&quot;Ruby&quot;</span><span class="p">,</span> 
+          <span class="s2">&quot;C++&quot;</span><span class="p">);</span>
+          <span class="c1">// [&#39;Javascript&#39;, &#39;PHP&#39;]</span>
+          </pre>
+        </div>
+        <!-- TOSTRING -->
+        <h3>toString()</h3>
+        <p>Convierte el arreglo a una cadena y retorna el resultado.</p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+          <span class="c1">// &quot;HTML,CSS,Javascript,PHP&quot;</span>
+          </pre>
+        </div>
+        <!-- UNSHIFT -->
+        <h3>unshift()</h3>
+        <p>
+          Añade elementos al inicio de un array, y retorna el tamaño nuevo del
+          array.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="s2">&quot;Ruby&quot;</span><span class="p">);</span>
+          <span class="c1">// 5</span>
+          <span class="c1">// [&quot;Ruby&quot;, &quot;HTML&quot;, &quot;CSS&quot;, &quot;Javascript&quot;, &quot;PHP&quot;]</span>
+          </pre>
+        </div>
+        <!-- VALUEOF -->
+        <h3>valueOf()</h3>
+        <p>Retorna el valor primitivo de un array.</p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">lenguajes</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;HTML&quot;</span><span class="p">,</span> <span class="s2">&quot;CSS&quot;</span><span class="p">,</span> <span class="s2">&quot;Javascript&quot;</span><span class="p">,</span> <span class="s2">&quot;PHP&quot;</span><span class="p">];</span>
+          <span class="nx">lenguajes</span><span class="p">.</span><span class="nx">valueOf</span><span class="p">();</span>
+          <span class="c1">// 5</span>
+          <span class="c1">// [&quot;HTML&quot;, &quot;CSS&quot;, &quot;Javascript&quot;, &quot;PHP&quot;]</span>
+          </pre>
+        </div>
+      </article>
+    </main>
+
+    <!-- El pie de página-->
+    <footer>
+      <ul>
+        <li><a href="../../">Página principal</a></li>
+        <li><a href="../../anexos/">Anexos</a></li>
+        <li><a href="../../about/">Acerca de</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

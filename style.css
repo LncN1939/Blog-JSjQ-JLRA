@@ -43,6 +43,14 @@ body {
 
     color: #ffffff;
   }
+
+  a {
+    color: #3aa0fa;
+  }
+
+  a:visited {
+    color: #9374ea;
+  }
 }
 
 .jsli {

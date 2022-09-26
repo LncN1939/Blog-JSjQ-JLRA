@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <title>JavaScript Typed Array</title>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <div class="nav-menu-container">
+      <nav class="nav-menu">
+        <a class="nav-menu-title" href="../../"
+          >Tutorial JavaScript &amp; jQuery</a
+        >
+
+        <ul>
+          <li>UwU</li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="main-container">
+      <!-- El sidebar-->
+      <div class="sidebar">
+        <aside>
+          <section>
+            <header>Menú</header>
+            <ul>
+              <li><a href="../../javascript/">JavaScript</a></li>
+              <li><a href="../../jquery/">jQuery</a></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+
+      <!-- El artículo o entrada del blog -->
+      <article itemscope itemtype="https://schema.org/Article">
+        <header>
+          <h1 itemprop="name">Typed Array</h1>
+          <div class="article-date">
+            Publicado el
+            <time
+              datetime="2022-09-21T09:41-6:00"
+              pubdate
+              itemprop="datePublished"
+            >
+              25 de septiembre de 2022
+            </time>
+          </div>
+          <p
+            class="article-author"
+            itemscope
+            itemtype="http://schema.org/Person"
+          >
+            por
+            <span itemprop="author">Armando Meza</span>
+          </p>
+        </header>
+
+        <p>
+          Los typed arrays en Javascript son buffers de datos binarios similares
+          a los arrays
+        </p>
+
+        <h2>Objetos Typed Array</h2>
+
+        <table class="ws-table-all notranslate">
+          <tbody>
+            <tr>
+              <th>Object</th>
+              <th>Data Type</th>
+              <th>Range</th>
+            </tr>
+            <tr>
+              <td>Int8Array</td>
+              <td>Entero con signo (byte)</td>
+              <td>-128/127</td>
+            </tr>
+            <tr>
+              <td>Uint8Array</td>
+              <td>Entero sin signo (octeto)</td>
+              <td>0/255</td>
+            </tr>
+            <tr>
+              <td>Uint8ClampedArray</td>
+              <td>Entero sin signo (octet)</td>
+              <td>0/255</td>
+            </tr>
+            <tr>
+              <td>Int16Array</td>
+              <td>Entero corto</td>
+              <td>-32768/32767</td>
+            </tr>
+            <tr>
+              <td>Uint16Array</td>
+              <td>Entero corto sin signo</td>
+              <td>0/65535</td>
+            </tr>
+            <tr>
+              <td>Int32Array</td>
+              <td>Entero largo con signo</td>
+              <td>-2<sup>31</sup>/2<sup>31</sup>-1</td>
+            </tr>
+            <tr>
+              <td>Uint32Array</td>
+              <td>Entero largo sin signo</td>
+              <td>0/2<sup>32</sup></td>
+            </tr>
+
+            <tr>
+              <td>Float32Array</td>
+              <td>Flotante con 7 cifras significativas</td>
+              <td>1.2x10<sup>-38</sup>/3.4x10<sup>38</sup></td>
+            </tr>
+            <tr>
+              <td>Float64Array</td>
+              <td>Flotante con 16 cifras significativas</td>
+              <td>5.0x10<sup>-324</sup>/1.8x10<sup>308</sup></td>
+            </tr>
+            <tr>
+              <td>BigInt64Array</td>
+              <td>Entero grande con signo</td>
+              <td>-2<sup>63</sup>/2<sup>63</sup>-1</td>
+            </tr>
+            <tr>
+              <td>BigUint64Array</td>
+              <td>Entero grande sin signo</td>
+              <td>0/2<sup>64</sup></td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Ejemplo</h2>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">cadenaEnteros</span> <span class="o">=</span> <span class="ow">new</span> <span class="nb">Int8Array</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span>       
+          <span class="c1">// [0, 0, 0, 0, 0]</span>
+          </pre>
+        </div>
+      </article>
+    </main>
+
+    <!-- El pie de página-->
+    <footer>
+      <ul>
+        <li><a href="../../">Página principal</a></li>
+        <li><a href="../../anexos/">Anexos</a></li>
+        <li><a href="../../about/">Acerca de</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
