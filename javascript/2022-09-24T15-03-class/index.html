@@ -28,8 +28,15 @@
           <section>
             <header>Menú</header>
             <ul>
-              <li><a href="../../javascript/">JavaScript</a></li>
-              <li><a href="../../jquery/">jQuery</a></li>
+              <li><a href="#class">JavaScript class</a></li>
+              <li>
+                <a href="#properties-methods">Propiedades y métodos</a>
+                <ul>
+                  <li><a href="#properties">Propiedades</a></li>
+                  <li><a href="#methods">Métodos</a></li>
+                </ul>
+              </li>
+              <li><a href="#getter-setter">Getter/Setter</a></li>
             </ul>
           </section>
         </aside>
@@ -38,7 +45,7 @@
       <!-- El artículo o entrada del blog -->
       <article itemscope itemtype="https://schema.org/Article">
         <header>
-          <h1 itemprop="name">JavaScript Class</h1>
+          <h1 itemprop="name" id="class">JavaScript Class</h1>
           <div class="article-date">
             Publicado el
             <time
@@ -85,7 +92,7 @@
         Como puede observarse, se definen unas cuantas <em>propiedades</em>, un
         <em>constructor</em>, y un <em>método</em>. Lo básico de una clase.
 
-        <h2>Instanciar clases</h2>
+        <h2 id="instance">Instanciar clases</h2>
 
         <p>
           Como ya deberías de saber, instanciar una clase significa crear
@@ -102,7 +109,7 @@
 </pre>
         </div>
 
-        <h2>Propiedades y métodos</h2>
+        <h2 id="properties-methods">Propiedades y métodos</h2>
 
         <p>
           Las clases pueden definir sus propiedades que son datos únicos de cada
@@ -110,7 +117,7 @@
           objeto.
         </p>
 
-        <h3>Propiedades</h3>
+        <h3 id="properties">Propiedades</h3>
         <p>
           En JavaScript, debido a que es un lenguaje interpretado y de tipaje no
           estricto, las propiedades por lo general no se definen en el cuerpo de
@@ -139,7 +146,7 @@
           de una clase se usa la palabra clave: <code>this</code>
         </p>
 
-        <h3>Métodos</h3>
+        <h3 id="methods">Métodos</h3>
         <p>
           A diferencia de una función cualquiera que está fuera de una clase,
           los métodos no requieren de una palabra clave como
@@ -169,7 +176,7 @@
           pantalla un sencillo <samp>Hola tu-nombre!!</samp>.
         </p>
 
-        <h2>Getter/Setter</h2>
+        <h2 id="getter-setter">Getter/Setter</h2>
         <p>
           Las clases, a su vez, pueden definir propiedades encapsuladas o
           computadas con los <em>getter</em> y <em>setters</em>. Son útiles para
