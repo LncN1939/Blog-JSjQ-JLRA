@@ -421,6 +421,231 @@
         </table>
       </div>
 
+      <!--Math.cbrt()-->
+      <div>
+        <h3>Math.cbrt()</h3>
+        <p>Devuelve la método devuelve la raíz cúbica de un número.</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+            Math.cbrt(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              La raiz cubica de un numero
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+            Math.cbrt(13)  
+        </pre>
+      </div>
+
+      <!--Math.ceil()-->
+      <div>
+        <h3>Math.ceil()</h3>
+        <p>Este metodo redondea redondea un número redondeado hacia arriba con el entero más cercano.</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+            Math.ceil(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              El entero más cercano al número redondeando hacia ARRIBA.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+            Math.ceil(0.70)  
+        </pre>
+      </div>
+
+      <!--Math.clz32()-->
+      <div>
+        <h3>Math.clz32()</h3>
+        <p>Este método devuelve el número de ceros iniciales en un número binario de 32 bits. clz32 es la abreviatura de <code>CountLeadingZeroes32</code></p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+            Math.clz32(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              Número de ceros iniciales en la representación binaria de 32 bits de un número. Si el número es 0, devuelve 32 (todos los bits son 0)
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+            Math.asin(7)  
+        </pre>
+      </div>
+
+      <!--Math.cos()-->
+      <div>
+        <h3>Math.cos()</h3>
+        <p>Devuelve el coseno de un numero, con un resultado numerico de entre -1 y 1, el cual espero nuneros en radianes</p>
+
+        <h4>Que son los Radianes</h4>
+        <p>Radianes es la cantidad α de rotación b de un ángulo en un círculo:</p>
+        <div class="imgs">
+          <img src="./img/img_radian.jpg" alt="circulo">
+        </div>
+        <br>
+        <table>
+          <tr>
+            <th>Grados</th>
+            <th>PI</th>
+            <th>Radianes</th>
+          </tr>
+          <tr>
+            <th>0°</th>
+            <th>0</th>
+            <th>0</th>
+          </tr>
+          <tr>
+            <th>1°</th>
+            <th>PI/180</th>
+            <th>0.0175</th>
+          </tr>
+          <tr>
+            <th>30°</th>
+            <th>PI/6</th>
+            <th>0.52</th>
+          </tr>
+          <tr>
+            <th>45°</th>
+            <th>PI/4</th>
+            <th>0.79</th>
+          </tr>
+          <tr>
+            <th>90°</th>
+            <th>PI/2</th>
+            <th>1.57</th>
+          </tr>
+          <tr>
+            <th>180°</th>
+            <th>PI</th>
+            <th>3.14</th>
+          </tr>
+          <tr>
+            <th>360°</th>
+            <th>PI*2</th>
+            <th>6.28</th>
+          </tr>
+        </table>
+
+        <h4>Sintaxis</h4>
+        <pre>
+            Math.cos(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número representado en radianes</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              -1 a 1 El coseno del número. Se obtendra <code>NaN</code> si el parámetro no es numérico.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+            Math.cos(3.14)
+            Math.cos(Math.PI)  
+        </pre>
+
+        <p>Para usar grados conviertelos en radianes con <code>degree</code></p>
+        <pre>
+            Math.cos(degree * Math.PI / 180);
+        </pre>
+
+      </div>
+
+
         <h4>Comentarios</h4>
           <div id="fb-root"></div>
           <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v15.0" nonce="AWHlPaDs">
