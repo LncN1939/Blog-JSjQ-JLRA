@@ -11,10 +11,14 @@
   --background-color: #ffffff;
   --menu-background-color: #ffffffcc;
   --code-background-color: #f2f1f1;
-  --border-color: #0f172a1a;
+  --border-color: #050201;
+  --link-color: #008b8b;
+  --link-visited-color: #1e4044;
+  --link-hover-color: #3388de;
 
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   background-color: var(--background-color);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -25,6 +29,52 @@ body {
 .main-container {
   display: flex;
   flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+a:visited {
+  color: var(--link-visited-color);
+}
+a:hover {
+  text-decoration-line: underline;
+  color: var(--link-hover-color);
+}
+
+code,
+samp,
+kbd {
+  padding: 0.3em;
+  border-radius: 0.3em;
+  background-color: var(--code-background-color);
+}
+kbd {
+  padding: 0.4em;
+  border-bottom: 1px solid var(--border-color);
+}
+
+table,
+tr,
+th {
+  border: 2px solid var(--border-color);
+  border-collapse: collapse;
+}
+
+th,
+tr {
+  padding: 5px;
+}
+
+th {
+  text-align: left;
+}
+
+.fb-comments {
+  border-style: solid;
+  background-color: white;
+  border-color: gray;
 }
 
 /* sm breakpoint */
@@ -39,33 +89,11 @@ body {
     --background-color: #1b1b1b;
     --menu-background-color: #1b1b1bcc;
     --code-background-color: #343434;
-    --border-color: #ffffff4a;
+    --border-color: #4b4a4a;
+    --link-color: #62a777;
+    --link-visited-color: #d3eed3;
+    --link-hover-color: #3388de;
 
     color: #ffffff;
   }
-}
-
-.jsli {
-  display: inline;
-  margin-left: 25px;
-}
-
-.jsfo {
-  text-align: center;
-}
-
-table,
-tr,
-th {
-  border: 2px solid white;
-  border-collapse: collapse;
-}
-
-th,
-tr {
-  padding: 5px;
-}
-
-th {
-  text-align: left;
 }
