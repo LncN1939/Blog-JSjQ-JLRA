@@ -141,6 +141,258 @@
             </th>
           </tr>
         </table>
+
+        <h3>Operadores de asignacion</h3>
+        <p>Utiles para asignar valores a las variables creadas <br></br>
+        Suponiendo que x = 10 e y = 5, la siguente la tabla expresara lo siguente:
+        </p>
+        <table>
+            <tr>
+              <th>Operador</th>
+              <th>Ejemplo</th>
+              <th>Igual a</th>
+              <th>Resultado en x</th>
+            </tr>
+            <tr>
+              <th>=</th>
+              <th>x = y</th>
+              <th>x = y</th>
+              <th>y = 5</th>
+            </tr>
+            <tr>
+              <th>+=</th>
+              <th>x += y</th>
+              <th>x = x + y</th>
+              <th>x = 15</th>
+            </tr>
+            <tr>
+              <th>-=</th>
+              <th>x -= y</th>
+              <th>x = x - y</th>
+              <th>x = 5</th>
+            </tr>
+            <tr>
+              <th>*=</th>
+              <th>x *= y</th>
+              <th>x = x * y</th>
+              <th>x = 50</th>
+            </tr>
+            <tr>
+              <th>/=</th>
+              <th>x /= y</th>
+              <th>x = x / y</th>
+              <th>x = 2</th>
+            </tr>
+            <tr>
+              <th>%=</th>
+              <th>x %= y</th>
+              <th>x = x % y</th>
+              <th>x = 0</th>
+            </tr>
+        </table>
+
+        <h3>Operadores de cadena</h3>
+        <p>El operador <code>+</code> y el operador <code>+=</code> tambien se pueden usar para concatenar (agregar) cadenas. <br></br>
+        Dado que texto1 = "Hello" , texto2 = "World" y texto3 = "" , la siguiente tabla explica los operadores:
+        </p>
+        <table>
+            <tr>
+              <th>Operador</th>
+              <th>Ejemplo</th>
+              <th>Texto 1</th>
+              <th>Texto 2</th>
+              <th>Texto 3</th>
+            </tr>
+            <tr>
+              <th>+</th>
+              <th>texto3 = texto1 + texto2</th>
+              <th>Hello</th>
+              <th>World</th>
+              <th>Hello World</th>
+            </tr>
+            <tr>
+              <th>+=</th>
+              <th>texto1 += texto2</th>
+              <th>texto1 = Hello World </th>
+              <th>texto2 = World</th>
+              <th>texto3 = " "</th>
+            </tr>
+        </table>
+
+        <h3>Operadores de comparacion</h3>
+        <p>Los operadores de comparación se utilizan en declaraciones lógicas para determinar la igualdad o diferencia entre variables o valores. <br></br>
+        Dado que x = 5 , la siguiente tabla explica los operadores de comparación:
+        </p>
+        <table>
+            <tr>
+              <th>Operador</th>
+              <th>Descripción</th>
+              <th>Comparacion</th>
+              <th>Retorna</th>
+            </tr>
+            <tr>
+              <th>==</th>
+              <th>Igual</th>
+              <th>x == 8 <br>
+                  x == 5
+            </th>
+              <th>false <br>
+                  true
+              </th>
+            </tr>
+            <tr>
+              <th>====</th>
+              <th>Valores iguales e igual tipo</th>
+              <th>x ==== "5" <br>
+                x === 5
+              </th>
+              <th>false <br>
+                  true
+            </th>
+            </tr>
+
+            <tr>
+            <th>!==</th>
+            <th>No es igual</th>
+            <th>x !== "5" <br>
+                x !== 5
+            </th>
+            <th>true <br>
+                false
+            </th>
+            </tr>
+
+            <tr>
+                <th>></th>
+                <th>mayor que</th>
+                <th>x > 8</th>
+                <th>false</th>
+            </tr>
+            <tr>
+                <th><</th>
+                <th>menor que</th>
+                <th>x < 8</th>
+                <th>true</th>
+            </tr>
+
+            <tr>
+                <th>>=</th>
+                <th>mayor o igual que</th>
+                <th>x >= 8</th>
+                <th>false</th>
+            </tr>
+
+            <tr>
+                <th><=</th>
+                <th>menor o igual que</th>
+                <th>x >= 8</th>
+                <th>false</th>
+            </tr>
+        </table>
+
+        <h3>Operador condicional</h3>
+        <p>El operador condicional asigna un valor a una variable en función de una condición.</p>
+        <table>
+            <tr>
+                <th>Sintaxis</th>
+                <th>Ejemplo</th>
+            </tr>
+            <tr>
+                <th>nombreVariable = (condicion) ? valor1: valor2
+                </th>
+                <th>
+                    voteable = (edad < 18) ? joven:Adulto;
+                </th>
+            </tr>
+        </table>
+
+        <h3>Operadores logicos</h3>
+        <p>Los operadores lógicos se utilizan para determinar la lógica entre variables o valores.
+        <br></br>
+        Dado que x = 6 e y = 3 , la siguiente tabla explica los operadores lógicos:</p>
+        <table>
+            <tr>
+                <th>Operador</th>
+                <th>Descripción</th>
+                <th>Ejemplo</th>
+            </tr>
+            <tr>
+                <th>&&</th>
+                <th>y</th>
+                <th>(x < && y > 1) is true</th>
+            </tr>
+            <tr>
+                <th>||</th>
+                <th>o</th>
+                <th>(x === 5 || y === 5) is false</th>
+            </tr>
+            <tr>
+                <th>!</th>
+                <th>no</th>
+                <th>!(x === y) is true</th>
+            </tr>
+        </table>
+
+        <h3>Operadores bit a bit</h3>
+        <p>Los operadores de bits funcionan en números de 32 bits. Cualquier operando numérico en la operación se convierte en un número de 32 bits. El resultado se vuelve a convertir en un número de JavaScript.</p>
+        <table>
+            <tr>
+                <th>Operador</th>
+                <th>Descripción</th>
+                <th>Ejemplo</th>
+                <th>Igual a</th>
+                <th>Resultado</th>
+                <th>Decimal</th>
+            </tr>
+            <tr>
+                <th>&</th>
+                <th>AND</th>
+                <th>x = 5 & 1</th>
+                <th> 0101 & 0001</th>
+                <th>0001</th>
+                <th>1</th>
+            </tr>
+            <tr>
+                <th>|</th>
+                <th>OR</th>
+                <th>x = 5 | 1</th>
+                <th>0101 | 0001</th>
+                <th>0101</th>
+                <th>5</th>
+            </tr>
+            <tr>
+                <th>~</th>
+                <th>NOT</th>
+                <th>x = ~ 5</th>
+                <th>~ 0101</th>
+                <th>1010</th>
+                <th>10</th>
+            </tr>
+            <tr>
+                <th>^</th>
+                <th>XOR</th>
+                <th>x = 5 ^ 1</th>
+                <th>0101 ^ 0001</th>
+                <th>0100</th>
+                <th>4</th>
+            </tr>
+            <tr>
+                <th><<</th>
+                <th>Shift izquierdo</th>
+                <th>x = 5 << 1</th>
+                <th>0101 << 1</th>
+                <th>1010</th>
+                <th>10</th>
+            </tr>
+            <tr>
+                <th>>></th>
+                <th>Shift derecho</th>
+                <th>x = 5 >> 1</th>
+                <th>0101 >> 1</th>
+                <th>0010</th>
+                <th>2</th>
+            </tr>
+        </table>
       </article>
     </main>
 
