@@ -168,6 +168,54 @@
           En el ejemplo anterior, el método <code>sayHola</code> imprimiría en
           pantalla un sencillo <samp>Hola tu-nombre!!</samp>.
         </p>
+
+        <h2>Getter/Setter</h2>
+        <p>
+          Las clases, a su vez, pueden definir propiedades encapsuladas o
+          computadas con los <em>getter</em> y <em>setters</em>. Son útiles para
+          limitar la accesibilidad de una propiedad al ser capaz de hacerlas
+          sólo de lectura, o bien tanto de lectura como escritura.
+        </p>
+
+        <p>
+          Un <em>getter</em> se define como un método sin parámetros precedido
+          de la palabra clave: <code>get</code>; un <em>getter</em> siempre debe
+          retornar un valor. Mientras, un <em>setter</em> se define como un
+          método con un parámetro precedido de la palabra clave:
+          <code>set</code>.
+        </p>
+
+        <p>Ejemplo:</p>
+        <div class="highlight">
+          <pre>
+<span></span><span class="kd">class</span><span class="w"> </span><span class="nx">User</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">name</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="nx">get</span><span class="w"> </span><span class="nx">name</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">_name</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="nx">set</span><span class="w"> </span><span class="nx">name</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">value</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;Juan&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El nombre Juan no está permitido&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">      </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">value</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">juan</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">User</span><span class="p">(</span><span class="s2">&quot;Juan&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// El nombre Juan no está permitido</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">juan</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span><span class="w"> </span><span class="c1">// undefined</span><span class="w"></span>
+</pre>
+        </div>
+
+        <p>
+          En este ejemplo se crea un objeto de la clase <code>User</code> con el
+          nombre de <code>Juan</code>. Dentro del constructor se llama al setter
+          y éste valida si el nombre es "Juan"; ya que lo es, se imprime en
+          pantalla <samp>El nombre Juan no está permitido</samp> y el nombre
+          queda indefinido.
+        </p>
       </article>
     </main>
 
