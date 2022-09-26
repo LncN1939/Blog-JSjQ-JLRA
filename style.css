@@ -43,6 +43,15 @@ a:hover {
   color: var(--link-hover-color);
 }
 
+h1::before,
+h2::before,
+h3::before {
+  display: block;
+  content: "";
+  height: 4em;
+  margin: -4em 0 0;
+}
+
 code,
 samp,
 kbd {
