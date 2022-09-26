@@ -76,7 +76,8 @@
 
         <h2>Metodos y propiedades de JS Math</h2>
         
-        <!--Math.abs()-->
+      <!--Math.abs()-->
+      <div>
         <h3>Math.abs()</h3>
         <p>Este metodo devuelve el valor absoluto de un numero</p>
 
@@ -117,10 +118,12 @@
         <pre>
             Math.abs(-12.45)
         </pre>
-      
-        <!--Math.acos()-->
+      </div>
+
+      <!--Math.acos()-->
+      <div>
         <h3>Math.acos()</h3>
-        <p>Es un metodo de devuelve el arcoseno (en radianes) de un numero entre el 0 y PI, asi mismo espera tiene un parametro entre -1 y 1</p>
+        <p>Es un metodo de devuelve el arcoseno (en radianes) de un numero entre el 0 y PI, asi mismo espera recibir un rango de numeros -1 y 1</p>
 
         <h4>Sintaxis</h4>
         <pre>
@@ -160,6 +163,94 @@
             Math.acos(0)
             Math.acos(1)
         </pre>
+      </div>
+
+      <!--Math.acosh()-->
+      <div>
+      <h3>Math.acosh()</h3>
+      <p>Devuelve el arcocoseno hiperbólico de un número, si el parámetro es menor que 1, el método devuelve <code>NaN</code>.</p>
+
+      <h4>Sintaxis</h4>
+      <pre>
+          Math.acosh(x)
+      </pre>
+
+      <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              El arcocoseno hiperbólico del parámetro, se mostrara <code>NaN</code> si el parámetro es menor que 1 o no es un valor numérico.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+            Math.acosh(1)
+            Math.acosh(2)  
+        </pre>
+      </div>
+
+      <!--Math.asin()-->
+      <div>
+        <h3>Math.asin()</h3>
+        <p>Es un metodo de devuelve el arseno (en radianes) de un numero entre el -2/PI y 2/PI, asi mismo espera recibir un rango de numeros entre -1 y 1</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+            Math.asin(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              -PI/2 a PI/2. Se obtendra <code>NaN</code> si el parámetro no es numérico o está fuera del rango de -1 a 1.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+            Math.asin(1)
+            Math.asin(0)
+            Math.asin(-1)  
+        </pre>
+      </div>
 
         <h4>Comentarios</h4>
           <div id="fb-root"></div>
