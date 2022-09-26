@@ -393,6 +393,65 @@
                 <th>2</th>
             </tr>
         </table>
+
+        <h4>Nota</h4>
+        <p>Los ejemplos anteriores usan ejemplos sin firmar de 4 bits. Pero JavaScript usa números con signo de 32 bits. Debido a esto, en JavaScript, ~ 5 no devolverá 10. Devolverá -6, es decir no devolvera:
+        <br></br>
+        ~00000000000000000000000000000101
+        <br></br>
+        Si no que devolvera: 111111111111111111111111111111010</p>
+        
+        <h3>Operador typeof</h3>
+        <p>Devuelve el tipo de una variable, objeto, función o expresión:</p>
+        <pre>
+typeof = "John"         // Retorna una cadena <br>
+typeof = 3.14           // Retorna un numero <br>
+typeof = "[1,2,3,4]"    //  Retorna un objecto
+        </pre>
+
+        <h3>Operador eliminacion</h3>
+        <p>El operador de eliminación elimina una propiedad de un objeto :</p>
+        <pre>
+const auto ={
+    marca = ferrari,
+    maximaVelocidad = 150,
+    garantia = 10,
+    color = azul
+};
+
+delete auto.garantia;   // Elimina la tanto el valor como la propiedad
+        </pre>
+
+        <h3>Operador in</h3>
+        <p>El operador in devuelve verdadero si la propiedad especificada está en el objeto especificado; de lo contrario, es falso:</p>
+
+        <pre>
+const auto = {marca:"ferrari", color:"azul", garantia:10};<br>
+"marca" in auto         // Returns true <br>
+"color" in auto         // Returns true
+        </pre>
+
+        <h3>La instancia del Operador</h3>
+        <p>El operador instanceof devuelve verdadero si el objeto especificado es una instancia del objeto especificado:
+        </p>
+        <pre>
+const cars = ["Saab", "Volvo", "BMW"];<br>
+
+(cars instanceof Array)   // Returns truebr <br>
+(cars instanceof String)  // Returns false
+        </pre>
+
+        <h3>El operador del vacío</h3>
+        <p>El operador void evalúa una expresión y devuelve undefined . Este operador se usa a menudo para obtener el valor primitivo indefinido, usando "void(0)" (útil cuando se evalúa una expresión sin usar el valor devuelto).</p>
+        <pre>
+<a href="javascript:void(0);">
+    Link no usable
+</a>
+              
+<a href="javascript:void(document.body.style.backgroundColor='green');">
+    Clickeame para cambiar el color a verde
+</a>
+        </pre>
       </article>
     </main>
 
