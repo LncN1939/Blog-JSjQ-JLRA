@@ -67,6 +67,107 @@
           tanto las clases como los objetos, los cuales pueden tener sus
           respectivas propiedades y métodos, la herencia, el polimorfismo, etc.
         </p>
+
+        <p>Una clase en JavaScript tiene la siguiente forma:</p>
+
+        <div class="highlight">
+          <pre>
+<span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Clase</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">propiedad1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="nx">propiedad2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">80</span><span class="p">;</span><span class="w"></span>
+
+<span class="w">  </span><span class="kr">constructor</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="nx">metodo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="cm">/* ... */</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre>
+        </div>
+
+        Como puede observarse, se definen unas cuantas <em>propiedades</em>, un
+        <em>constructor</em>, y un <em>método</em>. Lo básico de una clase.
+
+        <h2>Instanciar clases</h2>
+
+        <p>
+          Como ya deberías de saber, instanciar una clase significa crear
+          objetos a partir de la clase, objetos que contienen las propiedades y
+          métodos definidos en la clase. Al igual que en otros lenguajes de
+          programación, en JavaScript podemos instanciar cuántos objetos se
+          desee con la palabra clave: <code>new</code>.
+        </p>
+
+        <p>Así, se crea un objeto:</p>
+        <div class="highlight">
+          <pre>
+<span class="kd">const</span><span class="w"> </span><span class="nx">objeto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Clase</span><span class="p">();</span><span class="w"></span>
+</pre>
+        </div>
+
+        <h2>Propiedades y métodos</h2>
+
+        <p>
+          Las clases pueden definir sus propiedades que son datos únicos de cada
+          objeto, y definir métodos que representarían las funciones de tal
+          objeto.
+        </p>
+
+        <h3>Propiedades</h3>
+        <p>
+          En JavaScript, debido a que es un lenguaje interpretado y de tipaje no
+          estricto, las propiedades por lo general no se definen en el cuerpo de
+          la clase, sino en el constructor con su valor inicial o computado
+          según los parámetros del constructor.
+        </p>
+
+        <p>Ejemplo:</p>
+        <div class="highlight">
+          <pre>
+<span></span><span class="kd">class</span><span class="w"> </span><span class="nx">User</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">name</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre>
+        </div>
+
+        <p>
+          En el anterior ejemplo se define una propiedad llamada
+          <code>name</code> en el constructor.
+        </p>
+
+        <p>
+          <strong>Nota</strong>: Para acceder a las propiedades y métodos dentro
+          de una clase se usa la palabra clave: <code>this</code>
+        </p>
+
+        <h3>Métodos</h3>
+        <p>
+          A diferencia de una función cualquiera que está fuera de una clase,
+          los métodos no requieren de una palabra clave como
+          <code>function</code> para definirse; un método se define sólo con el
+          nombre del método, los paréntesis que contiene 0 o más parámetros, y
+          el cuerpo del método.
+        </p>
+
+        <p>Ejemplo:</p>
+
+        <div class="highlight">
+          <pre>
+<span></span><span class="kd">class</span><span class="w"> </span><span class="nx">User</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">name</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="nx">sayHola</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hola </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">!!`</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre>
+        </div>
+
+        <p>
+          En el ejemplo anterior, el método <code>sayHola</code> imprimiría en
+          pantalla un sencillo <samp>Hola tu-nombre!!</samp>.
+        </p>
       </article>
     </main>
 
