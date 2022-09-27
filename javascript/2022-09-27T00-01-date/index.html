@@ -337,6 +337,30 @@ let text = l.toJSON();
         <h4>Video</h4>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/hIzyfD4DJOo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+        <form action="POST">
+            <h3>Comentarios</h3>
+            <div class="input-container">
+              <label for="username">Nombre:</label>
+              <input type="text" name="username" />
+            </div>
+  
+            <div class="input-container">
+              <label for="email">Email:</label>
+              <input type="email" name="email" />
+            </div>
+  
+            <div class="input-container">
+              <textarea
+                name="body"
+                cols="100"
+                rows="10"
+                placeholder="Comentario..."
+              ></textarea>
+            </div>
+  
+            <input type="submit" />
+          </form>
+
       </article>
     </main>
 
