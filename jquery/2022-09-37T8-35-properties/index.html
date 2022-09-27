@@ -59,47 +59,76 @@
           </p>
         </header>
 
-        <p>
-          Aqui se muestran las propiedades generales de jQuery
-        </p>
+        <p>Aqui se muestran las propiedades generales de jQuery</p>
 
         <h2>Propiedades</h2>
 
         <!-- context -->
         <h3 id="context">context</h3>
         <p>
-          La propiedad de contexto contiene el contexto original pasado a jQuery, que podría ser un contexto de nodo DOM o, si no se pasa ningún nodo, el contexto del documento.
+          La propiedad de contexto contiene el contexto original pasado a
+          jQuery, que podría ser un contexto de nodo DOM o, si no se pasa ningún
+          nodo, el contexto del documento.
         </p>
 
         <!-- jQuey -->
         <h3 id="jQuery">jQuery</h3>
         <p>
-          La propiedad jQuery devuelve una cadena que contiene el número de versión de jQuery.
+          La propiedad jQuery devuelve una cadena que contiene el número de
+          versión de jQuery.
         </p>
 
         <!-- jQuery.fx.interval -->
         <h3 id="jQuery.fx.interval">jQuery.fx.interval()</h3>
         <p>
-          La propiedad jQuery.fx.interval se usa para cambiar la velocidad de activación de la animación en milisegundos.
+          La propiedad jQuery.fx.interval se usa para cambiar la velocidad de
+          activación de la animación en milisegundos.
         </p>
 
         <!-- jQuery.fx.off -->
         <h3 id="jQuery.fx.off">jQuery.fx.off</h3>
         <p>
-          La propiedad jQuery.fx.off se usa para deshabilitar/habilitar globalmente todas las animaciones.
+          La propiedad jQuery.fx.off se usa para deshabilitar/habilitar
+          globalmente todas las animaciones.
         </p>
 
         <!-- jQuery.support -->
         <h3 id="jQuery.support">jQuery.support</h3>
         <p>
-          La propiedad jQuery.support contiene una colección de propiedades que representan diferentes características o errores del navegador.
+          La propiedad jQuery.support contiene una colección de propiedades que
+          representan diferentes características o errores del navegador.
         </p>
 
         <!-- length -->
         <h3 id="length">length()</h3>
         <p>
-          La propiedad de longitud contiene la cantidad de elementos en el objeto jQuery.
+          La propiedad de longitud contiene la cantidad de elementos en el
+          objeto jQuery.
         </p>
+
+        <form action="POST">
+          <h3>Comentarios</h3>
+          <div class="input-container">
+            <label for="username">Nombre:</label>
+            <input type="text" name="username" />
+          </div>
+
+          <div class="input-container">
+            <label for="email">Email:</label>
+            <input type="email" name="email" />
+          </div>
+
+          <div class="input-container">
+            <textarea
+              name="body"
+              cols="100"
+              rows="10"
+              placeholder="Comentario..."
+            ></textarea>
+          </div>
+
+          <input type="submit" />
+        </form>
       </article>
     </main>
 
