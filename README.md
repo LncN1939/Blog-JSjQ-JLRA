@@ -17,6 +17,36 @@ Favor copiar siempre el template.html que está en la carpeta root según cada s
 
 Luego de copiar el template.html según corresponde, renombrarlo a `index.html` y empezar a añadir el contenido al `<article>`.
 
+## Añadir una navegación en el sidebar
+
+Para añadir una navegación en el sidebar de cada entrada, primero es necesario definir el `id` de cada etiqueta de `<h1>`, `<h2>`, `<h3>` y `<h4>` existentes con un nombre que describa la sección.
+
+Luego, en el sidebar se añaden enlaces a cada parte del artículo a través de los IDs antes definidos, de la siguiente manera:
+
+```html
+<!-- Sidebar -->
+<ul>
+  <li>
+
+    <a href="#propiedades-metodos">Propiedades y métodos</a>
+    <ul>
+      <li><a href="#propiedades">Propiedades</a></li>
+      <li><a href="#metodos">Métodos</a></li>
+    </ul>
+
+  </li>
+</ul>
+
+<!-- Article -->
+
+<h2 id="propiedades-metodos">Propiedades y métodos</h2>
+...
+<h3 id="propiedades">Propiedades</h3>
+...
+<h3 id="metodos">Métodos</h3>
+...
+```
+
 ## Código formateado
 
 Se utiliza el programa `pygmentize` (https://pygments.org) para presentar código formateado, el cual se instala con `pip3 install Pygments`.

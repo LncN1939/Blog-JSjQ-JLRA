@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <title>Polimorfismo</title>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <div class="nav-menu-container">
+      <nav class="nav-menu">
+        <a class="nav-menu-title" href="../../"
+          >Tutorial JavaScript &amp; jQuery</a
+        >
+
+        <ul>
+          <li>UwU</li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="main-container">
+      <!-- El sidebar-->
+      <div class="sidebar">
+        <aside>
+          <section>
+            <header>Menú</header>
+            <ul>
+              <li><a href="../../javascript/">JavaScript</a></li>
+              <li><a href="../../jquery/">jQuery</a></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+
+      <!-- El artículo o entrada del blog -->
+      <article itemscope itemtype="https://schema.org/Article">
+        <header>
+          <h1 itemprop="name">Polimorfismo</h1>
+          <div class="article-date">
+            Publicado el
+            <time
+              datetime="2022-09-26T00:09-6:00"
+              pubdate
+              itemprop="datePublished"
+            >
+              26 de septiembre de 2022
+            </time>
+          </div>
+          <p
+            class="article-author"
+            itemscope
+            itemtype="http://schema.org/Person"
+          >
+            por
+            <span itemprop="author">Jezer Mejía</span>
+          </p>
+        </header>
+
+        <p>
+          ¿Qué es el polimorfismo? Según wikipedia, el polimorfismo se refiere a
+          la propiedad o interfaz que múltiples entidades pueden tener en común,
+          de tal manera que pueden producirse distintas clases a partir de una
+          sola. Esto es similar al principio biológico en que un organismo puede
+          tener distintas formas o etapas, o bien puede verse como una rama
+          biológica.
+        </p>
+
+        <p>
+          También puede definirse como la reutilización de código de una clase
+          en otras de manera implícita; el código no se repite, sino que las
+          propiedades y métodos son heredados de una clase a otra.
+        </p>
+
+        <p>
+          JavaScript, al igual que otros lenguajes de programación orientados a
+          objetos, es capaz de hacer polimorfismo de clases. Para ello se hace
+          uso de la palabra clave: <code>extends</code>.
+        </p>
+
+        <p>Ejemplo:</p>
+
+        <p>
+          Digamos que tenemos una clase <code>Mueble</code> con sus distintas
+          propiedades como el nombre, material, dimensiones, etc. En principio,
+          un mueble no debería tener ningún método per sé, pero le
+          implementaremos uno para imprimir los detalles del mismo.
+        </p>
+
+        <div class="highlight">
+          <pre>
+<span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Mueble</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="nx">material</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">name</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">material</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">material</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+
+<span class="w">  </span><span class="nx">imprimirDetalles</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Nombre: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">\nMaterial: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">material</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre>
+        </div>
+
+        <p>
+          La clase <code>Mueble</code> sería una abstracción que nos serviría
+          para crear consecuentes tipos de muebles, como lo puede ser una silla
+          o una mesa.
+        </p>
+
+        <div class="highlight">
+          <pre>
+<span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Silla</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Mueble</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">super</span><span class="p">(</span><span class="s2">&quot;Silla&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;madera&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="nx">sentar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Te has sentado en una </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre>
+        </div>
+
+        <p>
+          En el código de arriba se crea una clase llamada <code>Silla</code>,
+          que se extiende a partir de un <code>Mueble</code>. De esta manera,
+          una silla tiene las mismas propiedades que un mueble: un nombre y un
+          material; y tiene los mismos métodos: imprimir los detalles.
+        </p>
+
+        <p>
+          Además de ello, una <code>Silla</code> implementa un método adicional
+          de <code>sentar</code> (que no es lógico ya que una silla no se
+          sienta) que es único para la clase de <code>Silla</code>; un mueble no
+          tiene este método.
+        </p>
+
+        <p>
+          A su vez, como puede observarse en el constructor, con la palabra
+          clave <code>super</code> se puede acceder a la clase padre o superior,
+          que en este caso resulta ser <code>Mueble</code>. Con
+          <code>super</code> podemos llamar métodos, obtener las propiedades, y
+          construir un objeto con el constructor del padre. Lo último es lo que
+          se está haciendo en el código de arriba: crear un mueble con el nombre
+          de <code>"Silla"</code> y un material de <code>"madera"</code>.
+        </p>
+      </article>
+    </main>
+
+    <!-- El pie de página-->
+    <footer>
+      <ul>
+        <li><a href="../../">Página principal</a></li>
+        <li><a href="../../anexos/">Anexos</a></li>
+        <li><a href="../../about/">Acerca de</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

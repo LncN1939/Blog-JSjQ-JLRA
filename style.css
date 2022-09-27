@@ -11,7 +11,7 @@
   --background-color: #ffffff;
   --menu-background-color: #ffffffcc;
   --code-background-color: #f2f1f1;
-  --border-color: #050201;
+  --border-color: #cdcdcd;
   --link-color: #008b8b;
   --link-visited-color: #1e4044;
   --link-hover-color: #3388de;
@@ -41,6 +41,15 @@ a:visited {
 a:hover {
   text-decoration-line: underline;
   color: var(--link-hover-color);
+}
+
+h1::before,
+h2::before,
+h3::before {
+  display: block;
+  content: "";
+  height: 4em;
+  margin: -4em 0 0;
 }
 
 code,
