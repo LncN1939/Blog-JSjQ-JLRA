@@ -298,6 +298,154 @@ String.fromCharCode(n1, n2, ..., nX)
 let char = String.fromCharCode(76);
           </pre>
         </div>
+
+        <!--includes()-->
+        <div>
+          <h3>includes()</h3>
+          <p>El método includes() devuelve <code>true</code> si una cadena contiene una cadena especificada.De lo contrario vuelve false. Distingue entre mayúsculas y minúsculas.</p>
+
+          <pre>
+let text = "Sandino, defensor de la soberania nacional.";
+let result = text.includes("Sandino");
+          </pre>
+        </div>
+
+        <!--indexOf()-->
+        <div>
+          <h3>indexOf()</h3>
+          <p>El método <code>indexOf()</code> devuelve la posición de la primera aparición de un valor en una cadena, con un retorno de -1 si no se encuentra el valor asi mismo distingue entre mayúsculas y minúsculas..</p>
+
+          <pre>
+let text = "Sandino, defensor de la soberania nacional.";
+let result = text.indexOf("Sandino");
+          </pre>
+        </div>
+
+        <!--lastIndexOf()-->
+        <div>
+          <h3>lastIndexOf()</h3>
+          <p>El método <code>lastIndexOf()</code> devuelve el índice (posición) de la última aparición de un valor especificado en una cadena, busca la cadena desde el final hasta el principio, devuelve el índice desde el principio (posición 0), asi mismi devuelve -1 si no se encuentra el valor Distinguiendo entre mayúsculas y minúsculas.</p>
+
+          <pre>
+let text = "Hola Saladino, como has estado Saladino";
+let result = text.lastIndexOf("Saladino");
+          </pre>
+        </div>
+
+        <!--length-->
+        <div>
+          <h3>lastIndexOf()</h3>
+          <p>La propiedad <code>length</code> devuelve la longitud de una cadena, siendo la propiedad vacia de una cadena vacía es 0.</p>
+
+          <pre>
+let text = "Somos UCA!";
+let length = text.length;
+          </pre>
+        </div>
+
+        <!--localeCompare()-->
+        <div>
+          <h3>localeCompare()</h3>
+          <p>El método <code>localeCompare()</code> compara dos cadenas en la configuración regional actual,devuelve el orden de clasificación -1, 1 o 0 (para antes, después o igual).</p>
+
+          <pre>
+let text1 = "UCA";
+let text2 = "UNI";
+let result = text1.localeCompare(text2);
+          </pre>
+        </div>
+
+        <!--match()-->
+        <div>
+          <h3>localeCompare()</h3>
+          <p>El método <code>match()</code> compara una cadena con una expresión regular **, devuelve una matriz con las coincidencias y devuelve nulo si no se encuentra ninguna coincidencia.</p>
+
+          <pre>
+let text = "La tierra es un satélite de la luna";
+text.match("luna");
+          </pre>
+        </div>
+
+        <!--prototype-->
+        <div>
+          <h3>prototype</h3>
+          <p>La propiedad <code>prototype</code> permite agregar nuevas propiedades y métodos a las cadenas.</p>
+
+          <pre>
+function soldado(name, range, born) {
+  this.name = name;
+  this.range = range;
+  this.born = born;
+}
+employee.prototype.salary = 2500;
+            
+const renov = new employee("Renov L.", "Capitan", 1917);
+          </pre>
+        </div>
+
+        <!--repeat()-->
+        <div>
+          <h3>repeat()</h3>
+          <p>El método <code>repeat()</code> devuelve una cadena con un número de copias de una cadena.devuelve una nueva cadena y no cambia la cadena original.</p>
+
+          <pre>
+let text = "Buenas tardes!";
+let result = text.repeat(3);
+          </pre>
+        </div>
+        
+        <!--replace()-->
+        <div>
+          <h3>replace()</h3>
+          <p>El método <code>replace()</code> busca en una cadena un valor o una expresión regular, devuelve una nueva cadena con los valores reemplazados, asi mismo el método no cambia la cadena original.</p>
+
+          <pre>
+let text = "HTML es un lenguaje de programacion";
+let result = text.replace("HTML", "JavaScript");
+          </pre>
+        </div>
+
+        <!--search()-->
+        <div>
+          <h3>search()</h3>
+          <p>El método <code>search()</code> compara una cadena con una expresión regular **, devuelve el índice (posición) de la primera coincidencia, asi mismo devuelve -1 si no se encuentra ninguna coincidencia y el metodo distingue entre mayúsculas y minúsculas.</p>
+
+          <pre>
+let text = "Mr. Dominguez tiene una asador de carne";
+let position = text.search("carne");
+          </pre>
+        </div>
+
+        <!--slice()-->
+        <div>
+          <h3>slice()</h3>
+          <p>El método <code>slice()</code> extrae una parte de una cadena, devuelve la parte extraída en una nueva cadena, no cambia la cadena original.
+          <br></br>
+          Los parámetros de inicio y fin especifican la parte de la cadena que se va a extraer. La primera posición es 0, la segunda es 1, ... Y un número negativo selecciona desde el final de la cadena.</p>
+
+          <pre>
+let text = "Pedro PicaPiedra";
+let result = text.slice(0, 5);
+          </pre>
+        </div>
+
+        <!--slice()-->
+        <div>
+          <h3>slice()</h3>
+          <p>El método <code>slice()</code> divide una cadena en una matriz de subcadenas, devuelve la nueva matriz asi mismo no cambia la cadena original.
+          <br></br>  
+          Si (" ") se usa como separador, la cadena se divide entre palabras.</p>
+
+          <pre>
+let text = "Hola que estas haciendo?";
+const myArray = text.split(" ");
+          </pre>
+        </div>
+
+
+        
+
+        
       </article>
     </main>
 
