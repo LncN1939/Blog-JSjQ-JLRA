@@ -429,23 +429,93 @@ let result = text.slice(0, 5);
           </pre>
         </div>
 
-        <!--slice()-->
+        <!--startsWith()-->
         <div>
-          <h3>slice()</h3>
-          <p>El método <code>slice()</code> divide una cadena en una matriz de subcadenas, devuelve la nueva matriz asi mismo no cambia la cadena original.
-          <br></br>  
-          Si (" ") se usa como separador, la cadena se divide entre palabras.</p>
+          <h3>startsWith()</h3>
+          <p>El método <code>startsWith()</code> devuelve <code>true</code>, Si una cadena comienza con una cadena especificada, de lo contrairo devolvera <code>false</code>, distingue entre minusculas y mayusculas.</p>
 
           <pre>
-let text = "Hola que estas haciendo?";
-const myArray = text.split(" ");
+let text = "Bienvenido a casa tenga un buen viaje.";
+text.startsWith("Bienvenido");
           </pre>
         </div>
 
+        <!--aLocaleLowerCase() & toLocaleUpperCase()-->
+        <div>
+          <h3>toLocaleLowerCase()</h3>
+          <p>El método <code>aLocaleLowerCase()</code> convierte una cadena en letras minúsculas, utilizando la configuración regional actual. La configuración regional se basa en la configuración de idioma del navegador.El toLocaleLowerCase() método no cambia la cadena original.
+          <br></br>
+          Asi mismo <code>toLocaleUpperCase()</code>, realiza la misma funcionalidad con diferencia que realiza la conversion de una caden en letras mayusculas.
+          </p>
 
-        
+          <h4>toLocaleUpperCase()</h4>
+          <pre>
+let text = "Viva la vida";
+let result = text.toLocaleUpperCase();
+          </pre>
+          <h4>toLocaleLowerCase()</h4>
+          <pre>
+let text = "Viva la vida";
+let result = text.toLocaleLowerCase();
+          </pre>
+        </div>
 
-        
+        <!--toLowerCase() & toUpperCase()-->
+        <div>
+          <h3>toLocaleLowerCase()</h3>
+          <p>El método <code>aLowerCase()</code> convierte una cadena en letras minúsculas, y no cambia la cadena original.
+          <br></br>
+          Asi mismo <code>toUpperCase()</code>, realiza la misma funcionalidad con diferencia que realiza la conversion de una caden en letras mayusculas.
+          </p>
+
+          <h4>Diferencia con toLocaleLowerCase() & toLocaleUpperCase()</h4>
+          <p>Las configuraciones regionales que entran en conflicto con las asignaciones de mayúsculas y minúsculas regulares de Unicode (como el turco), afectan al <code>toLocaleLowerCase</code> y <code>toLocaleUpperCase</code> </p>
+
+          <h4>toLocaleUpperCase()</h4>
+          <pre>
+let text = "Viva la vida";
+let result = text.toUpperCase();
+          </pre>
+          <h4>toLocaleLowerCase()</h4>
+          <pre>
+let text = "Viva la vida";
+let result = text.toLowerCase();
+          </pre>
+        </div>
+  
+        <!--toString()-->
+        <div>
+          <h3>toString()</h3>
+          <p>El método <code>toString()</code> devuelve una cadena como una cadena, el método no cambia la cadena original, se puede utilizar para convertir un objeto de cadena en una cadena. </p>
+
+          <pre>
+let text = "Hola mundo";
+let result = text.toString();
+          </pre>
+        </div>
+
+        <!--trim()-->
+        <div>
+          <h3>trim()</h3>
+          <p>El método <code>trim()</code> elimina los espacios en blanco de ambos lados de una. </p>
+
+          <pre>
+let text = "    Hola mundo";
+let result = trim();
+          </pre>
+        </div>
+
+        <!--valueOf()-->
+        <div>
+          <h3>valueOf()</h3>
+          <p>El método <code>valueOf()</code> devuelve el valor primitivo de una cadena, no cambia la cadena original. Se puede utilizar para convertir un objeto de cadena en una cadena.. </p>
+
+          <pre>
+let text = "Viva Nicaragua";
+let result = value();
+          </pre>
+        </div>
+
       </article>
     </main>
 
