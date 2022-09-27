@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <title>jQuery AJAX</title>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <div class="nav-menu-container">
+      <nav class="nav-menu">
+        <a class="nav-menu-title" href="../../"
+          >Tutorial JavaScript &amp; jQuery</a
+        >
+        <ul>
+          <li>UwU</li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="main-container">
+      <!-- El sidebar-->
+      <div class="sidebar">
+        <aside>
+          <section>
+            <header>Menú</header>
+            <ul>
+              <li><a href="#ajax">$.ajax()</a></li>
+              <li><a href="#ajaxsetup">$.ajaxSetup()</a></li>
+              <li><a href="#get">$.get()</a></li>
+              <li><a href="#getjson">$.getJSON()</a></li>
+              <li><a href="#getscript">$.getScript()</a></li>
+              <li><a href="#post">$.post()</a></li>
+              <li><a href="#ajaxcomplete">ajaxComplete()</a></li>
+              <li><a href="#ajaxerror">ajaxError()</a></li>
+              <li><a href="#ajaxsend">ajaxSend()</a></li>
+              <li><a href="#ajaxstart">ajaxStart()</a></li>
+              <li><a href="#ajaxstop">ajaxStop()</a></li>
+              <li><a href="#ajaxsuccess">ajaxSuccess()</a></li>
+              <li><a href="#load">load()</a></li>
+              <li><a href="#serialize">serialize()</a></li>
+              <li><a href="#serializearray">serializeArray()</a></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+
+      <!-- El artículo o entrada del blog -->
+      <article itemscope itemtype="https://schema.org/Article">
+        <header>
+          <h1 itemprop="name">jQuery AJAX</h1>
+          <div class="article-date">
+            Publicado el
+            <time
+              datetime="2022-09-21T09:41-6:00"
+              pubdate
+              itemprop="datePublished"
+            >
+              26 de septiembre de 2022
+            </time>
+          </div>
+          <p
+            class="article-author"
+            itemscope
+            itemtype="http://schema.org/Person"
+          >
+            por
+            <span itemprop="author">Armando Meza</span>
+          </p>
+        </header>
+        <p>
+          Los métodos AJAX son útiles para intercanbiar información con un
+          servidor y actualizar partes de una página web sin necesidad de
+          recargarla completamente.
+        </p>
+        <h2>Métodos AJAX de jQuery</h2>
+        <!-- AJAX -->
+        <h3 id="ajax">$.ajax()</h3>
+        <p>
+          Este método nos permite realizar una petición AJAX (HTTP asíncrono).
+          Toma un objeto como parámetro
+        </p>
+        <h4>Parámetros</h4>
+        <table class="ws-table-all notranslate">
+          <tbody>
+            <tr>
+              <th style="width: 27%">Name</th>
+              <th>Value/Description</th>
+            </tr>
+            <tr>
+              <td>async</td>
+              <td>
+                Un valor booleano que define si la petición será o no asíncrona.
+              </td>
+            </tr>
+            <tr>
+              <td>beforeSend(<em>xhr</em>)</td>
+              <td>
+                Una función que correrá antes de que la petición sea enviada.
+              </td>
+            </tr>
+            <tr>
+              <td>cache</td>
+              <td>
+                Un valor booleano que indica si el navegador debería guardar la
+                información en cache.
+              </td>
+            </tr>
+            <tr>
+              <td>complete(<em>xhr,status</em>)</td>
+              <td>
+                Una función que correrá después de que la petición sea enviada.
+                Independientemente de si tenga éxito.
+              </td>
+            </tr>
+            <tr>
+              <td>contentType</td>
+              <td>El tipo de contenido que se enviará al servidor.</td>
+            </tr>
+            <tr>
+              <td>context</td>
+              <td>Especifica el valor de "this".</td>
+            </tr>
+            <tr>
+              <td>data</td>
+              <td>Especifica los datos que serán enviados al servidor</td>
+            </tr>
+            <tr>
+              <td>dataFilter(<em>data</em>,<em>type</em>)</td>
+              <td>
+                Una función usada para manejar la respuesta de datos sin
+                procesar de la petición.
+              </td>
+            </tr>
+            <tr>
+              <td>dataType</td>
+              <td>El tipo de datos esperado como respuesta del servidor.</td>
+            </tr>
+            <tr>
+              <td>error(<em>xhr,status,error</em>)</td>
+              <td>Una función a correr si la petición falla.</td>
+            </tr>
+            <tr>
+              <td>global</td>
+              <td>
+                Un valor booleano que especifica si disparar un evento AJAX
+                global.
+              </td>
+            </tr>
+            <tr>
+              <td>ifModified</td>
+              <td>
+                Un valor booleano que especifica cuándo una petición tiene éxito
+                si la respuesta ha cambiado desde la última petición.
+              </td>
+            </tr>
+            <tr>
+              <td>jsonp</td>
+              <td>
+                Una cadena que sobrescribe la función callback en una petición
+                jsonp
+              </td>
+            </tr>
+            <tr>
+              <td>jsonpCallback</td>
+              <td>
+                Especifica un nombre para la función callback en una petición
+                jsonp
+              </td>
+            </tr>
+            <tr>
+              <td>password</td>
+              <td>
+                Especifica una contraseña que será usada en una petición de
+                autenticación de acceso HTTP
+              </td>
+            </tr>
+            <tr>
+              <td>processData</td>
+              <td>
+                Valor booleano que especifica si los datos enviados con la
+                petición serán transformados en una cadena de consulta.
+              </td>
+            </tr>
+            <tr>
+              <td>scriptCharset</td>
+              <td>Especifica el conjunto de caracteres de la petición.</td>
+            </tr>
+            <tr>
+              <td>success(<em>result,status,xhr</em>)</td>
+              <td>
+                Una función que será llamada cuando la petición tenga éxito.
+              </td>
+            </tr>
+            <tr>
+              <td>timeout</td>
+              <td>El tiempo de espera local de la petición en milisegundos</td>
+            </tr>
+            <tr>
+              <td>traditional</td>
+              <td>
+                Un valor booleano que especifica si se usará el estilo
+                tradicional de serialización de parámetros.
+              </td>
+            </tr>
+            <tr>
+              <td>type</td>
+              <td>Especifica el tipo de petición. (GET o POST)</td>
+            </tr>
+            <tr>
+              <td>url</td>
+              <td>Especifica la URL a la que será enviada la petición.</td>
+            </tr>
+            <tr>
+              <td>username</td>
+              <td>
+                Especifica un nombre de usuario que será usado en una petición
+                de autenticación de acceso HTTP
+              </td>
+            </tr>
+            <tr>
+              <td>xhr</td>
+              <td>Una función usada para crear el objeto XMLHttpRequest</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="highlight">
+          <pre><span></span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+  <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;https://jsonplaceholder.typicode.com/todos/1&quot;</span><span class="p">,</span>
+  <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+  <span class="p">},</span>
+<span class="p">});</span>
+<span class="c1">// Respuesta</span>
+<span class="c1">// {</span>
+<span class="c1">//   &quot;userId&quot;: 1,</span>
+<span class="c1">//   &quot;id&quot;: 1,</span>
+<span class="c1">//   &quot;title&quot;: &quot;delectus aut autem&quot;,</span>
+<span class="c1">//   &quot;completed&quot;: false</span>
+<span class="c1">// }</span>
+</pre>
+        </div>
+        <!-- AJAXSETUP -->
+        <h3 id="ajaxsetup">$.ajaxSetup()</h3>
+        <p>
+          Establece parámetros por defecto para todas futuras peticiones AJAX
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="nx">$</span><span class="p">.</span><span class="nx">ajaxSetup</span><span class="p">({</span>
+  <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;https://jsonplaceholder.typicode.com/todos/1&quot;</span><span class="p">,</span>      
+  <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+  <span class="p">},</span>
+<span class="p">});</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">();</span>
+<span class="c1">// Respuesta</span>
+<span class="c1">// {</span>
+<span class="c1">//   &quot;userId&quot;: 1,</span>
+<span class="c1">//   &quot;id&quot;: 1,</span>
+<span class="c1">//   &quot;title&quot;: &quot;delectus aut autem&quot;,</span>
+<span class="c1">//   &quot;completed&quot;: false</span>
+<span class="c1">// }</span>
+</pre>
+        </div>
+        <!-- GET -->
+        <h3 id="get">$.get()</h3>
+        <p>
+          Carga datos de un servidor usando una petición AJAX HTTP del tipo GET
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s2">&quot;https://jsonplaceholder.typicode.com/todos/2&quot;</span><span class="p">);</span>
+<span class="c1">// Respuesta</span>
+<span class="c1">// {</span>
+<span class="c1">//   &quot;userId&quot;: 1,</span>
+<span class="c1">//   &quot;id&quot;: 2,</span>
+<span class="c1">//   &quot;title&quot;: &quot;quis ut nam facilis et officia qui&quot;,</span>
+<span class="c1">//   &quot;completed&quot;: false</span>
+<span class="c1">// }</span>
+</pre>
+        </div>
+
+        <!-- GETJSON -->
+        <h3 id="getjson">$.getJSON()</h3>
+        <p>Obtiene datos JSON usando una petición AJAX</p>
+        <div class="highlight">
+          <pre><span></span><span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="s2">&quot;https://jsonplaceholder.typicode.com/todos/1&quot;</span><span class="p">);</span>
+<span class="c1">// Respuesta</span>
+<span class="c1">// {</span>
+<span class="c1">//   &quot;userId&quot;: 1,</span>
+<span class="c1">//   &quot;id&quot;: 1,</span>
+<span class="c1">//   &quot;title&quot;: &quot;delectus aut autem&quot;,</span>
+<span class="c1">//   &quot;completed&quot;: false</span>
+<span class="c1">// }</span>
+</pre>
+        </div>
+        <!-- GETSCRIPT -->
+        <h3 id="getscript">$.getScript()</h3>
+        <p>Obtiene y ejecuta javascript usando una petición AJAX</p>
+        <div class="highlight">
+          <pre><span></span><span class="nx">$</span><span class="p">.</span><span class="nx">getScript</span><span class="p">(</span><span class="s2">&quot;ejemplo.js&quot;</span><span class="p">);</span>
+</pre>
+        </div>
+        <!-- POST -->
+        <h3 id="post">$.post()</h3>
+        <p>
+          Carga datos de un servidor usando una petición AJAX HTTP del tipo GET
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="nx">$</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s2">&quot;https://jsonplaceholder.typicode.com/posts&quot;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">userId</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
+  <span class="nx">id</span><span class="o">:</span> <span class="mf">2</span><span class="p">,</span>
+  <span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;Lorem&quot;</span><span class="p">,</span>
+  <span class="nx">completed</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+<span class="p">});</span>
+</pre>
+        </div>
+        <!-- AJAXCOMPLETE() -->
+        <h3 id="ajaxcomplete">ajaxComplete()</h3>
+        <p>
+          Especifica una función a ejecutar cuando la petición AJAX se complete.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ajaxComplete</span><span class="p">(</span><span class="kd">function</span><span class="p">(){...})</span>
+</pre>
+        </div>
+        <!-- AJAXERROR -->
+        <h3 id="ajaxerror">ajaxError()</h3>
+        <p>
+          Especifica una función a ejecutar cuando la petición AJAX se complete
+          con error.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ajaxError</span><span class="p">(</span><span class="kd">function</span><span class="p">(){...})</span>
+</pre>
+        </div>
+        <!-- AJAXSEND -->
+        <h3 id="ajaxsend">ajaxSend()</h3>
+        <p>
+          Especifica una función a ejecutar antes de que la petición AJAX se
+          envíe.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ajaxSend</span><span class="p">(</span><span class="kd">function</span><span class="p">(){...})</span>
+</pre>
+        </div>
+        <!-- AJAXSTART -->
+        <h3 id="ajaxstart">ajaxStart()</h3>
+        <p>
+          Especifica una función a ejecutar cuando la primera petición AJAX
+          empieza.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ajaxStart</span><span class="p">(</span><span class="kd">function</span><span class="p">(){...})</span>
+</pre>
+        </div>
+        <!-- AJAXSTOP -->
+        <h3 id="ajaxstop">ajaxStop()</h3>
+        <p>
+          Especifica una función a ejecutar cuando todas las peticiones AJAX
+          hayan sido completadas.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ajaxStop</span><span class="p">(</span><span class="kd">function</span><span class="p">(){...})</span>
+</pre>
+        </div>
+        <!-- AJAXSUCCESS -->
+        <h3 id="ajaxsuccess">ajaxSuccess()</h3>
+        <p>
+          Especifica una función a ejecutar cuando todas las peticiones AJAX se
+          hayan completado con éxito.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ajaxSuccess</span><span class="p">(</span><span class="kd">function</span><span class="p">(){...})</span>
+</pre>
+        </div>
+        <!-- LOAD -->
+        <h3 id="load">load()</h3>
+        <p>
+          Carga datos de un servidor y los coloca en los elementos seleccionados
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div&gt;&lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">).</span><span class="nx">load</span><span class="p">(</span><span class="s2">&quot;https://jsonplaceholder.typicode.com/todos/1&quot;</span><span class="p">);</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// &lt;div&gt;{ &quot;userId&quot;: 1, &quot;id&quot;: 1, &quot;title&quot;: &quot;delectus aut autem&quot;, &quot;completed&quot;: false }&lt;/div&gt;</span>
+</pre>
+        </div>
+        <!-- SERIALIZE -->
+        <h3 id="serialize">serialize()</h3>
+        <p>
+          Crea una cadena de texto codificada en URL como resultado de
+          serializar valores de un formulario.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;form&gt;</span>
+<span class="c1">//   &lt;input type=&quot;text&quot; name=&quot;nombre&quot; value=&quot;Armando&quot;&gt;</span>
+<span class="c1">//   &lt;input type=&quot;text&quot; name=&quot;apellido&quot; value=&quot;Meza&quot;&gt;</span> 
+<span class="c1">//   &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;</span>
+<span class="c1">// &lt;/form&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;form&quot;</span><span class="p">).</span><span class="nx">serialize</span><span class="p">();</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// &quot;nombre=Armando&amp;apellido=Meza&quot;</span>
+</pre>
+        </div>
+        <!-- SERIALIZEARRAY -->
+        <h3 id="serializearray">serializeArray()</h3>
+        <p>
+          Crea un array de objetos como resultado de la serialización de valores
+          en un formulario.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;form&gt;</span>
+<span class="c1">//   &lt;input type=&quot;text&quot; name=&quot;nombre&quot; value=&quot;Armando&quot;&gt;</span>
+<span class="c1">//   &lt;input type=&quot;text&quot; name=&quot;apellido&quot; value=&quot;Meza&quot;&gt;</span>
+<span class="c1">//   &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;</span>
+<span class="c1">// &lt;/form&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;form&quot;</span><span class="p">).</span><span class="nx">serialize</span><span class="p">();</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// [</span>
+<span class="c1">//   {&quot;name&quot;: &quot;nombre&quot;, &quot;value&quot;: &quot;Armando&quot;},</span>
+<span class="c1">//   {&quot;name&quot;: &quot;apellido&quot;, &quot;value&quot;: &quot;Meza&quot;}</span>
+<span class="c1">// ]</span>
+</pre>
+        </div>
+      </article>
+    </main>
+
+    <!-- El pie de página-->
+    <footer>
+      <ul>
+        <li><a href="../../">Página principal</a></li>
+        <li><a href="../../anexos/">Anexos</a></li>
+        <li><a href="../../about/">Acerca de</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

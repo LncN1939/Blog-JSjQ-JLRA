@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <title>jQuery Misc</title>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <div class="nav-menu-container">
+      <nav class="nav-menu">
+        <a class="nav-menu-title" href="../../"
+          >Tutorial JavaScript &amp; jQuery</a
+        >
+        <ul>
+          <li>UwU</li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="main-container">
+      <!-- El sidebar-->
+      <div class="sidebar">
+        <aside>
+          <section>
+            <header>Menú</header>
+            <ul>
+              <li><a href="#data">data()</a></li>
+              <li><a href="#get">get()</a></li>
+              <li><a href="#index">index()</a></li>
+              <li><a href="#noconflict">$.noConflict()</a></li>
+              <li><a href="#param">$.param()</a></li>
+              <li><a href="#removedata">removeData()</a></li>
+              <li><a href="#toarray">toArray()</a></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+
+      <!-- El artículo o entrada del blog -->
+      <article itemscope itemtype="https://schema.org/Article">
+        <header>
+          <h1 itemprop="name">jQuery Misc</h1>
+          <div class="article-date">
+            Publicado el
+            <time
+              datetime="2022-09-21T09:41-6:00"
+              pubdate
+              itemprop="datePublished"
+            >
+              26 de septiembre de 2022
+            </time>
+          </div>
+          <p
+            class="article-author"
+            itemscope
+            itemtype="http://schema.org/Person"
+          >
+            por
+            <span itemprop="author">Armando Meza</span>
+          </p>
+        </header>
+
+        <h2>Métodos Misceláneos de jQuery</h2>
+        <!-- DATA -->
+        <h3 id="data">data()</h3>
+        <p>Agrega u obtiene datos de los elementos seleccionados</p>
+        <div class="highlight">
+          <pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div.data&quot;</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="mf">1</span><span class="p">);</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div.data&quot;</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">);</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// 1</span>
+</pre>
+        </div>
+        <!-- GET -->
+        <h3 id="get">get()</h3>
+        <p>Obtiene el elemento del DOM definido por el selector</p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;p&gt;0&lt;/p&gt;</span>
+<span class="c1">// &lt;p&gt;1&lt;/p&gt;</span>
+<span class="c1">// &lt;p&gt;2&lt;/p&gt;</span>
+<span class="c1">// &lt;p&gt;3&lt;/p&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// &lt;p&gt;0&lt;/p&gt;</span>
+</pre>
+        </div>
+        <!-- INDEX -->
+        <h3 id="index">index()</h3>
+        <p>
+          Retorna el índice de posición de un elemento específico en relación a
+          otros
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;p class=&quot;primero&quot;&gt;&lt;/p&gt;</span>
+<span class="c1">// &lt;p class=&quot;segundo&quot;&gt;&lt;/p&gt;</span>
+<span class="c1">// &lt;p class=&quot;tercero&quot;&gt;&lt;/p&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;p.tercero&quot;</span><span class="p">).</span><span class="nx">index</span><span class="p">();</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// 2</span>
+</pre>
+        </div>
+        <!-- NOCONFLICT -->
+        <h3 id="noconflict">$.noConflict()</h3>
+        <p>
+          Libera el control de jquery sobre la variable '$', puede usarse para
+          especificar otro nombre para la variable jquery
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">var</span> <span class="nx">jq</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">noConflict</span><span class="p">();</span>
+<span class="nx">jq</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">).</span><span class="nx">first</span><span class="p">();</span>
+</pre>
+        </div>
+        <!-- PARAM -->
+        <h3 id="param">$.param()</h3>
+        <p>Crea una representación serializada de un array o un objeto.</p>
+        <div class="highlight">
+          <pre><span></span><span class="kd">const</span> <span class="nx">persona</span> <span class="o">=</span> 
+<span class="p">{</span> <span class="nx">nombre</span><span class="o">:</span> <span class="s2">&quot;Armando&quot;</span><span class="p">,</span> <span class="nx">apellido</span><span class="o">:</span> <span class="s2">&quot;Meza&quot;</span> <span class="p">};</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">param</span><span class="p">(</span><span class="nx">persona</span><span class="p">);</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// &quot;nombre=Armando&amp;apellido=Meza&quot;</span>
+</pre>
+        </div>
+        <!-- REMOVEDATA -->
+        <h3 id="removedata">removeData()</h3>
+        <p>Elimina datos almacenados previamente con data()</p>
+        <div class="highlight">
+          <pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div.data&quot;</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="mf">1</span><span class="p">);</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div.data&quot;</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">);</span>
+<span class="c1">// 1</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div.data&quot;</span><span class="p">).</span><span class="nx">removeData</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">);</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div.data&quot;</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">);</span>
+<span class="c1">// undefined</span>
+</pre>
+        </div>
+        <!-- TOARRAY -->
+        <h3 id="toarray">toArray()</h3>
+        <p>
+          Retorna los elementos DOM contenidos en un conjunto de jQuery en forma
+          de array.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">//   &lt;h2&gt;&lt;/h2&gt;</span>
+<span class="c1">//   &lt;h3&gt;&lt;/h3&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">).</span><span class="nx">children</span><span class="p">().</span><span class="nx">toArray</span><span class="p">();</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// [&lt;h1&gt;&lt;/h1&gt;, &lt;h2&gt;&lt;/h2&gt;, &lt;h3&gt;&lt;/h3&gt;]</span>
+</pre>
+        </div>
+      </article>
+    </main>
+
+    <!-- El pie de página-->
+    <footer>
+      <ul>
+        <li><a href="../../">Página principal</a></li>
+        <li><a href="../../anexos/">Anexos</a></li>
+        <li><a href="../../about/">Acerca de</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <title>jQuery Traversing</title>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <div class="nav-menu-container">
+      <nav class="nav-menu">
+        <a class="nav-menu-title" href="../../"
+          >Tutorial JavaScript &amp; jQuery</a
+        >
+        <ul>
+          <li>UwU</li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="main-container">
+      <!-- El sidebar-->
+      <div class="sidebar">
+        <aside>
+          <section>
+            <header>Menú</header>
+            <ul>
+              <li><a href="#add">add()</a></li>
+              <li><a href="#children">children()</a></li>
+              <li><a href="#closest">closest()</a></li>
+              <li><a href="#contents">contents()</a></li>
+              <li><a href="#each">each()</a></li>
+              <li><a href="#eq">eq()</a></li>
+              <li><a href="#filter">filter()</a></li>
+              <li><a href="#find">find()</a></li>
+              <li><a href="#first">first()</a></li>
+              <li><a href="#has">has()</a></li>
+              <li><a href="#is">is()</a></li>
+              <li><a href="#last">last()</a></li>
+              <li><a href="#map">map()</a></li>
+              <li><a href="#next">next()</a></li>
+              <li><a href="#nextall">nextAll()</a></li>
+              <li><a href="#nextuntil">nextUntil()</a></li>
+              <li><a href="#not">not()</a></li>
+              <li><a href="#parent">parent()</a></li>
+              <li><a href="#parents">parents()</a></li>
+              <li><a href="#parentsuntil">parentsUntil()</a></li>
+              <li><a href="#prev">prev()</a></li>
+              <li><a href="#prevall">prevAll()</a></li>
+              <li><a href="#prevuntil">prevUntil()</a></li>
+              <li><a href="#siblings">siblings()</a></li>
+              <li><a href="#slice">slice()</a></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+
+      <!-- El artículo o entrada del blog -->
+      <article itemscope itemtype="https://schema.org/Article">
+        <header>
+          <h1 itemprop="name">jQuery Traversing</h1>
+          <div class="article-date">
+            Publicado el
+            <time
+              datetime="2022-09-21T09:41-6:00"
+              pubdate
+              itemprop="datePublished"
+            >
+              25 de septiembre de 2022
+            </time>
+          </div>
+          <p
+            class="article-author"
+            itemscope
+            itemtype="http://schema.org/Person"
+          >
+            por
+            <span itemprop="author">Armando Meza</span>
+          </p>
+        </header>
+
+        <p>
+          Los métodos de traversing de jQuery sirven para recorrer el DOM de
+          distintas maneras, seleccionar y encontrar elementos específicos.
+        </p>
+
+        <h2>Métodos Traversing de jQuery</h2>
+        <!-- ADD -->
+        <h3 id="add">add()</h3>
+        <p>Añade elementos al conjunto de elementos seleccionados</p>
+        <div class="highlight">
+          <pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">).</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">);</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+</pre>
+        </div>
+
+        <!-- CHILDREN -->
+        <h3 id="children">children()</h3>
+        <p>Retorna todos los hijos directos del elemento seleccionado</p>
+        <div class="highlight">
+          <pre>
+<span></span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">).</span><span class="nx">children</span><span class="p">();</span>
+<span class="c1">// Resultado </span>
+<span class="c1">// {</span>
+<span class="c1">//   0: &lt;h1&gt;&lt;/h1&gt;,</span>
+<span class="c1">//   1: &lt;p&gt;&lt;/p&gt;,</span>
+<span class="c1">//   ...</span>
+<span class="c1">// }</span>
+</pre>
+        </div>
+        <!-- CLOSEST -->
+        <h3 id="closest">closest()</h3>
+        <p>
+          Retorna el primer ancestro del elemento seleccionado, basado en la
+          selección.
+        </p>
+        <div class="highlight">
+          <pre>
+<span></span>
+<span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">closest</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">);</span>
+<span class="c1">//Resultado</span>
+<span class="c1">// {</span>
+<span class="c1">//   0: &lt;div&gt;&lt;/div&gt;,</span>
+<span class="c1">//   ...</span>
+<span class="c1">// }</span>
+          </pre>
+        </div>
+        <!-- CONTENTS -->
+        <h3 id="contents">contents()</h3>
+        <p>
+          Retorna todos los hijos directos del elemento seleccionado, incluyendo
+          el contenido de texto y comentarios
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">).</span><span class="nx">contents</span><span class="p">();</span>
+
+<span class="c1">// Resultado</span>
+<span class="c1">// {</span>
+<span class="c1">//   0: {},</span>
+<span class="c1">//   1: &lt;h1&gt;&lt;/h1&gt;,</span>
+<span class="c1">//   2: {},</span>
+<span class="c1">//   3: &lt;p&gt;&lt;/p&gt;,</span>
+<span class="c1">//   4: {},</span>
+<span class="c1">// }</span>
+</pre>
+        </div>
+        <!-- EACH -->
+        <h3 id="each">each()</h3>
+        <p>Ejecuta una función por cada elemento seleccionado.</p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">).</span><span class="nx">children</span><span class="p">().</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">e</span><span class="p">)</span> <span class="p">{</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">)})</span>
+
+<span class="c1">// Resultado</span>
+<span class="c1">// &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">// &lt;p&gt;&lt;/p&gt;</span>
+</pre>
+        </div>
+        <!-- EQ -->
+        <h3 id="eq">eq()</h3>
+        <p>Retorna un elemento con el índice especificado.</p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">).</span><span class="nx">children</span><span class="p">().</span><span class="nx">eq</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// &lt;h1&gt;&lt;/h1&gt;</span>
+</pre>
+        </div>
+        <!-- FILTER -->
+        <h3 id="filter">filter()</h3>
+        <p>
+          Reduce el conjunto de elementos seleccionados a aquellos que cumplen
+          cierta condición.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">).</span><span class="nx">children</span><span class="p">().</span><span class="nx">filter</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">);</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// &lt;p&gt;&lt;/p&gt;</span>
+</pre>
+        </div>
+
+        <!-- FIND -->
+        <h3 id="find">find()</h3>
+        <p>Retorna los elementos descendientes del elemento seleccionado</p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">);</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// &lt;p&gt;&lt;/p&gt;</span>
+</pre>
+        </div>
+        <!-- FIRST -->
+        <h3 id="first">first()</h3>
+        <p>Retorna el primer elemento de los seleccionados</p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">).</span><span class="nx">children</span><span class="p">().</span><span class="nx">first</span><span class="p">();</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// &lt;h1&gt;&lt;/h1&gt;</span>
+</pre>
+        </div>
+
+        <!-- HAS -->
+        <h3 id="has">has()</h3>
+        <p>
+          Retorna todos los elementos que tienen uno o más elementos dentro de
+          ellos.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">).</span><span class="nx">has</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">);</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+</pre>
+        </div>
+
+        <!-- IS -->
+        <h3 id="is">is()</h3>
+        <p>
+          Chequea los elementos seleccionados por un selector, y retorna true si
+          al menos uno de estos cumple con los argumentos dados
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">).</span><span class="nx">is</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">);</span>
+<span class="c1">// true</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">).</span><span class="nx">is</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">);</span>
+<span class="c1">// false</span>
+</pre>
+        </div>
+
+        <!-- LAST -->
+        <h3 id="last">last()</h3>
+        <p>Retorna el último elemento de los seleccionados.</p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">).</span><span class="nx">last</span><span class="p">();</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// &lt;p&gt;&lt;/p&gt;</span>
+</pre>
+        </div>
+        <!-- MAP -->
+        <h3 id="map">map()</h3>
+        <p>
+          Retorna un nuevo objeto jQuery conteniendo los elementos que retorna
+          la función pasada como argumento.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1&gt;Hola&lt;/h1&gt;</span>
+<span class="c1">//   &lt;p&gt;Buenas&lt;/p&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">).</span><span class="nx">children</span><span class="p">().</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span> <span class="nx">e</span><span class="p">)</span> <span class="p">{</span><span class="k">return</span> <span class="nx">$</span><span class="p">(</span><span class="nx">e</span><span class="p">).</span><span class="nx">text</span><span class="p">()})</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// {</span>
+<span class="c1">//   0: &quot;Hola&quot;,</span>
+<span class="c1">//   1: &quot;Buenas&quot;</span>
+<span class="c1">// }</span>
+</pre>
+        </div>
+        <!-- NEXT -->
+        <h3 id="next">next()</h3>
+        <p>Retorna el siguiente elemento hermano del elemento seleccionado.</p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">first</span><span class="p">().</span><span class="nx">next</span><span class="p">();</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// &lt;p&gt;&lt;/p&gt;</span>
+</pre>
+        </div>
+        <!-- NEXTALL -->
+        <h3 id="nextall">nextAll()</h3>
+        <p>
+          Retorna todos los elementos hermanos siguientes del elemento
+          seleccionado.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">first</span><span class="p">().</span><span class="nx">nextAll</span><span class="p">();</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// {</span>
+<span class="c1">//   0: &lt;p&gt;&lt;/p&gt;,</span>
+<span class="c1">//   1: &lt;p&gt;&lt;/p&gt;,</span>
+<span class="c1">//   2: &lt;p&gt;&lt;/p&gt;,</span>
+<span class="c1">// }</span>
+</pre>
+        </div>
+        <!-- NEXTUNTIL -->
+        <h3 id="nextuntil">nextUntil()</h3>
+        <p>
+          Retorna todos los elementos hermanos siguientes entre dos argumentos
+          dados.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">//   &lt;p class=&quot;stop&quot;&gt;&lt;/p&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">first</span><span class="p">().</span><span class="nx">nextUntil</span><span class="p">(</span><span class="s2">&quot;p.stop&quot;</span><span class="p">);</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// {</span>
+<span class="c1">//   0: &lt;p&gt;&lt;/p&gt;,</span>
+<span class="c1">//   1: &lt;p&gt;&lt;/p&gt;,</span>
+<span class="c1">// }</span>
+</pre>
+        </div>
+        <!-- NOT -->
+        <h3 id="not">not()</h3>
+        <p>Retorna los elementos que no cumplen cierta condición.</p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">//   &lt;h2&gt;&lt;/h2&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">).</span><span class="nx">children</span><span class="p">().</span><span class="nx">not</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">);</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// {</span>
+<span class="c1">//   0: &lt;h1&gt;&lt;/h1&gt;,</span>
+<span class="c1">//   1: &lt;h2&gt;&lt;/h2&gt;,</span>
+<span class="c1">//   ...</span>
+<span class="c1">// }</span>
+</pre>
+        </div>
+        <!-- PARENT -->
+        <h3 id="parent">parent()</h3>
+        <p>
+          Retorna el primer elemento padre directo del elemento seleccionado.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div class=&quot;grandparent&quot;&gt;</span>
+<span class="c1">//   &lt;div class=&quot;parent&quot;&gt;</span>
+<span class="c1">//     &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">//     &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">//   &lt;/div&gt;</span>
+<span class="c1">// &lt;/div&gt;</span> 
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">parent</span><span class="p">();</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// &lt;div class=&quot;parent&quot;&gt;&lt;/div&gt;</span>
+</pre>
+        </div>
+        <!-- PARENTS -->
+        <h3 id="parents">parents()</h3>
+        <p>Retorna todos los ancestros del elemento seleccionado.</p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div class=&quot;grandparent&quot;&gt;</span>
+<span class="c1">//   &lt;div class=&quot;parent&quot;&gt;</span>
+<span class="c1">//     &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">//     &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">//   &lt;/div&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">parents</span><span class="p">();</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// {</span>
+<span class="c1">//   0: &lt;div class=&quot;parent&quot;&gt;&lt;/div&gt;,</span>
+<span class="c1">//   1: &lt;div class=&quot;grandparent&quot;&gt;&lt;/div&gt;</span>
+<span class="c1">// }</span>
+</pre>
+        </div>
+        <!-- PARENTSUNTIL -->
+        <h3 id="parentsuntil">parentsUntil()</h3>
+        <p>Retorna todos los ancestros entre dos argumentos dados.</p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div class=&quot;stop&quot;&gt;</span>
+<span class="c1">//   &lt;div class=&quot;grandparent&quot;&gt;</span>
+<span class="c1">//     &lt;div class=&quot;parent&quot;&gt;</span>
+<span class="c1">//       &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">//       &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">//     &lt;/div&gt;</span>
+<span class="c1">//   &lt;/div&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">parentsUntil</span><span class="p">(</span><span class="s2">&quot;div.stop&quot;</span><span class="p">);</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// {</span>
+<span class="c1">//   0: &lt;div class=&quot;parent&quot;&gt;&lt;/div&gt;,</span>
+<span class="c1">//   1: &lt;div class=&quot;grandparent&quot;&gt;&lt;/div&gt;</span>
+<span class="c1">// }</span>
+</pre>
+        </div>
+        <!-- PREV -->
+        <h3 id="prev">prev()</h3>
+        <p>
+          Retorna todos los elementos hermanos anteriores del elemento
+          seleccionado
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">).</span><span class="nx">first</span><span class="p">().</span><span class="nx">prev</span><span class="p">();</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// &lt;h1&gt;&lt;/h1&gt;</span>
+</pre>
+        </div>
+        <!-- PREVALL -->
+        <h3 id="prevall">prevAll()</h3>
+        <p>
+          Retorna todos los elementos hermanos anteriores del elemento
+          seleccionado.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">//   &lt;h2&gt;&lt;/h2&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h2&quot;</span><span class="p">).</span><span class="nx">first</span><span class="p">().</span><span class="nx">prevAll</span><span class="p">();</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// {</span>
+<span class="c1">//   0: &lt;p&gt;&lt;/p&gt;,</span>
+<span class="c1">//   1: &lt;p&gt;&lt;/p&gt;,</span>
+<span class="c1">//   2: &lt;h1&gt;&lt;/h1&gt;</span>
+<span class="c1">// }</span>
+</pre>
+        </div>
+        <!-- PREVUNTIL -->
+        <h3 id="prevuntil">prevUntil()</h3>
+        <p>
+          Retorna todos los elementos hermanos anteriores entre dos argumentos
+          dados.
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1 class=&quot;stop&quot;&gt;&lt;/h1&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">//   &lt;h2&gt;&lt;/h2&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h2&quot;</span><span class="p">).</span><span class="nx">first</span><span class="p">().</span><span class="nx">prevUntil</span><span class="p">(</span><span class="s2">&quot;.stop&quot;</span><span class="p">);</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// {</span>
+<span class="c1">//   0: &lt;p&gt;&lt;/p&gt;,</span>
+<span class="c1">//   1: &lt;p&gt;&lt;/p&gt;,</span>
+<span class="c1">// }</span>
+</pre>
+        </div>
+        <!-- SIBLINGS -->
+        <h3 id="siblings">siblings()</h3>
+        <p>Retorna todos los elementos hermanos del elemento seleccionado.</p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1 class=&quot;stop&quot;&gt;&lt;/h1&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">//   &lt;h2&gt;&lt;/h2&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">first</span><span class="p">().</span><span class="nx">siblings</span><span class="p">();</span>
+<span class="c1">// Resultado</span>
+<span class="c1">// {</span>
+<span class="c1">//   0: &lt;p&gt;&lt;/p&gt;,</span>
+<span class="c1">//   1: &lt;p&gt;&lt;/p&gt;,</span>
+<span class="c1">//   2: &lt;h2&gt;&lt;/h2&gt;</span>
+<span class="c1">// }</span>
+</pre>
+        </div>
+        <!-- SLICE -->
+        <h3 id="slice">slice()</h3>
+        <p>
+          Reduce el conjunto de elementos seleccionados a un conjunto
+          especificado por un rango de índices
+        </p>
+        <div class="highlight">
+          <pre><span></span><span class="c1">// &lt;div&gt;</span>
+<span class="c1">//   &lt;h1 class=&quot;stop&quot;&gt;&lt;/h1&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">//   &lt;p&gt;&lt;/p&gt;</span>
+<span class="c1">//   &lt;h2&gt;&lt;/h2&gt;</span>
+<span class="c1">// &lt;/div&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">).</span><span class="nx">children</span><span class="p">().</span><span class="nx">slice</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span> <span class="mf">4</span><span class="p">);</span>    
+<span class="c1">// Resultado</span>
+<span class="c1">// {</span>
+<span class="c1">//   0: &lt;p&gt;&lt;/p&gt;,</span>
+<span class="c1">//   1: &lt;h2&gt;&lt;/h2&gt;</span>
+<span class="c1">// }</span>
+</pre>
+        </div>
+      </article>
+    </main>
+
+    <!-- El pie de página-->
+    <footer>
+      <ul>
+        <li><a href="../../">Página principal</a></li>
+        <li><a href="../../anexos/">Anexos</a></li>
+        <li><a href="../../about/">Acerca de</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
