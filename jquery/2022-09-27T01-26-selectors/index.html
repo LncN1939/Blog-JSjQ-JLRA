@@ -211,18 +211,133 @@ $(document).ready(function(){
             </pre>
         </div>
         
-        <!--el1,el2,el3-->
+        <!--:ew(index)-->
         <div>
-            <h3>el1,el2,el3</h3>
-            <p>Seleccione todos los elementos <code>(h2)</code>, <code>(div)</code> y <code>(span)</code></p>
+            <h3>ew(index)</h3>
+            <p>Selecciona un elemento con un número de índice específico. Los números de índice comienzan en 0, por lo que el primer elemento tendrá el número de índice 0 (no 1). Esto se usa principalmente junto con otro selector para seleccionar un elemento indexado específicamente en un grupo (como en el ejemplo anterior).</p>
             
             <pre>
 $(document).ready(function(){
-    $("h2, div, span").css("background-color", "green");
+    $("p:eq(1)").css("background-color","green");
 });
             </pre>
         </div>
-        
+
+        <!--:header-->
+        <div>
+            <h3>:header</h3>
+            <p>Selecciona todos los elementos del encabezado <code>(h1) a (h6)</code>.</p>
+            
+            <pre>
+$(document).ready(function(){
+    $(":header").css("background-color", "yellow");
+});
+            </pre>
+        </div>
+
+        <!--:animated-->
+        <div>
+            <h3>:animated</h3>
+            <p>Selecciona todos los elementos que están animados actualmente.</p>
+            
+            <pre>
+ $(document).ready(function(){
+    function animation(){
+        $("div:eq(0)").animate({width: "50%"}, "slow");
+        $("div:eq(0)").animate({width: "100%"}, "slow", aniDiv);
+    }
+    animation();
+    $(".btn1").click(function(){
+    $(":animated").css("background-color", "purple");
+    });
+});
+            </pre>
+        </div>
+
+        <!--lang(idioma)-->
+        <div>
+            <h3>:lang(idioma)</h3>
+            <p>Selecciona todos los elementos con el atributo de idioma comenzando con un valor específico..</p>
+            
+            <pre>
+$(document).ready(function(){
+    $("p:lang(es)").css("background-color", "yellow");
+});
+            </pre>
+        </div>
+
+        <!--:text-->
+        <div>
+            <h3>:text</h3>
+            <p>Seleccione elementos <code>(input)</code> con type="text".</p>
+            
+            <pre>
+$(document).ready(function(){
+    $(":text").css("background-color", "green");
+});
+            </pre>
+        </div>
+
+        <!--:buttom-->
+        <div>
+            <h3>:buttom</h3>
+            <p>Seleccione los elementos <code>(button)</code> y los elementos <code>(input)</code> con <code>type="button"</code></p>
+            
+            <pre>
+$(document).ready(function(){
+    $(":button").css("background-color", "green");
+});
+            </pre>
+        </div>
+
+        <!--:image-->
+        <div>
+            <h3>:image</h3>
+            <p>Seleccione elementos <code>(input)</code> con <code>type="image"</code></p>
+            
+            <pre>
+$(document).ready(function(){
+    $(":image").css("background-color", "green");
+});
+            </pre>
+        </div>
+
+        <!--Status-->
+        <div>
+            <h3>Status</h3>
+            <p>Son utiles para escoger los elementpos activados, desactivados, seleccionados y chekeados</p>
+
+            <h4>enable</h4>
+            <pre>
+$(document).ready(function(){
+    $(":enabled").css("background-color","green");
+});
+            </pre>
+
+            <h4>disable</h4>
+            <pre>
+$(document).ready(function(){
+    $(":disable").css("background-color","green");
+});
+            </pre>
+
+            <h4>selected</h4>
+            <pre>
+$(document).ready(function(){
+    $(":selected").css("background-color","green");
+});
+            </pre>
+
+            <h4>checked</h4>
+            <pre>
+$(document).ready(function(){
+    $(":checked").css("background-color","green");
+});
+            </pre>
+        </div>
+
+
+
 
 
 
