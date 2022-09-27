@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <title>Tutorial JavaScript &amp; jQuery</title>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <div class="nav-menu-container">
+      <nav class="nav-menu">
+        <a class="nav-menu-title" href="../../">Tutorial JavaScript &amp; jQuery</a>
+
+        <ul>
+          <li>UwU</li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="main-container">
+      <!-- El sidebar-->
+      <div class="sidebar">
+        <aside>
+          <section>
+            <header>Menú</header>
+            <ul>
+              <li><a href="../../javascript/">JavaScript</a></li>
+              <li><a href="../../jquery/">jQuery</a></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+
+      <!-- El artículo o entrada del blog -->
+      <article itemscope itemtype="https://schema.org/Article">
+        <header>
+          <h1 itemprop="name">JavaScript String</h1>
+          <div class="article-date">
+            Publicado el
+            <time
+              datetime="2022-09-21T09:41-6:00"
+              pubdate
+              itemprop="datePublished"
+            >
+              26 de septiembre de 2022
+            </time>
+          </div>
+          <p
+            class="article-author"
+            itemscope
+            itemtype="http://schema.org/Person">
+            por
+            <span itemprop="author">Leo Corea</span>
+          </p>
+        </header>
+
+        <p>
+            Las cadenas en JavaScript son utiles para guardar datos texuales, Una cadena puede almacenar una serie de caracteres como "John Doe", asi mismo puede ser cualquier texto entre comillas simples o dobles:
+        </p>
+        <pre>
+let counName1 = "Nicaragua"
+let counName2 = "Germany"
+        </pre>
+
+        <p>Sus indices estan basados en 0, es decir el primero esta en 0, el segundo en 1 y asi sucesivamente</p>
+
+        <h2>
+          Propiedades y metodos
+        </h2>
+        <p>
+        Normalmente, cadenas como "John Doe" no pueden tener métodos o propiedades porque no son objetos.
+
+        Pero con JavaScript, los métodos y las propiedades también están disponibles para cadenas, porque JavaScript trata las cadenas como objetos cuando ejecuta métodos y propiedades.
+          </p>
+        
+        <h2>Metodos de cadena</h2>
+        
+        <!--charAt()-->
+        <div>
+          <h3>charAt()</h3>
+          <p>El método <code>charAt()</code> devuelve el carácter en un índice especificado (posición) en una cadena.El índice del primer carácter es 0, el segundo 1</p>
+
+          <h4>Sintaxis</h4>
+          <pre>
+string.charAt(index)
+          </pre>
+
+          <h4>Parámetros</h4>
+          <table>
+            <tr>
+              <th>Parámetro</th>
+              <th>Descripción</th>
+            </tr>
+            <tr>
+              <th>index</th>
+              <th>El index (posición) del caracter, por default es 0</th>
+            </tr>
+          </table>
+
+          <h4>Ejemplo</h4>
+          <pre>
+let text = "Hello World";
+let letter = text.charAt(0);
+          </pre>
+          <p>Se obtendra el primer caracter de una cadena</p>
+        </div>
+
+        <!--charCodeAt()-->
+        <div>
+          <h3>charAt()</h3>
+          <p>El método <code>charCodeAt()</code> devuelve el Unicode del carácter en un índice especificado (posición) en una cadena.
+          <br>
+          El índice del primer carácter es 0, el segundo es 1, ....
+          <br>  
+          El índice del último carácter es la longitud de la cadena: 1 (consulte los ejemplos a continuación).</p>
+
+          <h4>Sintaxis</h4>
+          <pre>
+string.CodeAt(index)
+          </pre>
+
+          <h4>Parámetros</h4>
+          <table>
+            <tr>
+              <th>Parámetro</th>
+              <th>Descripción</th>
+            </tr>
+            <tr>
+              <th>index</th>
+              <th>El index (posición) del caracter, por default es 0</th>
+            </tr>
+          </table>
+
+          <h4>Ejemplo</h4>
+          <pre>
+let text = "Hello World";
+let uni = text.charCodeAt(0);
+          </pre>
+          <p>Se obtendra el unicode del primer caracter de la una cadena</p>
+        </div>
+        
+        <!--codePointAt()-->
+        <div>
+          <h3>codePointAt()</h3>
+          <p>El método <code>codePointAt()</code> devuelve el valor Unicode en un índice (posición) en una cadena. El índice de la primera posición es 0, el segundo es 1, ....</p>
+          
+          <h4>
+            Diferencia entre <code>charCodeAt()</code> y <code>codePointAt()</code>
+          </h4>
+          <p>
+            <code>charCodeAt()</code> es UTF-16 y <code>codePointAt()</code> es Unicode. <code>charCodeAt()</code> devuelve un número entre 0 y 65535. Ambos métodos devuelven un número entero que representa el código UTF-16 de un carácter, pero solo <code>codePointAt()</code> pueden devolver el valor completo de un valor Unicode mayor que 0xFFFF (65535).</p>
+
+          <h4>Sintaxis</h4>
+          <pre>
+string.codePointAt(index)
+          </pre>
+
+          <h4>Parámetros</h4>
+          <table>
+            <tr>
+              <th>Parámetro</th>
+              <th>Descripción</th>
+            </tr>
+            <tr>
+              <th>index</th>
+              <th>El index (posición) del caracter, por default es 0</th>
+            </tr>
+          </table>
+
+          <h4>Ejemplo</h4>
+          <pre>
+let text = "Hello World";
+let code = text.codePointAt(0);
+          </pre>
+          <p>Se obtendra el primer caracter de una cadena</p>
+        </div>
+
+        <!--concat()-->
+        <div>
+          <h3>concat()</h3>
+          <p>El metodo <code>concat()</code> une 2 o mas cadenas, las cuales no cambia su sintaxis y  regresa una cadena complemente nueva</p>
+
+          <h4>Sintaxis</h4>
+          <pre>
+string.concat(string1, string2, ..., stringX)
+          </pre>
+
+          <h4>Parámetros</h4>
+          <table>
+            <tr>
+              <th>Parámetro</th>
+              <th>Descripción</th>
+            </tr>
+            <tr>
+              <th>string1, strng2, ... stringX</th>
+              <th>Las cadenas que se van a unir</th>
+            </tr>
+          </table>
+
+          <h4>Ejemplo</h4>
+          <pre>
+let text1 = "Hola";
+let text2 = "leo";
+let result = text1.concat(text2);
+          </pre>
+          <p>Se obtendra el primer caracter de una cadena</p>
+        </div>
+
+        <!--constructor-->
+        <div>
+          <h3>constructor</h3>
+          <p>La propiedad <code>constructor</code>devuelve la función que creó el prototipo String.
+          <br>
+          Para las cadenas de JS, el constructir retorna:
+          </p>
+          <pre>
+function String() { [código nativo] }
+          </pre>
+
+          <h4>Sintaxis</h4>
+          <pre>
+string.constructor
+          </pre>
+          </table>
+
+          <h4>Ejemplo</h4>
+          <pre>
+let message = "Hello World!";
+let text = message.constructor;
+          </pre>
+        </div>
+
+        <!--endsWith()-->
+        <div>
+          <h3>endsWith()</h3>
+          <p>El método <code>endsWith()</code> devuelve <code>true</code> si una cadena termina con una cadena especificada. De lo contrario retorna <code>false</code>.
+          <br> 
+          El <code>endsWith()</code> es un método distingue entre mayúsculas y minúsculas.
+            </p>
+
+          <h4>Sintaxis</h4>
+          <pre>
+string.endsWith(searchvalue, length)
+          </pre>
+
+          <h4>Parámetros</h4>
+          <table>
+            <tr>
+              <th>Parámetro</th>
+              <th>Descripción</th>
+            </tr>
+            <tr>
+              <th>searchvalue</th>
+              <th>La cadena a buscar</th>
+            </tr>
+            <tr>
+              <th>length</th>
+              <th>La longitud de la cadena a buscar, es su valor predeterminado</th>
+            </tr>
+          </table>
+
+          <h4>Ejemplo</h4>
+          <pre>
+let text = "Hello world";
+let result = text.endsWith("world");
+          </pre>
+          <p>Compruebe si una cadena termina con "wordl"</p>
+        </div>
+
+        <!--fromCharCode()-->
+        <div>
+          <h3>fromCharCode()</h3>
+          <p>El método <code>fromCharCode()</code> convierte valores de unicode en caracteres, es un metodo estatico de String cuya sintaxis siempre sera <code>String.fromCharCode()</code></p>
+          <br></br>
+          Nota: No puedes usar <code>myString.fromCharCode()</code>.
+
+          <h4>Sintaxis</h4>
+          <pre>
+String.fromCharCode(n1, n2, ..., nX)
+          </pre>
+
+          <h4>Parámetros</h4>
+          <table>
+            <tr>
+              <th>Parámetro</th>
+              <th>Descripción</th>
+            </tr>
+            <tr>
+              <th>n1, n2, nX</th>
+              <th>Uno o mas valores de unicode a convertir.</th>
+            </tr>
+          </table>
+
+          <h4>Ejemplo</h4>
+          <pre>
+let char = String.fromCharCode(76);
+          </pre>
+        </div>
+
+        <!--includes()-->
+        <div>
+          <h3>includes()</h3>
+          <p>El método includes() devuelve <code>true</code> si una cadena contiene una cadena especificada.De lo contrario vuelve false. Distingue entre mayúsculas y minúsculas.</p>
+
+          <pre>
+let text = "Sandino, defensor de la soberania nacional.";
+let result = text.includes("Sandino");
+          </pre>
+        </div>
+
+        <!--indexOf()-->
+        <div>
+          <h3>indexOf()</h3>
+          <p>El método <code>indexOf()</code> devuelve la posición de la primera aparición de un valor en una cadena, con un retorno de -1 si no se encuentra el valor asi mismo distingue entre mayúsculas y minúsculas..</p>
+
+          <pre>
+let text = "Sandino, defensor de la soberania nacional.";
+let result = text.indexOf("Sandino");
+          </pre>
+        </div>
+
+        <!--lastIndexOf()-->
+        <div>
+          <h3>lastIndexOf()</h3>
+          <p>El método <code>lastIndexOf()</code> devuelve el índice (posición) de la última aparición de un valor especificado en una cadena, busca la cadena desde el final hasta el principio, devuelve el índice desde el principio (posición 0), asi mismi devuelve -1 si no se encuentra el valor Distinguiendo entre mayúsculas y minúsculas.</p>
+
+          <pre>
+let text = "Hola Saladino, como has estado Saladino";
+let result = text.lastIndexOf("Saladino");
+          </pre>
+        </div>
+
+        <!--length-->
+        <div>
+          <h3>lastIndexOf()</h3>
+          <p>La propiedad <code>length</code> devuelve la longitud de una cadena, siendo la propiedad vacia de una cadena vacía es 0.</p>
+
+          <pre>
+let text = "Somos UCA!";
+let length = text.length;
+          </pre>
+        </div>
+
+        <!--localeCompare()-->
+        <div>
+          <h3>localeCompare()</h3>
+          <p>El método <code>localeCompare()</code> compara dos cadenas en la configuración regional actual,devuelve el orden de clasificación -1, 1 o 0 (para antes, después o igual).</p>
+
+          <pre>
+let text1 = "UCA";
+let text2 = "UNI";
+let result = text1.localeCompare(text2);
+          </pre>
+        </div>
+
+        <!--match()-->
+        <div>
+          <h3>localeCompare()</h3>
+          <p>El método <code>match()</code> compara una cadena con una expresión regular **, devuelve una matriz con las coincidencias y devuelve nulo si no se encuentra ninguna coincidencia.</p>
+
+          <pre>
+let text = "La tierra es un satélite de la luna";
+text.match("luna");
+          </pre>
+        </div>
+
+        <!--prototype-->
+        <div>
+          <h3>prototype</h3>
+          <p>La propiedad <code>prototype</code> permite agregar nuevas propiedades y métodos a las cadenas.</p>
+
+          <pre>
+function soldado(name, range, born) {
+  this.name = name;
+  this.range = range;
+  this.born = born;
+}
+employee.prototype.salary = 2500;
+            
+const renov = new employee("Renov L.", "Capitan", 1917);
+          </pre>
+        </div>
+
+        <!--repeat()-->
+        <div>
+          <h3>repeat()</h3>
+          <p>El método <code>repeat()</code> devuelve una cadena con un número de copias de una cadena.devuelve una nueva cadena y no cambia la cadena original.</p>
+
+          <pre>
+let text = "Buenas tardes!";
+let result = text.repeat(3);
+          </pre>
+        </div>
+        
+        <!--replace()-->
+        <div>
+          <h3>replace()</h3>
+          <p>El método <code>replace()</code> busca en una cadena un valor o una expresión regular, devuelve una nueva cadena con los valores reemplazados, asi mismo el método no cambia la cadena original.</p>
+
+          <pre>
+let text = "HTML es un lenguaje de programacion";
+let result = text.replace("HTML", "JavaScript");
+          </pre>
+        </div>
+
+        <!--search()-->
+        <div>
+          <h3>search()</h3>
+          <p>El método <code>search()</code> compara una cadena con una expresión regular **, devuelve el índice (posición) de la primera coincidencia, asi mismo devuelve -1 si no se encuentra ninguna coincidencia y el metodo distingue entre mayúsculas y minúsculas.</p>
+
+          <pre>
+let text = "Mr. Dominguez tiene una asador de carne";
+let position = text.search("carne");
+          </pre>
+        </div>
+
+        <!--slice()-->
+        <div>
+          <h3>slice()</h3>
+          <p>El método <code>slice()</code> extrae una parte de una cadena, devuelve la parte extraída en una nueva cadena, no cambia la cadena original.
+          <br></br>
+          Los parámetros de inicio y fin especifican la parte de la cadena que se va a extraer. La primera posición es 0, la segunda es 1, ... Y un número negativo selecciona desde el final de la cadena.</p>
+
+          <pre>
+let text = "Pedro PicaPiedra";
+let result = text.slice(0, 5);
+          </pre>
+        </div>
+
+        <!--startsWith()-->
+        <div>
+          <h3>startsWith()</h3>
+          <p>El método <code>startsWith()</code> devuelve <code>true</code>, Si una cadena comienza con una cadena especificada, de lo contrairo devolvera <code>false</code>, distingue entre minusculas y mayusculas.</p>
+
+          <pre>
+let text = "Bienvenido a casa tenga un buen viaje.";
+text.startsWith("Bienvenido");
+          </pre>
+        </div>
+
+        <!--aLocaleLowerCase() & toLocaleUpperCase()-->
+        <div>
+          <h3>toLocaleLowerCase()</h3>
+          <p>El método <code>aLocaleLowerCase()</code> convierte una cadena en letras minúsculas, utilizando la configuración regional actual. La configuración regional se basa en la configuración de idioma del navegador.El toLocaleLowerCase() método no cambia la cadena original.
+          <br></br>
+          Asi mismo <code>toLocaleUpperCase()</code>, realiza la misma funcionalidad con diferencia que realiza la conversion de una caden en letras mayusculas.
+          </p>
+
+          <h4>toLocaleUpperCase()</h4>
+          <pre>
+let text = "Viva la vida";
+let result = text.toLocaleUpperCase();
+          </pre>
+          <h4>toLocaleLowerCase()</h4>
+          <pre>
+let text = "Viva la vida";
+let result = text.toLocaleLowerCase();
+          </pre>
+        </div>
+
+        <!--toLowerCase() & toUpperCase()-->
+        <div>
+          <h3>toLocaleLowerCase()</h3>
+          <p>El método <code>aLowerCase()</code> convierte una cadena en letras minúsculas, y no cambia la cadena original.
+          <br></br>
+          Asi mismo <code>toUpperCase()</code>, realiza la misma funcionalidad con diferencia que realiza la conversion de una caden en letras mayusculas.
+          </p>
+
+          <h4>Diferencia con toLocaleLowerCase() & toLocaleUpperCase()</h4>
+          <p>Las configuraciones regionales que entran en conflicto con las asignaciones de mayúsculas y minúsculas regulares de Unicode (como el turco), afectan al <code>toLocaleLowerCase</code> y <code>toLocaleUpperCase</code> </p>
+
+          <h4>toLocaleUpperCase()</h4>
+          <pre>
+let text = "Viva la vida";
+let result = text.toUpperCase();
+          </pre>
+          <h4>toLocaleLowerCase()</h4>
+          <pre>
+let text = "Viva la vida";
+let result = text.toLowerCase();
+          </pre>
+        </div>
+  
+        <!--toString()-->
+        <div>
+          <h3>toString()</h3>
+          <p>El método <code>toString()</code> devuelve una cadena como una cadena, el método no cambia la cadena original, se puede utilizar para convertir un objeto de cadena en una cadena. </p>
+
+          <pre>
+let text = "Hola mundo";
+let result = text.toString();
+          </pre>
+        </div>
+
+        <!--trim()-->
+        <div>
+          <h3>trim()</h3>
+          <p>El método <code>trim()</code> elimina los espacios en blanco de ambos lados de una. </p>
+
+          <pre>
+let text = "    Hola mundo";
+let result = trim();
+          </pre>
+        </div>
+
+        <!--valueOf()-->
+        <div>
+          <h3>valueOf()</h3>
+          <p>El método <code>valueOf()</code> devuelve el valor primitivo de una cadena, no cambia la cadena original. Se puede utilizar para convertir un objeto de cadena en una cadena.. </p>
+
+          <pre>
+let text = "Viva Nicaragua";
+let result = value();
+          </pre>
+        </div>
+
+        <form action="POST">
+          <h3>Comentarios</h3>
+          <div class="input-container">
+            <label for="username">Nombre:</label>
+            <input type="text" name="username" />
+          </div>
+
+          <div class="input-container">
+            <label for="email">Email:</label>
+            <input type="email" name="email" />
+          </div>
+
+          <div class="input-container">
+            <textarea
+              name="body"
+              cols="100"
+              rows="10"
+              placeholder="Comentario..."
+            ></textarea>
+          </div>
+
+          <input type="submit" />
+        </form>
+
+      </article>
+    </main>
+
+    <!-- El pie de página-->
+    <footer>
+      <ul>
+        <li><a href="../../">Página principal</a></li>
+        <li><a href="../../anexos/">Anexos</a></li>
+        <li><a href="../../about/">Acerca de</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

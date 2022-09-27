@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <title>JavaScript Math</title>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <div class="nav-menu-container">
+      <nav class="nav-menu">
+        <a class="nav-menu-title" href="../../"
+          >Tutorial JavaScript &amp; jQuery</a
+        >
+
+        <ul>
+          <li><a href="../../javascript/">JavaScript</a></li>
+          <li><a href="../../jquery/">jQuery</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="main-container">
+      <!-- El sidebar-->
+      <div class="sidebar">
+        <aside>
+          <section>
+            <header>Menú</header>
+            <ul>
+              <li><a href="../../javascript/">JavaScript</a></li>
+              <li><a href="../../jquery/">jQuery</a></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+
+      <!-- El artículo o entrada del blog -->
+      <article itemscope itemtype="https://schema.org/Article">
+        <header>
+          <h1 itemprop="name">JavaScript Math</h1>
+
+          <div class="article-date">
+            Publicado el
+            <time
+              datetime="2022-09-24T09:41-6:00"
+              pubdate
+              itemprop="datePublished"
+            >
+              24 de septiembre del 2022
+            </time>
+          </div>
+          <p
+            class="article-author"
+            itemscope
+            itemtype="http://schema.org/Person"
+          >
+            por
+            <span itemprop="author">Leo Corea</span>
+          </p>
+        </header>
+
+        <p>
+          En este post se explicará todo lo relacionado a JS Math el cual es un
+          objeto que permite realizar tareas matemáticas.
+          <br />
+          Las matemáticas no son un constructor. Todas las propiedades/métodos
+          de Math se pueden llamar usando Math como un objeto, sin crearlo
+        </p>
+
+        <h2>Ejemplo</h2>
+        <pre>
+let x = Math.PI;
+let y = Math.sqrt(16);
+        </pre>
+
+        <h2>Metodos y propiedades de JS Math</h2>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.abs(x)
+        </pre>
+
+          <h4>Parámetros</h4>
+          <table>
+            <tr>
+              <th>Parámetro</th>
+              <th>Descripción</th>
+            </tr>
+            <tr>
+              <th><code>x</code></th>
+              <th>Requiere un número</th>
+            </tr>
+          </table>
+
+          <h4>Valores de retorno</h4>
+          <table>
+            <tr>
+              <th>Tipo</th>
+              <th>Descripción</th>
+            </tr>
+            <tr>
+              <th><code>Número</code></th>
+              <th>
+                El valor absoluto del número.<br />
+                <code>Nan</code> si el valor no es un número y 0 si el valor es
+                <code>null</code>.
+              </th>
+            </tr>
+          </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.abs(-12.45)
+        </pre>
+      </div>
+
+        <!--Math.acos()-->
+        <div>
+          <h3>Math.acos()</h3>
+          <p>
+            Es un metodo de devuelve el arcoseno (en radianes) de un numero
+            entre el 0 y PI, asi mismo espera recibir un rango de numeros -1 y 1
+          </p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.acos(x)
+        </pre>
+
+          <h4>Parámetros</h4>
+          <table>
+            <tr>
+              <th>Parámetro</th>
+              <th>Descripción</th>
+            </tr>
+            <tr>
+              <th><code>x</code></th>
+              <th>Requiere un número</th>
+            </tr>
+          </table>
+
+          <h4>Valores de retorno</h4>
+          <table>
+            <tr>
+              <th>Tipo</th>
+              <th>Descripción</th>
+            </tr>
+            <tr>
+              <th><code>Número</code></th>
+              <th>
+                0 a PI.<br />
+                <code>NaN</code> si el parámetro está fuera del rango de -1 a 1
+                o no es numérico.
+              </th>
+            </tr>
+          </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.acos(-1)
+Math.acos(0)
+Math.acos(1)
+        </pre>
+      </div>
+
+        <!--Math.acosh()-->
+        <div>
+          <h3>Math.acosh()</h3>
+          <p>
+            Devuelve el arcocoseno hiperbólico de un número, si el parámetro es
+            menor que 1, el método devuelve <code>NaN</code>.
+          </p>
+
+      <h4>Sintaxis</h4>
+      <pre>
+Math.acosh(x)
+      </pre>
+
+          <h4>Parámetros</h4>
+          <table>
+            <tr>
+              <th>Parámetro</th>
+              <th>Descripción</th>
+            </tr>
+            <tr>
+              <th><code>x</code></th>
+              <th>Requiere un número</th>
+            </tr>
+          </table>
+
+          <h4>Valores de retorno</h4>
+          <table>
+            <tr>
+              <th>Tipo</th>
+              <th>Descripción</th>
+            </tr>
+            <tr>
+              <th><code>Número</code></th>
+              <th>
+                El arcocoseno hiperbólico del parámetro, se mostrara
+                <code>NaN</code> si el parámetro es menor que 1 o no es un valor
+                numérico.
+              </th>
+            </tr>
+          </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.acosh(1)
+Math.acosh(2)  
+        </pre>
+      </div>
+
+        <!--Math.asin()-->
+        <div>
+          <h3>Math.asin()</h3>
+          <p>
+            Es un metodo de devuelve el arseno (en radianes) de un numero entre
+            el -2/PI y 2/PI, asi mismo espera recibir un rango de numeros entre
+            -1 y 1
+          </p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.asin(x)
+        </pre>
+
+          <h4>Parámetros</h4>
+          <table>
+            <tr>
+              <th>Parámetro</th>
+              <th>Descripción</th>
+            </tr>
+            <tr>
+              <th><code>x</code></th>
+              <th>Requiere un número</th>
+            </tr>
+          </table>
+
+          <h4>Valores de retorno</h4>
+          <table>
+            <tr>
+              <th>Tipo</th>
+              <th>Descripción</th>
+            </tr>
+            <tr>
+              <th><code>Número</code></th>
+              <th>
+                -PI/2 a PI/2. Se obtendra <code>NaN</code> si el parámetro no es
+                numérico o está fuera del rango de -1 a 1.
+              </th>
+            </tr>
+          </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.asin(1)
+Math.asin(0)
+Math.asin(-1)  
+        </pre>
+      </div>
+
+      <!--Math.asinh()-->
+      <div>
+        <h3>Math.asinh()</h3>
+        <p>El Math.asinh()método devuelve el arco-seno hiperbólico de un número.</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.asinh(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              El arco-seno hiperbólico del parámetro. Se obtendra <code>NaN</code> si el parámetro no es numérico.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.asinh(12)  
+        </pre>
+      </div>
+
+      <!--Math.atan()-->
+      <div>
+        <h3>Math.atan()</h3>
+        <p>Es un método que devuelve la arcotangente de un número como un valor entre -PI/2 y PI/2 radianes.</p>
+        
+        <h4>Sintaxis</h4>
+        <pre>
+Math.atan(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              -PI a PI/2. Se obtendra <code>NaN</code> si el parámetro no es numérico o esta vacio.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.atan(14)  
+        </pre>
+      </div>
+
+      <!--Math.atan2()-->
+      <div>
+        <h4>Math.atan2()</h4>
+        <p> Este método devuelve el arcotangente del cociente de sus argumentos, con un valor numérico entre PI y -PI radianes. El número devuelto representa el ángulo en sentido antihorario en radianes (no grados) entre el eje X positivo y el punto (x, y).
+        </p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.atan2(y,x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere la coordenada x</th>
+          </tr>
+          <tr>
+            <th><code>y</code></th>
+            <th>Requiere la coordenada y</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              PI a -PI. Se obtendra <code>NaN</code> si los valores están vacíos o no son numéricos.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.atan2(12, 4)  
+        </pre>
+
+      </div>
+
+      <!--Math.atanh()-->
+      <div>
+        <h4>Math.atanh()</h4>
+        <p>Este método devuelve el arcotangente hiperbólico de un número, que espera un numero entre -1 y 1 donde regresara <code>Infinite</code> cuando sea 1 y <code>-Infinite</code> cuando sea -1</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.atanh(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              El arcotangente hiperbólico del número, o <code>NaN</code>, o <code>Infinito</code>, o <code>-Infinito</code>. Se obtendra <code>NaN</code> si el número es mayor que 1 o menor que -1.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.atanh(3.5)
+        </pre>
+      </div>
+
+      <!--Math.cbrt()-->
+      <div>
+        <h3>Math.cbrt()</h3>
+        <p>Devuelve la método devuelve la raíz cúbica de un número.</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.cbrt(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              La raiz cubica de un numero
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.cbrt(13)  
+        </pre>
+      </div>
+
+      <!--Math.ceil()-->
+      <div>
+        <h3>Math.ceil()</h3>
+        <p>Este metodo redondea redondea un número redondeado hacia arriba con el entero más cercano.</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.ceil(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              El entero más cercano al número redondeando hacia ARRIBA.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.ceil(0.70)  
+        </pre>
+      </div>
+
+      <!--Math.clz32()-->
+      <div>
+        <h3>Math.clz32()</h3>
+        <p>Este método devuelve el número de ceros iniciales en un número binario de 32 bits. clz32 es la abreviatura de <code>CountLeadingZeroes32</code></p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.clz32(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              Número de ceros iniciales en la representación binaria de 32 bits de un número. Si el número es 0, devuelve 32 (todos los bits son 0)
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.clz32(7)  
+        </pre>
+      </div>
+
+      <!--Math.cos()-->
+      <div>
+        <h3>Math.cos()</h3>
+        <p>Devuelve el coseno de un numero, con un resultado numerico de entre -1 y 1, el cual espero nuneros en radianes</p>
+
+        <h4>Que son los Radianes</h4>
+        <p>Radianes es la cantidad α de rotación b de un ángulo en un círculo:</p>
+        <div class="imgs">
+          <img src="./img/img_radian.jpg" alt="circulo">
+        </div>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.cos(x)
+        </pre>
+
+          <h4>Parámetros</h4>
+          <table>
+            <tr>
+              <th>Parámetro</th>
+              <th>Descripción</th>
+            </tr>
+            <tr>
+              <th><code>x</code></th>
+              <th>Requiere un número representado en radianes</th>
+            </tr>
+          </table>
+
+          <h4>Valores de retorno</h4>
+          <table>
+            <tr>
+              <th>Tipo</th>
+              <th>Descripción</th>
+            </tr>
+            <tr>
+              <th><code>Número</code></th>
+              <th>
+                -1 a 1 El coseno del número. Se obtendra <code>NaN</code> si el
+                parámetro no es numérico.
+              </th>
+            </tr>
+          </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.cos(3.14)
+Math.cos(Math.PI)  
+        </pre>
+
+          <p>
+            Para usar grados conviertelos en radianes con <code>degree</code>
+          </p>
+          <pre>
+            Math.cos(degree * Math.PI / 180);
+        </pre>
+      </div>
+
+      <!--Math.cosh()-->
+      <div>
+        <h3>Math.cosh()</h3>
+        <p>Este método devuelve el coseno hiperbólico de un número</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.cosh(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              El coseno hiperbólico del número.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.cosh(19)  
+        </pre>
+      </div>
+
+      <!--Math.E-->
+      <div>
+        <h4>Math.E</h4>
+        <p>Este propiedad retorna el numero de Euler, siendo aproximadamente 2.718</p>
+
+        <h3>Que es el numero de Euler?</h3>
+        <p>El número de Euler es la base de los logaritmos naturales.</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.E
+        </pre>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              Numero de Euler
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.E 
+        </pre>
+      </div>
+
+      <!--Math.exp()-->
+      <div>
+        <h3>Math.exp()</h3>
+        <p>Este metodo devuelve el valor de E<sup>x</sup> , donde E es el número de Euler (aproximadamente 2,7183) y <code>x</code> es el número que se le pasa.</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.exp(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              E^x
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.exp(25)  
+        </pre>
+      </div>
+
+      <!--Math.expm1()-->
+      <div>
+        <h3>Math.expm1()</h3>git 
+        <p>Este metodo devuelve el valor de E<sup>x</sup> menos 1, donde E es el número de Euler (aproximadamente 2,7183) y <code>x</code> es el número que se le pasa.
+
+        Este método es más preciso que usar Math.exp() y restar 1.</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.exmp1(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              E<sup>x</sup> - 1
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.expm1(27)  
+        </pre>
+      </div>
+
+      <!--Math.floor()-->
+      <div>
+        <h3>Math.floor()</h3>
+        <p>Este método redondea un número HACIA ABAJO al entero más cercano.</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.floor(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              El entero más cercano al número, redondeando HACIA ABAJO.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.floor(1.36)  
+        </pre> 
+      </div>
+
+      <!--Math.fround()-->
+      <div>
+        <h3>Math.fround()</h3>
+        <p>Este método devuelve la representación flotante de presicion mas simple de 32 bits de un número.</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.fround(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              la representación flotante de presicion mas simple de 32 bits de un número.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.fround(8.65)  
+        </pre>
+      </div>
+
+      <!--Math.LN2-->
+      <div>
+        <h3>Math.LN2</h3>
+        <p>Esta propiedad devuelve logaritmo natural de 2, que es aproximadamente 0.639</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.LN2
+        </pre>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              El logaritmo natural de 2.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.LN2  
+        </pre>
+      </div>
+
+      <!--Math.LN10-->
+      <div>
+        <h3>Math.LN10</h3>
+        <p>Esta propiedad devuelve logaritmo natural de 10, que es aproximadamente 2.302</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.LN10
+        </pre>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              El logaritmo natural de 10.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.LN10 
+        </pre>
+      </div>
+
+      <!--Math.log()-->
+      <div>
+        <h3>Math.log()</h3>
+        <p>Este metodo devuelve el logaritmo natural (base E) de un número.</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.log(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              El logaritmo natural del número. Se obtendra <code>NaN</code> si el numero es negativo y <code>-Infinite</code> si es 0.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.log(110)  
+        </pre>
+      </div>
+
+      <!--Math.log10()-->
+      <div>
+        <h3>Math.log10()</h3>
+        <p>Este metodo devuelve el logaritmo en base 10 de un número.</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.log10(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              El logaritmo en base 10 del número. Se obtendra <code>NaN</code> si el numero es negativo y <code>-Infinite</code> si es 0.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.log10(15) 
+        </pre>
+      </div>
+      
+      <!--Math.log1p()-->
+      <div>
+        <h3>Math.log1p()</h3>
+        <p>Este método devuelve el logaritmo natural (base E) de 1 + un número.
+        </p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.log1p(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              El logaritmo natural (base E) de 1 + el número. Se obtendra <code>NaN</code> si el numero es menor que -1 y <code>-Infinite</code> si el numero es -1.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.log1p(4);  
+        </pre>
+      </div>
+
+      <!--Math.log2()-->
+      <div>
+        <h3>Math.log2()</h3>
+        <p>Este método devuelve el logaritmo en base 2 de un número</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.log2(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              El logaritmo en base 2 del número. Se obtendra <code>NaN</code> si numero es menor quw -1 y <code>-Infinite</code> si el numero es -1.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.log2(3)  
+        </pre>
+      </div>
+
+      <!--Math LOG2E-->
+      <div>
+        <h3>Math LOG2E</h3>
+        <p>Esta propiedad devuelve el logaritmo en base 2 de E que es aproximadamente 1.442</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.LOG2E
+        </pre>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              El logaritmo en base 2 de E
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.LOG2E 
+        </pre>
+      </div>
+
+      <!--Math LOG10E-->
+      <div>
+        <h3>Math LOG10E</h3>
+        <p>Esta propiedad devuelve el logaritmo en base 10 de E que es aproximadamente 0.434</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.LOG10E
+        </pre>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              El logaritmo en base 10 de E
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.LOG10E 
+        </pre>
+      </div>
+
+      <!--Math.max()-->
+      <div>
+        <h3>Math.max()</h3>
+        <p>Este metodo devuelve el número con el valor más alto.</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.min(n1, n2, ...)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>n1, n2, ...</code></th>
+            <th>Uno o mas numeros para comparar</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              El mayor número de argumentos. Se obtendra <code>-Infinite</code> si no se dan argumentos y <code>NaN</code> si uno de los argumentos no es un numero.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.max(14, 51)  
+        </pre>
+      </div>
+
+      <!--Math.min()-->
+      <div>
+        <h3>Math.min()</h3>
+        <p>Este metodo devuelve el número con el valor más pequeño.</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.min(n1, n2, ...)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>1, n2, ...</code></th>
+            <th>Uno o mas numeros para comparar</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              El mayor número de argumentos. Se obtendra <code>-Infinite</code> si no se dan argumentos y <code>NaN</code> si uno de los argumentos no es un numero.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.min(14, 51)  
+        </pre>
+      </div> 
+
+      <!--Math.PI-->
+      <div>
+        <h3>Math.PI</h3>
+        <p>Devuelve PI (la relación entre el área de un círculo y el cuadrado de su radio, aproximadamente 3,14)</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.PI
+        </pre>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>#</code></th>
+            <th>
+              Un numero que representa PI
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.PI  
+        </pre>
+      </div>
+
+      <!--Math.pow()-->
+      <div>
+        <h3>Math.pow()</h3>
+        <p>El método Math.pow() devuelve el valor de x elevado a y.</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.pow(x, y)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>La base</th>
+          </tr>
+          <tr>
+            <th><code>y</code></th>
+            <th>El exponente</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              Un numero que representa el valor de x elevado a y.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.pow(12, 5)  
+        </pre>
+      </div>
+
+      <!--Math.random()-->
+      <div>
+        <h3>Math.random()</h3>
+        <p>Es un método que devuelve un número aleatorio desde 0 (inclusivo) hasta 1 (exclusivo), pero sin incluirlo.</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.random()
+        </pre>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              Un número aleatorio desde 0 (inclusivo) hasta pero sin incluir 1 (exclusivo).
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <p>Devuelve un numero aleatorio entre 0 y 15</p>
+        <pre>
+Math.random() * 15  
+        </pre>
+      </div>
+
+      <!--Math.round()-->
+      <div>
+        <h3>Math.round()</h3>
+        <p>Este método redondea un número al entero más cercano, mayor a .5 sera redondeado hacia arriba y menor a 0.5 sera redondeado hacia abajo</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.round(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              El número redondeado al entero más cercano.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+            Math.round(4.45)  
+        </pre>
+      </div>
+
+      <!--Math.sign()-->
+      <div>
+        <h3>Math.sign()</h3>
+        <p>Este método devuelve si un número es negativo, positivo o cero, si es positivo devuelve 1, si es negativo -1 y si 0 cero 0</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.sign(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              Si el número es positivo, devuelve <code>1</code>
+              Si el número es negativo, devuelve <code>-1</code>
+              Si el número es cero positivo, devuelve <code>0</code>
+              Si el número es cero negativo, devuelve <code>-0</code>
+              Si el número no es un número, devuelve <code>NaN</code>
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.sign(-4)  
+        </pre>
+      </div>
+
+      <!--Math.sin()-->
+      <div>
+        <h3>Math.sin()</h3>
+        <p>Devuelve el seno de un numero, con un resultado numerico de entre -1 y 1, el cual espero nuneros en radianes</p>
+
+        <h4>Que son los Radianes</h4>
+        <p>Radianes es la cantidad α de rotación b de un ángulo en un círculo:</p>
+        <div class="imgs">
+          <img src="./img/img_radian.jpg" alt="circulo">
+        </div>
+        <br>
+        <table>
+          <tr>
+            <th>Grados</th>
+            <th>PI</th>
+            <th>Radianes</th>
+          </tr>
+          <tr>
+            <th>0°</th>
+            <th>0</th>
+            <th>0</th>
+          </tr>
+          <tr>
+            <th>1°</th>
+            <th>PI/180</th>
+            <th>0.0175</th>
+          </tr>
+          <tr>
+            <th>30°</th>
+            <th>PI/6</th>
+            <th>0.52</th>
+          </tr>
+          <tr>
+            <th>45°</th>
+            <th>PI/4</th>
+            <th>0.79</th>
+          </tr>
+          <tr>
+            <th>90°</th>
+            <th>PI/2</th>
+            <th>1.57</th>
+          </tr>
+          <tr>
+            <th>180°</th>
+            <th>PI</th>
+            <th>3.14</th>
+          </tr>
+          <tr>
+            <th>360°</th>
+            <th>PI*2</th>
+            <th>6.28</th>
+          </tr>
+        </table>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.sin(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número representado en radianes</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              El seno del número. Se obtendra <code>NaN</code> si el parámetro no es numérico.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.sin(3.14)
+Math.sin(Math.PI)  
+        </pre>
+
+        <p>Para usar grados conviertelos en radianes con <code>degree</code></p>
+        <pre>
+Math.sin(degree * Math.PI / 180);
+        </pre>
+      </div>
+
+      <!--Math.sinh()-->
+      <div>
+        <h3>Math.sinh()</h3>
+        <p>Este método devuelve el seno hiperbólico de un número</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.sinh(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              El seno hiperbólico del número.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.sinh(19)  
+        </pre>
+      </div>
+
+      <!--Math.sqrt()-->
+      <div>
+        <h3>Math.sqrt()</h3>
+        <p>Este método devuelve la raíz cuadrada de un número.</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.sqrt(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              La raíz cuadrada del número. Se obtendra <code>NaN</code> si el numero es negativo.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.sqrt(6)  
+        </pre>
+      </div>
+
+      <!--Math.tan()-->
+      <div>
+        <h3>Math.tan()</h3>
+        <p>Devuelve la tagente de un numero, con un resultado numerico de entre -1 y 1, el cual espero nuneros en radianes</p>
+
+        <h4>Que son los Radianes</h4>
+        <p>Radianes es la cantidad α de rotación b de un ángulo en un círculo:</p>
+        <div class="imgs">
+          <img src="./img/img_radian.jpg" alt="circulo">
+        </div>
+        <br>
+        <table>
+          <tr>
+            <th>Grados</th>
+            <th>PI</th>
+            <th>Radianes</th>
+          </tr>
+          <tr>
+            <th>0°</th>
+            <th>0</th>
+            <th>0</th>
+          </tr>
+          <tr>
+            <th>1°</th>
+            <th>PI/180</th>
+            <th>0.0175</th>
+          </tr>
+          <tr>
+            <th>30°</th>
+            <th>PI/6</th>
+            <th>0.52</th>
+          </tr>
+          <tr>
+            <th>45°</th>
+            <th>PI/4</th>
+            <th>0.79</th>
+          </tr>
+          <tr>
+            <th>90°</th>
+            <th>PI/2</th>
+            <th>1.57</th>
+          </tr>
+          <tr>
+            <th>180°</th>
+            <th>PI</th>
+            <th>3.14</th>
+          </tr>
+          <tr>
+            <th>360°</th>
+            <th>PI*2</th>
+            <th>6.28</th>
+          </tr>
+        </table>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.tan(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número representado en radianes</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              La tagente del número. Se obtendra <code>NaN</code> si el parámetro no es numérico.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.tan(3.14)
+Math.tan(Math.PI)  
+        </pre>
+
+        <p>Para usar grados conviertelos en radianes con <code>degree</code></p>
+        <pre>
+Math.sin(degree * Math.PI / 180);
+        </pre>
+      </div>
+
+      <!--Math.tanh()-->
+      <div>
+        <h3>Math.tannh()</h3>
+        <p>Este método devuelve la tagente hiperbólica de un número</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.tanh(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              La tagente hiperbólico del número.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.tanh(19)  
+        </pre>
+      </div>
+
+      <!--Math.trunc()-->
+      <div>
+        <h3>Math.trunc()</h3>
+        <p>Este método devuelve la parte entera de un número, eliminando los decimales</p>
+
+        <h4>Sintaxis</h4>
+        <pre>
+Math.trunc(x)
+        </pre>
+
+        <h4>Parámetros</h4>
+        <table>
+          <tr>
+            <th>Parámetro</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>x</code></th>
+            <th>Requiere un número</th>
+          </tr>
+        </table>
+
+        <h4>Valores de retorno</h4>
+        <table>
+          <tr>
+            <th>Tipo</th>
+            <th>Descripción</th>
+          </tr>
+          <tr>
+            <th><code>Número</code></th>
+            <th>
+              La parte entera del número.
+            </th>
+          </tr>
+        </table>
+
+        <h4>Ejemplo</h4>
+        <pre>
+Math.trunc(16)  
+        </pre>
+      </div>
+
+      <h4>Comentarios</h4>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v15.0" nonce="AWHlPaDs">
+        </script>
+        <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="100%" data-numposts="1" data-colorscheme="dark">
+        </div>
+
+        <form action="POST">
+          <h3>Comentarios</h3>
+          <div class="input-container">
+            <label for="username">Nombre:</label>
+            <input type="text" name="username" />
+          </div>
+
+          <div class="input-container">
+            <label for="email">Email:</label>
+            <input type="email" name="email" />
+          </div>
+
+          <div class="input-container">
+            <textarea
+              name="body"
+              cols="100"
+              rows="10"
+              placeholder="Comentario..."
+            ></textarea>
+          </div>
+
+          <input type="submit" />
+        </form>
+      </article>
+    </main>
+    <!-- El pie de página-->
+    <footer>
+      <ul>
+        <li><a href="../../">Página principal</a></li>
+
+        <li><a href="../../about/">Acerca de</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

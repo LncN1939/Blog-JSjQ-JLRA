@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <title>Tutorial JavaScript &amp; jQuery</title>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <div class="nav-menu-container">
+      <nav class="nav-menu">
+        <a class="nav-menu-title" href="../../"
+          >Tutorial JavaScript &amp; jQuery</a
+        >
+
+        <ul>
+          <li>UwU</li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="main-container">
+      <!-- El sidebar-->
+      <div class="sidebar">
+        <aside>
+          <section>
+            <header>Menú</header>
+            <ul>
+              <li><a href="../../javascript/">JavaScript</a></li>
+              <li><a href="../../jquery/">jQuery</a></li>
+            </ul>
+            <ul>
+              <li> <a href="#opArit">Operadores aritmeticos</a></li>
+              <li> <a href="#opAsig">Operadores de asignacion</a></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+
+      <!-- El artículo o entrada del blog -->
+      <article itemscope itemtype="https://schema.org/Article">
+        <header>
+          <h1 itemprop="name">JS Operators</h1>
+          <div class="article-date">
+            Publicado el
+            <time
+              datetime="2022-09-21T09:41-6:00"
+              pubdate
+              itemprop="datePublished"
+            >
+              25 de septiembre del 2022
+            </time>
+          </div>
+          <p
+            class="article-author"
+            itemscope
+            itemtype="http://schema.org/Person"
+          >
+            por
+            <span itemprop="author">Leo Corea</span>
+          </p>
+        </header>
+
+        <p>Los operadores son de vital importancia para a la hora de asignar valores y compararlos, su conocimiento es de vital importancia a la hora de realizar operaciones aritmeticas que faciliten el manejo de los mismos.</p>
+        
+        <h3 id="opArit">Operadores aritmeticos</h3>
+        <p>Son aquellos que se emplean para operaciones aritmeticas entre variables y/o valores <br></br>
+        Suponiendo que y = 6 se explicaran los valores aritmeticos:</p>
+        <table>
+          <tr>
+            <th>Operador</th>
+            <th>Descripción</th>
+            <th>Ejemplo</th>
+            <th>Resultado en y</th>
+            <th>Resultado en x</th>
+          </tr>
+          <tr>
+            <th>+</th>
+            <th>Suma</th>
+            <th>x = y + 2</th>
+            <th>y = 6</th>
+            <th>x = 8</th>
+          </tr>
+          <tr>
+            <th>-</th>
+            <th>Resta</th>
+            <th>x = y - 2</th>
+            <th>y = 6</th>
+            <th>x = 4</th>
+          </tr>
+          <tr>
+            <th>*</th>
+            <th>Multiplicacion</th>
+            <th>x = y * 2</th>
+            <th>y = 6</th>
+            <th>x = 12</th>
+          </tr>
+          <tr>
+            <th>**</th>
+            <th>Exponenciación</th>
+            <th>x = y ** 2</th>
+            <th>y = 6</th>
+            <th>x = 36</th>
+          </tr>
+          <tr>
+            <th>/</th>
+            <th>Division</th>
+            <th>x = y / 2</th>
+            <th>y = 6</th>
+            <th>x = 3</th>
+          </tr>
+          <tr>
+            <th>%</th>
+            <th>Modulo</th>
+            <th>x = y % 2</th>
+            <th>y = 6</th>
+            <th>x = 0</th>
+          </tr>
+          <tr>
+            <th>++</th>
+            <th>Incremento</th>
+            <th>x = ++y <br>
+                x = y++
+            </th>
+            <th>y = 7 <br>
+                y = 7
+            </th>
+            <th>x = 7 <br>
+                x = 6
+            </th>
+          </tr>
+          <tr>
+            <th>--</th>
+            <th>Decremento</th>
+            <th>x = --y <br>
+                x = y--
+            </th>
+            <th>y = 5 <br>
+                y = 5
+            </th>
+            <th>x = 5 <br>
+                x = 6
+            </th>
+          </tr>
+        </table>
+
+        <h3 id="opAsig">Operadores de asignacion</h3>
+        <p>Utiles para asignar valores a las variables creadas <br></br>
+        Suponiendo que x = 10 e y = 5, la siguente la tabla expresara lo siguente:
+        </p>
+        <table>
+            <tr>
+              <th>Operador</th>
+              <th>Ejemplo</th>
+              <th>Igual a</th>
+              <th>Resultado en x</th>
+            </tr>
+            <tr>
+              <th>=</th>
+              <th>x = y</th>
+              <th>x = y</th>
+              <th>y = 5</th>
+            </tr>
+            <tr>
+              <th>+=</th>
+              <th>x += y</th>
+              <th>x = x + y</th>
+              <th>x = 15</th>
+            </tr>
+            <tr>
+              <th>-=</th>
+              <th>x -= y</th>
+              <th>x = x - y</th>
+              <th>x = 5</th>
+            </tr>
+            <tr>
+              <th>*=</th>
+              <th>x *= y</th>
+              <th>x = x * y</th>
+              <th>x = 50</th>
+            </tr>
+            <tr>
+              <th>/=</th>
+              <th>x /= y</th>
+              <th>x = x / y</th>
+              <th>x = 2</th>
+            </tr>
+            <tr>
+              <th>%=</th>
+              <th>x %= y</th>
+              <th>x = x % y</th>
+              <th>x = 0</th>
+            </tr>
+        </table>
+
+        <h3>Operadores de cadena</h3>
+        <p>El operador <code>+</code> y el operador <code>+=</code> tambien se pueden usar para concatenar (agregar) cadenas. <br></br>
+        Dado que texto1 = "Hello" , texto2 = "World" y texto3 = "" , la siguiente tabla explica los operadores:
+        </p>
+        <table>
+            <tr>
+              <th>Operador</th>
+              <th>Ejemplo</th>
+              <th>Texto 1</th>
+              <th>Texto 2</th>
+              <th>Texto 3</th>
+            </tr>
+            <tr>
+              <th>+</th>
+              <th>texto3 = texto1 + texto2</th>
+              <th>Hello</th>
+              <th>World</th>
+              <th>Hello World</th>
+            </tr>
+            <tr>
+              <th>+=</th>
+              <th>texto1 += texto2</th>
+              <th>texto1 = Hello World </th>
+              <th>texto2 = World</th>
+              <th>texto3 = " "</th>
+            </tr>
+        </table>
+
+        <h3>Operadores de comparacion</h3>
+        <p>Los operadores de comparación se utilizan en declaraciones lógicas para determinar la igualdad o diferencia entre variables o valores. <br></br>
+        Dado que x = 5 , la siguiente tabla explica los operadores de comparación:
+        </p>
+        <table>
+            <tr>
+              <th>Operador</th>
+              <th>Descripción</th>
+              <th>Comparacion</th>
+              <th>Retorna</th>
+            </tr>
+            <tr>
+              <th>==</th>
+              <th>Igual</th>
+              <th>x == 8 <br>
+                  x == 5
+            </th>
+              <th>false <br>
+                  true
+              </th>
+            </tr>
+            <tr>
+              <th>====</th>
+              <th>Valores iguales e igual tipo</th>
+              <th>x ==== "5" <br>
+                x === 5
+              </th>
+              <th>false <br>
+                  true
+            </th>
+            </tr>
+
+            <tr>
+            <th>!==</th>
+            <th>No es igual</th>
+            <th>x !== "5" <br>
+                x !== 5
+            </th>
+            <th>true <br>
+                false
+            </th>
+            </tr>
+
+            <tr>
+                <th>></th>
+                <th>mayor que</th>
+                <th>x > 8</th>
+                <th>false</th>
+            </tr>
+            <tr>
+                <th><</th>
+                <th>menor que</th>
+                <th>x < 8</th>
+                <th>true</th>
+            </tr>
+
+            <tr>
+                <th>>=</th>
+                <th>mayor o igual que</th>
+                <th>x >= 8</th>
+                <th>false</th>
+            </tr>
+
+            <tr>
+                <th><=</th>
+                <th>menor o igual que</th>
+                <th>x >= 8</th>
+                <th>false</th>
+            </tr>
+        </table>
+
+        <h3>Operador condicional</h3>
+        <p>El operador condicional asigna un valor a una variable en función de una condición.</p>
+        <table>
+            <tr>
+                <th>Sintaxis</th>
+                <th>Ejemplo</th>
+            </tr>
+            <tr>
+                <th>nombreVariable = (condicion) ? valor1: valor2
+                </th>
+                <th>
+                    voteable = (edad < 18) ? joven:Adulto;
+                </th>
+            </tr>
+        </table>
+
+        <h3>Operadores logicos</h3>
+        <p>Los operadores lógicos se utilizan para determinar la lógica entre variables o valores.
+        <br></br>
+        Dado que x = 6 e y = 3 , la siguiente tabla explica los operadores lógicos:</p>
+        <table>
+            <tr>
+                <th>Operador</th>
+                <th>Descripción</th>
+                <th>Ejemplo</th>
+            </tr>
+            <tr>
+                <th>&&</th>
+                <th>y</th>
+                <th>(x < && y > 1) is true</th>
+            </tr>
+            <tr>
+                <th>||</th>
+                <th>o</th>
+                <th>(x === 5 || y === 5) is false</th>
+            </tr>
+            <tr>
+                <th>!</th>
+                <th>no</th>
+                <th>!(x === y) is true</th>
+            </tr>
+        </table>
+
+        <h3>Operadores bit a bit</h3>
+        <p>Los operadores de bits funcionan en números de 32 bits. Cualquier operando numérico en la operación se convierte en un número de 32 bits. El resultado se vuelve a convertir en un número de JavaScript.</p>
+        <table>
+            <tr>
+                <th>Operador</th>
+                <th>Descripción</th>
+                <th>Ejemplo</th>
+                <th>Igual a</th>
+                <th>Resultado</th>
+                <th>Decimal</th>
+            </tr>
+            <tr>
+                <th>&</th>
+                <th>AND</th>
+                <th>x = 5 & 1</th>
+                <th> 0101 & 0001</th>
+                <th>0001</th>
+                <th>1</th>
+            </tr>
+            <tr>
+                <th>|</th>
+                <th>OR</th>
+                <th>x = 5 | 1</th>
+                <th>0101 | 0001</th>
+                <th>0101</th>
+                <th>5</th>
+            </tr>
+            <tr>
+                <th>~</th>
+                <th>NOT</th>
+                <th>x = ~ 5</th>
+                <th>~ 0101</th>
+                <th>1010</th>
+                <th>10</th>
+            </tr>
+            <tr>
+                <th>^</th>
+                <th>XOR</th>
+                <th>x = 5 ^ 1</th>
+                <th>0101 ^ 0001</th>
+                <th>0100</th>
+                <th>4</th>
+            </tr>
+            <tr>
+                <th><<</th>
+                <th>Shift izquierdo</th>
+                <th>x = 5 << 1</th>
+                <th>0101 << 1</th>
+                <th>1010</th>
+                <th>10</th>
+            </tr>
+            <tr>
+                <th>>></th>
+                <th>Shift derecho</th>
+                <th>x = 5 >> 1</th>
+                <th>0101 >> 1</th>
+                <th>0010</th>
+                <th>2</th>
+            </tr>
+        </table>
+
+        <h4>Nota</h4>
+        <p>Los ejemplos anteriores usan ejemplos sin firmar de 4 bits. Pero JavaScript usa números con signo de 32 bits. Debido a esto, en JavaScript, ~ 5 no devolverá 10. Devolverá -6, es decir no devolvera:
+        <br></br>
+        ~00000000000000000000000000000101
+        <br></br>
+        Si no que devolvera: 111111111111111111111111111111010</p>
+        
+        <h3>Operador typeof</h3>
+        <p>Devuelve el tipo de una variable, objeto, función o expresión:</p>
+        <pre>
+typeof = "John"         // Retorna una cadena <br>
+typeof = 3.14           // Retorna un numero <br>
+typeof = "[1,2,3,4]"    //  Retorna un objecto
+        </pre>
+
+        <h3>Operador eliminacion</h3>
+        <p>El operador de eliminación elimina una propiedad de un objeto :</p>
+        <pre>
+const auto ={
+    marca = ferrari,
+    maximaVelocidad = 150,
+    garantia = 10,
+    color = azul
+};
+
+delete auto.garantia;   // Elimina la tanto el valor como la propiedad
+        </pre>
+
+        <h3>Operador in</h3>
+        <p>El operador in devuelve verdadero si la propiedad especificada está en el objeto especificado; de lo contrario, es falso:</p>
+
+        <pre>
+const auto = {marca:"ferrari", color:"azul", garantia:10};<br>
+"marca" in auto         // Returns true <br>
+"color" in auto         // Returns true
+        </pre>
+
+        <h3>La instancia del Operador</h3>
+        <p>El operador instanceof devuelve verdadero si el objeto especificado es una instancia del objeto especificado:
+        </p>
+        <pre>
+const cars = ["Saab", "Volvo", "BMW"];<br>
+
+(cars instanceof Array)   // Returns truebr <br>
+(cars instanceof String)  // Returns false
+        </pre>
+
+        <h3>El operador del vacío</h3>
+        <p>El operador void evalúa una expresión y devuelve undefined . Este operador se usa a menudo para obtener el valor primitivo indefinido, usando "void(0)" (útil cuando se evalúa una expresión sin usar el valor devuelto).</p>
+        <pre>
+<a href="javascript:void(0);">
+    Link no usable
+</a>
+              
+<a href="javascript:void(document.body.style.backgroundColor='green');">
+    Clickeame para cambiar el color a verde
+</a>
+        </pre>
+      </article>
+    </main>
+
+    <!-- El pie de página-->
+    <footer>
+      <ul>
+        <li><a href="../../">Página principal</a></li>
+        <li><a href="../../anexos/">Anexos</a></li>
+        <li><a href="../../about/">Acerca de</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

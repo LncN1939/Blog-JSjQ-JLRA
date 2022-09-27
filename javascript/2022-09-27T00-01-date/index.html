@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <title>Tutorial JavaScript &amp; jQuery</title>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <div class="nav-menu-container">
+      <nav class="nav-menu">
+        <a class="nav-menu-title" href="../../"
+          >Tutorial JavaScript &amp; jQuery</a
+        >
+
+        <ul>
+          <li>UwU</li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="main-container">
+      <!-- El sidebar-->
+      <div class="sidebar">
+        <aside>
+          <section>
+            <header>Menú</header>
+            <ul>
+              <li><a href="../../javascript/">JavaScript</a></li>
+              <li><a href="../../jquery/">jQuery</a></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+
+      <!-- El artículo o entrada del blog -->
+      <article itemscope itemtype="https://schema.org/Article">
+        <header>
+          <h1 itemprop="name">JavaScript Date</h1>
+          <div class="article-date">
+            Publicado el
+            <time
+              datetime="2022-09-21T09:41-6:00"
+              pubdate
+              itemprop="datePublished"
+            >
+              27 de septiembre de 2022
+            </time>
+          </div>
+          <p
+            class="article-author"
+            itemscope
+            itemtype="http://schema.org/Person"
+          >
+            por
+            <span itemprop="author">Leo Corea</span>
+          </p>
+        </header>
+
+        <p>El objeto Date trabaja con fechas y horas. Los objetos de fecha se crean con <code>new Date()</code>.</p>
+
+        <pre>
+new Date()
+        </pre>
+
+        <!--Constructor-->
+        <div>
+            <h3>constructor</h3>
+            <p>La propiedad <code>constructor</code> devuelve la función que creó el prototipo de Fecha. Para las fechas de JavaScript, la constructorpropiedad devuelve:
+            </p>
+            <pre>
+función Fecha() { [código nativo] }
+            </pre>
+
+            <pre>
+const l = new Date();
+let text = l.constructor;
+            </pre>
+
+        </div>
+
+        <!--getDate-->
+        <div>
+            <h3>getDate</h3>
+            <p>La propiedad <code>getDate</code> método devuelve el día del mes (1 a 31) de una fecha.</p>
+
+            <pre>
+const l = new Date();
+let day = l.getDate();
+            </pre>
+
+            <p>Asi mismo se puede implementar esta funcion para obtener años, hora, minutos ect.</p>
+
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                </tr>
+                <tr>
+                    <th>getDay()</th>
+                    <th>Retorna un dia de la semana (0-6)</th>
+                </tr>
+                <tr>
+                    <th>getFullYear()</th>
+                    <th>Retorna el año</th>
+                </tr>
+                <tr>
+                    <th>getHours()</th>
+                    <th>Retorna la hora (0-23)</th>
+                </tr>
+                <tr>
+                    <th>getMiliseconds</th>
+                    <th>Retorna milisegundos (0-999)</th>
+                </tr>
+                <tr>
+                    <th>getMinutes()</th>
+                    <th>Retorna minutos (0-59)</th>
+                </tr>
+                <tr>
+                    <th>getMoth()</th>
+                    <th>retorna mes (0-11)</th>
+                </tr>
+                <tr>
+                    <th>getSeconds</th>
+                    <th>Retorna segundos (0-59)</th>
+                </tr>
+                
+            </table>
+        </div>
+
+        <!--getTimezoneOffset()-->
+        <div>
+            <h3>getTimezoneOffset()</h3>
+            <p><code>getTimezoneOffset()</code> devuelve la diferencia entre la hora UTC y la hora local. Tambien devuelve la diferencia en minutos.
+            <br></br>    
+            Por ejemplo, si su zona horaria es GMT+2, se devolverá -120</p>
+
+            <pre>
+const l = new Date();
+let diff = l.getTimezoneOffset();
+            </pre>
+        </div>
+
+        <!--getUTCDate()-->
+        <div>
+            <h3>getUTCDate()</h3>
+            <p><code>getUTCDate()</code> devuelve el día del mes (1 a 31) de un objeto de fecha, segun UTC</p>
+            
+            <h4>Que es UTC?</h4>
+            <p>UTC (Universal Time Coordinated) es la hora establecida por el estándar de hora mundial. La hora UTC es la misma que la hora GMT (hora del meridiano de Greenwich).Todos los métodos getUTC de JavaScript asumen que la fecha es la hora local.</p>
+            <pre>
+const l = new Date();
+let day = l.getUTCDate();
+            </pre>
+
+            <p>Asi mismo se puede implementar esta funcion para obtener años, hora, minutos ect.</p>
+
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                </tr>
+                <tr>
+                    <th>getUTCDay()</th>
+                    <th>Retorna un dia de la semana (0-6), deacuerdo con UTC</th>
+                </tr>
+                <tr>
+                    <th>getUTCFullYear()</th>
+                    <th>Retorna el año, deacuerdo con UTC</th>
+                </tr>
+                <tr>
+                    <th>getUTCHours()</th>
+                    <th>Retorna la hora (0-23), deacuerdo con UTC</th>
+                </tr>
+                <tr>
+                    <th>getUTCMiliseconds</th>
+                    <th>Retorna milisegundos (0-999), deacuerdo con UTC</th>
+                </tr>
+                <tr>
+                    <th>getUTCMinutes()</th>
+                    <th>Retorna minutos (0-59), deacuerdo con UTC</th>
+                </tr>
+                <tr>
+                    <th>getUTCMoth()</th>
+                    <th>retorna mes (0-11), deacuerdo con UTC</th>
+                </tr>
+                <tr>
+                    <th>getUTCSeconds</th>
+                    <th>Retorna segundos (0-59), deacuerdo con UTC</th>
+                </tr>
+                
+            </table>
+        </div>
+
+        <!--now()-->
+        <div>
+            <h3>now()</h3>
+            <p><code>now()</code> devuelve el número de milisegundos desde el 1 de enero de 1970. El cual es inalterable
+            </p>
+
+            <pre>
+let ms = Date.now();
+            </pre>
+        </div>
+
+        <!--parse()-->
+        <div>
+            <h3>parse()</h3>
+            <p><code>parse()</code> analiza una cadena de fecha y devuelve la diferencia horaria desde el 1 de enero de 1970. Y lo devuelve en milisegundos.
+            </p>
+
+            <pre>
+let ms = Date.parse("September 26, 2022");
+            </pre>
+        </div>
+
+        <!--setDate()-->
+        <div>
+            <h3>setDate()</h3>
+            <p><code>setDate()</code> establece el día del mes de una fecha.
+            </p>
+
+            <pre>
+const l = new Date();
+l.setDate(0)
+            </pre>
+
+            <p>Asi mismo se puede implementar esta funcion para usarla con años, hora, minutos ect.</p>
+
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                </tr>
+                <tr>
+                    <th>setFullYear()</th>
+                    <th>Establece el año de una fecha</th>
+                </tr>
+                <tr>
+                    <th>setHours()</th>
+                    <th>Establece la hora de una fecha</th>
+                </tr>
+                <tr>
+                    <th>setMiliseconds</th>
+                    <th>Establece los milisegundos de una fecha</th>
+                </tr>
+                <tr>
+                    <th>setMinutes()</th>
+                    <th>Establece el minutos de una fecha</th>
+                </tr>
+                <tr>
+                    <th>setMoth()</th>
+                    <th>Establece el mes de una fecha</th>
+                </tr>
+                <tr>
+                    <th>setSeconds</th>
+                    <th>Establece los segundos de una fecha</th>
+                </tr>
+                
+            </table>
+        </div>
+
+        <!--setUTCDate()-->
+        <div>
+            <h3>setUTCDate()</h3>
+            <p>El método <code>setUTCDate()</code> establece el día de un objeto Date, según UTC (Universal time coordinated).</p>
+
+            <pre>
+const l = new Date();
+l.setUTCDate(16);
+            </pre>
+
+            <p>Asi mismo se puede implementar esta funcion para usarla con años, hora, minutos ect.</p>
+
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                </tr>
+                <tr>
+                    <th>setUTCFullYear()</th>
+                    <th>Establece el año de una fecha, segun UTC</th>
+                </tr>
+                <tr>
+                    <th>setUTCHours()</th>
+                    <th>Establece la hora de una fecha, segun UTC</th>
+                </tr>
+                <tr>
+                    <th>setUTCMiliseconds</th>
+                    <th>Establece los milisegundos de una fecha, segun UTC</th>
+                </tr>
+                <tr>
+                    <th>setUTCMinutes()</th>
+                    <th>Establece el minutos de una fecha</th>
+                </tr>
+                <tr>
+                    <th>setUTCMoth()</th>
+                    <th>Establece el mes de una fecha, segun UTC</th>
+                </tr>
+                <tr>
+                    <th>setUTCSeconds</th>
+                    <th>Establece los segundos de una fecha, segun UTC</th>
+                </tr>
+                
+            </table>
+
+        </div>
+
+        <!--toDateString()-->
+        <div>
+            <h3>toDateString()</h3>
+            <p><code>toDateString()</code> devuelve la fecha (no la hora) de un objeto de fecha como una cadena.
+            </p>
+
+            <pre>
+const l = new Date();
+let text = l.toDateString();
+            </pre>
+
+            
+        </div>
+
+        <!--toJSON()-->
+        <div>
+            <h3>toJSON()</h3>
+            <p><code>toJSON()</code> devuelve un objeto de fecha como una cadena, con formato de fecha JSON. Las fechas <code>JSON</code> tienen el mismo formato que el estándar <code>ISO-8601</code>: <code>AAAA-MM-DDTHH:mm:ss.sssZ.</code>
+            </p>
+
+            <pre>
+const l = new Date();
+let text = l.toJSON();
+            </pre>
+        </div>
+
+        <h4>Video</h4>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hIzyfD4DJOo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <form action="POST">
+            <h3>Comentarios</h3>
+            <div class="input-container">
+              <label for="username">Nombre:</label>
+              <input type="text" name="username" />
+            </div>
+  
+            <div class="input-container">
+              <label for="email">Email:</label>
+              <input type="email" name="email" />
+            </div>
+  
+            <div class="input-container">
+              <textarea
+                name="body"
+                cols="100"
+                rows="10"
+                placeholder="Comentario..."
+              ></textarea>
+            </div>
+  
+            <input type="submit" />
+          </form>
+
+      </article>
+    </main>
+
+    <!-- El pie de página-->
+    <footer>
+      <ul>
+        <li><a href="../../">Página principal</a></li>
+        <li><a href="../../anexos/">Anexos</a></li>
+        <li><a href="../../about/">Acerca de</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
