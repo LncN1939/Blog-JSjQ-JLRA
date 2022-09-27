@@ -218,8 +218,124 @@ let ms = Date.parse("September 26, 2022");
 
         <!--setDate()-->
         <div>
+            <h3>setDate()</h3>
+            <p><code>setDate()</code> establece el día del mes de una fecha.
+            </p>
+
+            <pre>
+const l = new Date();
+l.setDate(0)
+            </pre>
+
+            <p>Asi mismo se puede implementar esta funcion para usarla con años, hora, minutos ect.</p>
+
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                </tr>
+                <tr>
+                    <th>setFullYear()</th>
+                    <th>Establece el año de una fecha</th>
+                </tr>
+                <tr>
+                    <th>setHours()</th>
+                    <th>Establece la hora de una fecha</th>
+                </tr>
+                <tr>
+                    <th>setMiliseconds</th>
+                    <th>Establece los milisegundos de una fecha</th>
+                </tr>
+                <tr>
+                    <th>setMinutes()</th>
+                    <th>Establece el minutos de una fecha</th>
+                </tr>
+                <tr>
+                    <th>setMoth()</th>
+                    <th>Establece el mes de una fecha</th>
+                </tr>
+                <tr>
+                    <th>setSeconds</th>
+                    <th>Establece los segundos de una fecha</th>
+                </tr>
+                
+            </table>
+        </div>
+
+        <!--setUTCDate()-->
+        <div>
+            <h3>setUTCDate()</h3>
+            <p>El método <code>setUTCDate()</code> establece el día de un objeto Date, según UTC (Universal time coordinated).</p>
+
+            <pre>
+const l = new Date();
+l.setUTCDate(16);
+            </pre>
+
+            <p>Asi mismo se puede implementar esta funcion para usarla con años, hora, minutos ect.</p>
+
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                </tr>
+                <tr>
+                    <th>setUTCFullYear()</th>
+                    <th>Establece el año de una fecha, segun UTC</th>
+                </tr>
+                <tr>
+                    <th>setUTCHours()</th>
+                    <th>Establece la hora de una fecha, segun UTC</th>
+                </tr>
+                <tr>
+                    <th>setUTCMiliseconds</th>
+                    <th>Establece los milisegundos de una fecha, segun UTC</th>
+                </tr>
+                <tr>
+                    <th>setUTCMinutes()</th>
+                    <th>Establece el minutos de una fecha</th>
+                </tr>
+                <tr>
+                    <th>setUTCMoth()</th>
+                    <th>Establece el mes de una fecha, segun UTC</th>
+                </tr>
+                <tr>
+                    <th>setUTCSeconds</th>
+                    <th>Establece los segundos de una fecha, segun UTC</th>
+                </tr>
+                
+            </table>
+
+        </div>
+
+        <!--toDateString()-->
+        <div>
+            <h3>toDateString()</h3>
+            <p><code>toDateString()</code> devuelve la fecha (no la hora) de un objeto de fecha como una cadena.
+            </p>
+
+            <pre>
+const l = new Date();
+let text = l.toDateString();
+            </pre>
+
             
         </div>
+
+        <!--toJSON()-->
+        <div>
+            <h3>toJSON()</h3>
+            <p><code>toJSON()</code> devuelve un objeto de fecha como una cadena, con formato de fecha JSON. Las fechas <code>JSON</code> tienen el mismo formato que el estándar <code>ISO-8601</code>: <code>AAAA-MM-DDTHH:mm:ss.sssZ.</code>
+            </p>
+
+            <pre>
+const l = new Date();
+let text = l.toJSON();
+            </pre>
+
+            
+        </div>
+
       </article>
     </main>
 
