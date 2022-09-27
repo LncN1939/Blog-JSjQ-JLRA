@@ -15,6 +15,8 @@
   --link-color: #008b8b;
   --link-visited-color: #1e4044;
   --link-hover-color: #3388de;
+  --input-background-color: #fafafa;
+  --button-hover-color: #f6e8e0;
 
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   background-color: var(--background-color);
@@ -102,6 +104,8 @@ th {
     --link-color: #62a777;
     --link-visited-color: #d3eed3;
     --link-hover-color: #3388de;
+    --input-background-color: #282828;
+    --button-hover-color: #2c1e31;
 
     color: #ffffff;
   }
