@@ -19,3 +19,47 @@ article pre {
   margin: 2em 0.2em;
   white-space: pre-wrap;
 }
+
+article > form {
+  margin-top: 6em;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1em;
+}
+article > form > .input-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  padding: 0.5em;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+article > form > .input-container > input,
+article > form > .input-container > textarea {
+  width: 100%;
+  max-width: 20em;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5em;
+  padding: 0.6em;
+  background-color: var(--input-background-color);
+  color: inherit;
+}
+article > form > .input-container > textarea {
+  max-width: 50em;
+}
+article > form > input[type="submit"] {
+  padding: 1em;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5em;
+  color: inherit;
+}
+article > form > input[type="submit"]:hover {
+  background-color: var(--button-hover-color);
+}
+
+.image-center {
+  text-align: center;
+  padding: 1em;
+}

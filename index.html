@@ -15,7 +15,8 @@
         <a class="nav-menu-title" href="./">Tutorial JavaScript &amp; jQuery</a>
 
         <ul>
-          <li>UwU</li>
+          <li><a href="./javascript/">JavaScript</a></li>
+          <li><a href="./jquery/">jQuery</a></li>
         </ul>
       </nav>
     </div>
@@ -37,39 +38,100 @@
       <!-- El artículo o entrada del blog -->
       <article itemscope itemtype="https://schema.org/Article">
         <header>
-          <h1 itemprop="name">El título</h1>
-          <div class="article-date">
-            Publicado el
-            <time
-              datetime="2022-09-21T09:41-6:00"
-              pubdate
-              itemprop="datePublished"
-            >
-              21 de septiembre de 2022
-            </time>
-          </div>
-          <p
-            class="article-author"
-            itemscope
-            itemtype="http://schema.org/Person"
-          >
-            por
-            <span itemprop="author">Autor</span>
-          </p>
+          <h1 itemprop="name">Tutorial JavaScript &amp; jQuery</h1>
         </header>
 
-        <p>Aquí iría el artículo editado por leo</p>
+        <p>¡Bienvenido/a a este blog!</p>
 
-        <pre>
-Esto es código
-preformateado
-        </pre>
+        <p>
+          Aquí encontrarás publicaciones sobre el aprendizaje del lenguaje de
+          <em>JavaScript</em> y <em>jQuery</em>. Puedes entrar a
+          <a href="./javascript/">JavaScript</a> para ir a la sección de las
+          publicaciones o entradas de JavaScript, o puedes entrar a
+          <a href="./jquery/">jQuery</a> para ver las publicaciones de jQuery.
+        </p>
 
-        <div class="highlight">
-          <pre><span></span><span class="kd">let</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Juan&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hola &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">a</span><span class="p">);</span><span class="w"></span>
-</pre>
-        </div>
+        <p>
+          Al lado izquierdo (arriba en móviles) está el menú de navegación que
+          te servirá para moverte por las distintas secciones de una entrada. En
+          la página principal puedes usarla para ir a la sección de JavaScript o
+          jQuery.
+        </p>
+
+        <p>
+          Abajo de cada entrada estará un formulario para publicar tus
+          comentarios. Ten en cuenta que
+          <em>su funcionalidad no está implementada</em>
+          por parte del servidor ni por parte del cliente (debido a la
+          limitancia de no usar JavaScript para elaborar el blog).
+        </p>
+
+        <p>En la siguiente sección verás todas las entradas publicadas:</p>
+
+        <h2>Últimas publicaciones</h2>
+
+        <h3>2022-09-27</h3>
+
+        <h3>2022-09-26</h3>
+
+        <ul>
+          <li>
+            <a href="./javascript/2022-09-26T00-05-inheritance/"
+              >Polimorfismo en JavaScript</a
+            >
+          </li>
+        </ul>
+
+        <h3>2022-09-25</h3>
+
+        <ul>
+          <li>
+            <a href="./javascript/2022-09-25T21-53-typed-array/">Typed Array</a>
+          </li>
+          <li>
+            <a href="./javascript/2022-09-25T20-59-json/">JavaScript JSON</a>
+          </li>
+          <li>
+            <a href="./javascript/2022-09-25T17-23-array/">JavaScript Array</a>
+          </li>
+        </ul>
+
+        <h3>2022-09-24</h3>
+
+        <ul>
+          <li><a href="./javascript/2022-09-24-L/">JavaScript Math</a></li>
+          <li>
+            <a href="./javascript/2022-09-24T15-03-class/">JavaScript Class</a>
+          </li>
+        </ul>
+
+        <h3>2022-09-23</h3>
+
+        <h3>2022-09-22</h3>
+
+        <form action="POST">
+          <h3>Comentarios</h3>
+          <div class="input-container">
+            <label for="username">Nombre:</label>
+            <input type="text" name="username" />
+          </div>
+
+          <div class="input-container">
+            <label for="email">Email:</label>
+            <input type="email" name="email" />
+          </div>
+
+          <div class="input-container">
+            <textarea
+              name="body"
+              cols="100"
+              rows="10"
+              placeholder="Comentario..."
+            ></textarea>
+          </div>
+
+          <input type="submit" />
+        </form>
       </article>
     </main>
 
