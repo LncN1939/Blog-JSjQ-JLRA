@@ -59,9 +59,167 @@
           </p>
         </header>
 
-        <p>
-          Esto está dentro de una carpeta del tipo: 2022-09-21T22-45-titulo.
-        </p>
+        <p>El objeto Date trabaja con fechas y horas. Los objetos de fecha se crean con <code>new Date()</code>. Hay cuatro formas de instanciar (crear) una fecha:</p>
+
+        <pre>
+new Date()
+        </pre>
+
+        <!--Constructor-->
+        <div>
+            <h3>constructor</h3>
+            <p>La propiedad <code>constructor</code> devuelve la función que creó el prototipo de Fecha. Para las fechas de JavaScript, la constructorpropiedad devuelve:
+            </p>
+            <pre>
+función Fecha() { [código nativo] }
+            </pre>
+
+            <pre>
+const l = new Date();
+let text = l.constructor;
+            </pre>
+
+        </div>
+
+        <!--getDate-->
+        <div>
+            <h3>getDate</h3>
+            <p>La propiedad <code>getDate</code> método devuelve el día del mes (1 a 31) de una fecha.</p>
+
+            <pre>
+const l = new Date();
+let day = l.getDate();
+            </pre>
+
+            <p>Asi mismo se puede implementar esta funcion para obtener años, hora, minutos ect.</p>
+
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                </tr>
+                <tr>
+                    <th>getDay()</th>
+                    <th>Retorna un dia de la semana (0-6)</th>
+                </tr>
+                <tr>
+                    <th>getFullYear()</th>
+                    <th>Retorna el año</th>
+                </tr>
+                <tr>
+                    <th>getHours()</th>
+                    <th>Retorna la hora (0-23)</th>
+                </tr>
+                <tr>
+                    <th>getMiliseconds</th>
+                    <th>Retorna milisegundos (0-999)</th>
+                </tr>
+                <tr>
+                    <th>getMinutes()</th>
+                    <th>Retorna minutos (0-59)</th>
+                </tr>
+                <tr>
+                    <th>getMoth()</th>
+                    <th>retorna mes (0-11)</th>
+                </tr>
+                <tr>
+                    <th>getSeconds</th>
+                    <th>Retorna segundos (0-59)</th>
+                </tr>
+                
+            </table>
+        </div>
+
+        <!--getTimezoneOffset()-->
+        <div>
+            <h3>getTimezoneOffset()</h3>
+            <p><code>getTimezoneOffset()</code> devuelve la diferencia entre la hora UTC y la hora local. Tambien devuelve la diferencia en minutos.
+            <br></br>    
+            Por ejemplo, si su zona horaria es GMT+2, se devolverá -120</p>
+
+            <pre>
+const l = new Date();
+let diff = l.getTimezoneOffset();
+            </pre>
+        </div>
+
+        <!--getUTCDate()-->
+        <div>
+            <h3>getUTCDate()</h3>
+            <p><code>getUTCDate()</code> devuelve el día del mes (1 a 31) de un objeto de fecha, segun UTC</p>
+            
+            <h4>Que es UTC?</h4>
+            <p>UTC (Universal Time Coordinated) es la hora establecida por el estándar de hora mundial. La hora UTC es la misma que la hora GMT (hora del meridiano de Greenwich).Todos los métodos getUTC de JavaScript asumen que la fecha es la hora local.</p>
+            <pre>
+const l = new Date();
+let day = l.getUTCDate();
+            </pre>
+
+            <p>Asi mismo se puede implementar esta funcion para obtener años, hora, minutos ect.</p>
+
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                </tr>
+                <tr>
+                    <th>getUTCDay()</th>
+                    <th>Retorna un dia de la semana (0-6), deacuerdo con UTC</th>
+                </tr>
+                <tr>
+                    <th>getUTCFullYear()</th>
+                    <th>Retorna el año, deacuerdo con UTC</th>
+                </tr>
+                <tr>
+                    <th>getUTCHours()</th>
+                    <th>Retorna la hora (0-23), deacuerdo con UTC</th>
+                </tr>
+                <tr>
+                    <th>getUTCMiliseconds</th>
+                    <th>Retorna milisegundos (0-999), deacuerdo con UTC</th>
+                </tr>
+                <tr>
+                    <th>getUTCMinutes()</th>
+                    <th>Retorna minutos (0-59), deacuerdo con UTC</th>
+                </tr>
+                <tr>
+                    <th>getUTCMoth()</th>
+                    <th>retorna mes (0-11), deacuerdo con UTC</th>
+                </tr>
+                <tr>
+                    <th>getUTCSeconds</th>
+                    <th>Retorna segundos (0-59), deacuerdo con UTC</th>
+                </tr>
+                
+            </table>
+        </div>
+
+        <!--now()-->
+        <div>
+            <h3>now()</h3>
+            <p><code>now()</code> devuelve el número de milisegundos desde el 1 de enero de 1970. El cual es inalterable
+            </p>
+
+            <pre>
+let ms = Date.now();
+            </pre>
+        </div>
+
+        <!--parse()-->
+        <div>
+            <h3>parse()</h3>
+            <p><code>parse()</code> analiza una cadena de fecha y devuelve la diferencia horaria desde el 1 de enero de 1970. Y lo devuelve en milisegundos.
+            </p>
+
+            <pre>
+let ms = Date.parse("September 26, 2022");
+            </pre>
+        </div>
+
+        <!--setDate()-->
+        <div>
+            
+        </div>
       </article>
     </main>
 
