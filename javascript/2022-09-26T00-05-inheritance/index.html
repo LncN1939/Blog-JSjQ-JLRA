@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../style.css" />
-    <title>Polimorfismo</title>
+    <title>Polimorfismo en JavaScript</title>
   </head>
   <body>
     <!-- Barra de navegación -->
@@ -29,8 +29,8 @@
           <section>
             <header>Menú</header>
             <ul>
-              <li><a href="../../javascript/">JavaScript</a></li>
-              <li><a href="../../jquery/">jQuery</a></li>
+              <li><a href="#polimorfismo">Polimorfismo</a></li>
+              <li><a href="#herencia">Herencia</a></li>
             </ul>
           </section>
         </aside>
@@ -39,7 +39,7 @@
       <!-- El artículo o entrada del blog -->
       <article itemscope itemtype="https://schema.org/Article">
         <header>
-          <h1 itemprop="name">Polimorfismo</h1>
+          <h1 itemprop="name" id="polimorfismo">Polimorfismo</h1>
           <div class="article-date">
             Publicado el
             <time
@@ -61,12 +61,15 @@
         </header>
 
         <p>
-          ¿Qué es el polimorfismo? Según wikipedia, el polimorfismo se refiere a
-          la propiedad o interfaz que múltiples entidades pueden tener en común,
-          de tal manera que pueden producirse distintas clases a partir de una
-          sola. Esto es similar al principio biológico en que un organismo puede
-          tener distintas formas o etapas, o bien puede verse como una rama
-          biológica.
+          ¿Qué es el polimorfismo? Según
+          <a
+            href="https://es.wikipedia.org/w/index.php?title=Polimorfismo_(informática)&oldid=145812853"
+            >wikipedia</a
+          >, el polimorfismo se refiere a la propiedad o interfaz que múltiples
+          entidades pueden tener en común, de tal manera que pueden producirse
+          distintas clases a partir de una sola. Esto es similar al principio
+          biológico en que un organismo puede tener distintas formas o etapas, o
+          bien puede verse como una rama biológica.
         </p>
 
         <p>
@@ -111,6 +114,8 @@
           o una mesa.
         </p>
 
+        <h2 id="herencia">Herencia</h2>
+
         <div class="highlight">
           <pre>
 <span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Silla</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Mueble</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -147,6 +152,30 @@
           se está haciendo en el código de arriba: crear un mueble con el nombre
           de <code>"Silla"</code> y un material de <code>"madera"</code>.
         </p>
+
+        <form action="POST">
+          <h3>Comentarios</h3>
+          <div class="input-container">
+            <label for="username">Nombre:</label>
+            <input type="text" name="username" />
+          </div>
+
+          <div class="input-container">
+            <label for="email">Email:</label>
+            <input type="email" name="email" />
+          </div>
+
+          <div class="input-container">
+            <textarea
+              name="body"
+              cols="100"
+              rows="10"
+              placeholder="Comentario..."
+            ></textarea>
+          </div>
+
+          <input type="submit" />
+        </form>
       </article>
     </main>
 
@@ -154,7 +183,7 @@
     <footer>
       <ul>
         <li><a href="../../">Página principal</a></li>
-        <li><a href="../../anexos/">Anexos</a></li>
+
         <li><a href="../../about/">Acerca de</a></li>
       </ul>
     </footer>

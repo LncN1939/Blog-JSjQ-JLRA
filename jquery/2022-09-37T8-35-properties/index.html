@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <title>Tutorial JavaScript &amp; jQuery</title>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <div class="nav-menu-container">
+      <nav class="nav-menu">
+        <a class="nav-menu-title" href="../../"
+          >Tutorial JavaScript &amp; jQuery</a
+        >
+
+        <ul>
+          <li>UwU</li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="main-container">
+      <!-- El sidebar-->
+      <div class="sidebar">
+        <aside>
+          <section>
+            <header>Menú</header>
+            <ul>
+              <li><a href="../../javascript/">JavaScript</a></li>
+              <li><a href="../../jquery/">jQuery</a></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+
+      <!-- El artículo o entrada del blog -->
+      <article itemscope itemtype="https://schema.org/Article">
+        <header>
+          <h1 itemprop="name">jQuery Properties</h1>
+          <div class="article-date">
+            Publicado el
+            <time
+              datetime="2022-09-21T09:41-6:00"
+              pubdate
+              itemprop="datePublished"
+            >
+              27 de septiembre de 2022
+            </time>
+          </div>
+          <p
+            class="article-author"
+            itemscope
+            itemtype="http://schema.org/Person"
+          >
+            por
+            <span itemprop="author">Roire Villavicencio</span>
+          </p>
+        </header>
+
+        <p>Aqui se muestran las propiedades generales de jQuery</p>
+
+        <h2>Propiedades</h2>
+
+        <!-- context -->
+        <h3 id="context">context</h3>
+        <p>
+          La propiedad de contexto contiene el contexto original pasado a
+          jQuery, que podría ser un contexto de nodo DOM o, si no se pasa ningún
+          nodo, el contexto del documento.
+        </p>
+
+        <!-- jQuey -->
+        <h3 id="jQuery">jQuery</h3>
+        <p>
+          La propiedad jQuery devuelve una cadena que contiene el número de
+          versión de jQuery.
+        </p>
+
+        <!-- jQuery.fx.interval -->
+        <h3 id="jQuery.fx.interval">jQuery.fx.interval()</h3>
+        <p>
+          La propiedad jQuery.fx.interval se usa para cambiar la velocidad de
+          activación de la animación en milisegundos.
+        </p>
+
+        <!-- jQuery.fx.off -->
+        <h3 id="jQuery.fx.off">jQuery.fx.off</h3>
+        <p>
+          La propiedad jQuery.fx.off se usa para deshabilitar/habilitar
+          globalmente todas las animaciones.
+        </p>
+
+        <!-- jQuery.support -->
+        <h3 id="jQuery.support">jQuery.support</h3>
+        <p>
+          La propiedad jQuery.support contiene una colección de propiedades que
+          representan diferentes características o errores del navegador.
+        </p>
+
+        <!-- length -->
+        <h3 id="length">length()</h3>
+        <p>
+          La propiedad de longitud contiene la cantidad de elementos en el
+          objeto jQuery.
+        </p>
+
+        <form action="POST">
+          <h3>Comentarios</h3>
+          <div class="input-container">
+            <label for="username">Nombre:</label>
+            <input type="text" name="username" />
+          </div>
+
+          <div class="input-container">
+            <label for="email">Email:</label>
+            <input type="email" name="email" />
+          </div>
+
+          <div class="input-container">
+            <textarea
+              name="body"
+              cols="100"
+              rows="10"
+              placeholder="Comentario..."
+            ></textarea>
+          </div>
+
+          <input type="submit" />
+        </form>
+      </article>
+    </main>
+
+    <!-- El pie de página-->
+    <footer>
+      <ul>
+        <li><a href="../../">Página principal</a></li>
+
+        <li><a href="../../about/">Acerca de</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

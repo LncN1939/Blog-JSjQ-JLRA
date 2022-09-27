@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <title>Tutorial JavaScript &amp; jQuery</title>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <div class="nav-menu-container">
+      <nav class="nav-menu">
+        <a class="nav-menu-title" href="../../"
+          >Tutorial JavaScript &amp; jQuery</a
+        >
+
+        <ul>
+          <li>UwU</li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="main-container">
+      <!-- El sidebar-->
+      <div class="sidebar">
+        <aside>
+          <section>
+            <header>Menú</header>
+            <ul>
+              <li><a href="#constructor">construtor</a></li>
+              <li><a href="#prototype">prototype</a></li>
+              <li><a href="#toString">toString()</a></li>
+              <li><a href="#valueOf">valueOf()</a></li>
+              <li><a href="../../javascript/">JavaScript</a></li>
+              <li><a href="../../jquery/">jQuery</a></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+
+      <!-- El artículo o entrada del blog -->
+      <article itemscope itemtype="https://schema.org/Article">
+        <header>
+          <h1 itemprop="name">Javascript Number</h1>
+          <div class="article-date">
+            Publicado el
+            <time
+              datetime="2022-09-21T09:41-6:00"
+              pubdate
+              itemprop="datePublished"
+            >
+              27 de septiembre de 2022
+            </time>
+          </div>
+          <p
+            class="article-author"
+            itemscope
+            itemtype="http://schema.org/Person"
+          >
+            por
+            <span itemprop="author">Roire Villavicencio</span>
+          </p>
+        </header>
+
+        <p>
+          Los valores booleanos de JavaScript pueden tener uno de dos valores:
+          true o false.
+        </p>
+
+        <h2>Métodos de Boolean</h2>
+
+        <!-- constructor -->
+        <h3 id="constructor">construtor</h3>
+        <p>
+          La constructor propiedad devuelve la función que creó el prototipo de
+          Número.
+        </p>
+
+        <pre>
+          <p id="demo"></p>
+          <script>
+          let bool = true;
+          let text = bool.constructor;
+          </script>
+        </pre>
+
+        <!-- prototype -->
+        <h3 id="prototype">prototype</h3>
+        <p>
+          prototype le permite agregar nuevas propiedades y métodos a los
+          números.
+        </p>
+
+        <pre>
+          <script>
+          Boolean.prototype.myColor = function() {
+            if (this.valueOf() == false) {
+              return "pink";
+            } else {
+              return "blue";
+            }
+          };
+          
+          let a = true;
+          </script>
+        </pre>
+
+        <!-- toString -->
+        <h3 id="toString">toString()</h3>
+        <p>
+          JavaScript usa el toString() método internamente cuando un objeto debe
+          mostrarse como texto (como en HTML), o cuando un objeto debe usarse
+          como una cadena.
+        </p>
+
+        <pre>
+          <script>
+          let bool = true;
+          let text = bool.toString(); 
+          </script>
+        </pre>
+
+        <!-- valueOf -->
+        <h3 id="valueOf">valueOf()</h3>
+        <p>El valueOf() método devuelve el valor primitivo de un número.</p>
+
+        <pre>
+          <script>
+          let bool = false;
+          </script>
+        </pre>
+
+        <form action="POST">
+          <h3>Comentarios</h3>
+          <div class="input-container">
+            <label for="username">Nombre:</label>
+            <input type="text" name="username" />
+          </div>
+
+          <div class="input-container">
+            <label for="email">Email:</label>
+            <input type="email" name="email" />
+          </div>
+
+          <div class="input-container">
+            <textarea
+              name="body"
+              cols="100"
+              rows="10"
+              placeholder="Comentario..."
+            ></textarea>
+          </div>
+
+          <input type="submit" />
+        </form>
+      </article>
+    </main>
+
+    <!-- El pie de página-->
+    <footer>
+      <ul>
+        <li><a href="../../">Página principal</a></li>
+
+        <li><a href="../../about/">Acerca de</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

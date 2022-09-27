@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <title>JavaScript RegEx</title>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <div class="nav-menu-container">
+      <nav class="nav-menu">
+        <a class="nav-menu-title" href="../../"
+          >Tutorial JavaScript &amp; jQuery</a
+        >
+
+        <ul>
+          <li><a href="../../javascript/">JavaScript</a></li>
+          <li><a href="../../jquery/">jQuery</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="main-container">
+      <!-- El sidebar-->
+      <div class="sidebar">
+        <aside>
+          <section>
+            <header>Menú</header>
+            <ul>
+              <li><a href="#regex">RegEx</a></li>
+              <li>
+                <a href="#how-to-create">Cómo crear una expresión regular</a>
+              </li>
+              <li>
+                <a href="#syntax-examples">Ejemplos de la sintaxis RegEx</a>
+                <ul>
+                  <li><a href="#simple-search">Búsqueda simple</a></li>
+                  <li><a href="#optional-search">Búsqueda opcional</a></li>
+                  <li><a href="#quantifiers">Cuantificadores</a></li>
+                  <li><a href="#capture">Captura de grupo</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#regex-object">Objeto RegEx</a>
+                <ul>
+                  <li><a href="#m-exec">exec()</a></li>
+                  <li><a href="#m-test">test()</a></li>
+                  <li><a href="#m-match">match()</a></li>
+                  <li><a href="#m-search">search()</a></li>
+                  <li><a href="#m-replace">replace()</a></li>
+                  <li><a href="#m-split">split()</a></li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+
+      <!-- El artículo o entrada del blog -->
+      <article itemscope itemtype="https://schema.org/Article">
+        <header>
+          <h1 itemprop="name" id="regex">JavaScript RegEx</h1>
+          <div class="article-date">
+            Publicado el
+            <time
+              datetime="2022-09-26T23:00-6:00"
+              pubdate
+              itemprop="datePublished"
+            >
+              26 de septiembre de 2022
+            </time>
+          </div>
+          <p
+            class="article-author"
+            itemscope
+            itemtype="http://schema.org/Person"
+          >
+            por
+            <span itemprop="author">Jezer Mejía</span>
+          </p>
+        </header>
+
+        <p>
+          RegEx, o expresiones regulares, son patrones usados para comparar
+          combinaciones de caracteres en cadenas de texto. Generalmente, estas
+          expresiones son usadas para operaciones de búsqueda o de buscar y
+          reemplazar. En situaciones específicas puede servir para validar, por
+          ejemplo, la dirección de un correo electrónico, un número de teléfono
+          o el número de cédula.
+        </p>
+
+        <p>
+          Como tal, existen diversas especificaciones de este concepto, diversos
+          estándares que pueden variar en funcionalidad (aunque no mucha). Según
+          un comentario de <cite>Jonathan Leffler</cite> en StackOverflow (<a
+            href="https://stackoverflow.com/a/12739769"
+            >ver aquí</a
+          >), JavaScript no usa un estándar como tal, sino que implementa su
+          propia versión de RegEx; de igual forma, sigue siendo similar al RegEx
+          de otros lenguajes.
+        </p>
+
+        <h2 id="how-to-create">Cómo crear una expresión regular</h2>
+
+        <p>En JavaScript, para crear una expresión regular hay 2 modos:</p>
+        <ol>
+          <li>
+            Definiendo el regex alrededor de plecas. Ejemplo:
+            <div class="highlight">
+              <pre>
+<span></span><span class="kd">const</span><span class="w"> </span><span class="nx">regex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sr">/ab+c/</span><span class="p">;</span><span class="w"></span>
+</pre>
+            </div>
+          </li>
+          <li>
+            Construyendo un objeto de <code>RegExp</code>. Ejemplo:
+            <div class="highlight">
+              <pre>
+<span></span><span class="kd">const</span><span class="w"> </span><span class="nx">regex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">RegExp</span><span class="p">(</span><span class="s2">&quot;ab+c&quot;</span><span class="p">);</span><span class="w"></span>
+</pre>
+            </div>
+          </li>
+        </ol>
+
+        <p>
+          Ambas formas crean un objeto <code>RegExp</code> que posteriormente
+          podrá ser usado para buscar, reemplazar, validar, etc.
+        </p>
+
+        <h2 id="syntax-examples">Algunos ejemplos de su sintaxis</h2>
+
+        <h3 id="simple-search">Búsqueda simple</h3>
+        <p>
+          En el siguiente ejemplo se crea un <em>RegEx</em> que busca un
+          <code>hola</code>.
+        </p>
+        <div class="highlight">
+          <pre>
+<span></span><span class="kd">const</span><span class="w"> </span><span class="nx">re</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sr">/hola/</span><span class="p">;</span><span class="w"></span>
+</pre>
+        </div>
+
+        <h3 id="optional-search">Búsqueda opcional</h3>
+        <p>Se busca un <code>hola</code>, o bien un <code>hello</code>.</p>
+        <div class="highlight">
+          <pre>
+<span></span><span class="kd">const</span><span class="w"> </span><span class="nx">re</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sr">/hola|hello/</span><span class="p">;</span><span class="w"></span>
+</pre>
+        </div>
+
+        <h3 id="quantifiers">Cuantificadores</h3>
+        <p>
+          Se puede definir un rango numérico para encontrar ciertos elementos,
+          de por ejemplo 1 a <code>{1,3}</code>. O bien, de 3 a muchos:
+          <code>{3,}</code>. De 1 a muchos: <code>+</code>. Y de 0 a muchos
+          (cualquiera): <code>*</code>.
+        </p>
+        <div class="highlight">
+          <pre>
+<span></span><span class="kd">const</span><span class="w"> </span><span class="nx">re</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sr">/ho{10,}la/</span><span class="p">;</span><span class="w"></span>
+</pre>
+        </div>
+        <p>
+          El ejemplo anterior coincidiría sólo en caso de tener un
+          <em>hola</em> con más de 10 <em>o</em>.
+        </p>
+
+        <h3 id="capture">Captura de grupo</h3>
+        <p>
+          Se captura cualquier texto que esté entre un signo de menor y un signo
+          de mayor. Con esto se podrían capturar etiquetas XML/HTML como:
+          <code>&lt;code&gt;</code> ó <code>&lt;table&gt;</code>. Para lo
+          anterior, la captura devolvería el valor de <code>code</code> y
+          <code>table</code> respectivamente.
+        </p>
+        <div class="highlight">
+          <pre>
+<span></span><span class="kd">const</span><span class="w"> </span><span class="nx">re</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sr">/\&lt;(.*)\&gt;/</span><span class="p">;</span><span class="w"></span>
+</pre>
+        </div>
+
+        <p>
+          Existe además una amplia variedad de palabras claves como
+          <code>\w</code> para buscar cualquier palabra, <code>\s</code> para
+          buscar espacios vacíos, <code>\d</code> para buscar dígitos, y entre
+          otras tantas. Para más información, revisar el artículo de
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions"
+            >MDN Web Docs | Regular expressions</a
+          >.
+        </p>
+
+        <h2 id="regex-object">Objeto RegEx</h2>
+
+        <p>
+          El objeto <code>RegEx</code> es el encargado de almacenar la expresión
+          regular y ofrecer los métodos para comparar, buscar y reemplazar
+          cadenas de texto.
+        </p>
+
+        <h3 id="m-exec">exec()</h3>
+        <p>
+          Este método ejecuta una búsqueda de comparación en una cadena de
+          texto. Retorna un arreglo de información o <code>null</code> en caso
+          de no encontrarse coincidencia.
+        </p>
+
+        <h3 id="m-test">test()</h3>
+        <p>
+          Comprueba que exista coincidencia de la expresión regular en una
+          cadena de texto. Retorna ya sea <code>true</code> ó
+          <code>false</code>.
+        </p>
+
+        <h3 id="m-match">match()</h3>
+        <p>
+          Retorna un arreglo que contiene todas las coincidencias, así como los
+          grupos capturados (en caso de haber), o <code>null</code> si existe
+          coincidencia.
+        </p>
+
+        <h3 id="m-search">search()</h3>
+        <p>
+          Comprueba que exista coincidencia. En caso de coincidir retorna el
+          índice de la coincidencia, en caso contrario retorna <code>-1</code>.
+        </p>
+
+        <h3 id="m-replace">replace()</h3>
+        <p>
+          Ejecuta una búsqueda en la cadena de texto, y reemplaza la porción
+          encontrada con la cadena de texto de reemplazo.
+        </p>
+
+        <h3 id="m-split">split()</h3>
+        <p>
+          Parte la cadena de texto en un arreglo de subcadenas a partir de la
+          expresión regular o una cadena de texto.
+        </p>
+
+        <form action="POST">
+          <h3>Comentarios</h3>
+          <div class="input-container">
+            <label for="username">Nombre:</label>
+            <input type="text" name="username" />
+          </div>
+
+          <div class="input-container">
+            <label for="email">Email:</label>
+            <input type="email" name="email" />
+          </div>
+
+          <div class="input-container">
+            <textarea
+              name="body"
+              cols="100"
+              rows="10"
+              placeholder="Comentario..."
+            ></textarea>
+          </div>
+
+          <input type="submit" />
+        </form>
+      </article>
+    </main>
+
+    <!-- El pie de página-->
+    <footer>
+      <ul>
+        <li><a href="../../">Página principal</a></li>
+
+        <li><a href="../../about/">Acerca de</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

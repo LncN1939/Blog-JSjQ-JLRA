@@ -63,3 +63,7 @@ article > form > input[type="submit"]:hover {
   text-align: center;
   padding: 1em;
 }
+
+article iframe {
+  max-width: 100%;
+}

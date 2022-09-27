@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <title>JavaScript Object</title>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <div class="nav-menu-container">
+      <nav class="nav-menu">
+        <a class="nav-menu-title" href="../../"
+          >Tutorial JavaScript &amp; jQuery</a
+        >
+
+        <ul>
+          <li><a href="../../javascript/">JavaScript</a></li>
+          <li><a href="../../jquery/">jQuery</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="main-container">
+      <!-- El sidebar-->
+      <div class="sidebar">
+        <aside>
+          <section>
+            <header>Menú</header>
+            <ul>
+              <li><a href="#object">Object</a></li>
+              <li><a href="#constructor">Constructor</a></li>
+              <li><a href="#prototype">Prototype</a></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+
+      <!-- El artículo o entrada del blog -->
+      <article itemscope itemtype="https://schema.org/Article">
+        <header>
+          <h1 itemprop="name" id="object">JavaScript Object</h1>
+          <div class="article-date">
+            Publicado el
+            <time
+              datetime="2022-09-26T23:30-6:00"
+              pubdate
+              itemprop="datePublished"
+            >
+              26 de septiembre de 2022
+            </time>
+          </div>
+          <p
+            class="article-author"
+            itemscope
+            itemtype="http://schema.org/Person"
+          >
+            por
+            <span itemprop="author">Jezer Mejía</span>
+          </p>
+        </header>
+
+        <p>
+          Un objeto representa uno de los tipos básicos de datos de JavaScript,
+          el cual es usado para almacenar datos y entidades más complejas. No
+          hay que confundir este Objeto con una instancia de una clase, ya que
+          <code>Object</code> hace referencia a una "clase" primaria y no es
+          para nada una instancia.
+        </p>
+        <p>
+          Un objeto es la unidad básica de JavaScript (dicen muchos por ahí). La
+          mayoría de objetos existentes en JavaScript son instancias de
+          <code>Object</code>. De esta manera, cualquier cambio que se haga a la
+          clase <code>Object</code> por medio de su <code>prototype</code> se
+          verá reflejado en todos los objetos de JavaScript.
+        </p>
+
+        <h2 id="constructor">Constructor</h2>
+        <p>
+          Al igual que otras clases en JavaScript, el <code>Object</code> puede
+          ser instanciado con cualquier parámetro de entrada que devolverá un
+          resultado correspondiente a la entrada.
+        </p>
+        <p>
+          En el siguiente ejemplo, se crea un valor "booleano" con
+          <code>Object</code>:
+        </p>
+        <div class="highlight">
+          <pre>
+<span></span><span class="kd">const</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Object</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w"></span>
+</pre>
+        </div>
+
+        <h2 id="prototype">Prototype</h2>
+        <p>
+          La propiedad <code>prototype</code> es una propiedad global de una
+          clase que contiene la lógica básica de una instancia. Así, modificar
+          esta propiedad en una clase implica estar modificando los
+          <code>prototype</code> de los objetos y las clases hijas.
+        </p>
+
+        <p>
+          Por lo general, JavaScript ya ofrece un <code>prototype</code> por
+          defecto en la clase <code>Object</code> de la cual todos extienden.
+          Esta implementación resulta útil para ofrecer métodos y propiedades
+          que pueden usarse en cualquier contexto, como lo puede ser el método:
+          <code>toString()</code>, el cual siempre estará disponible incluso si
+          la clase no lo define.
+        </p>
+
+        <p>
+          Está también el método <code>valueOf</code> que retorna el valor
+          primitivo del objeto; lo ideal sería reemplazarlo por una
+          implementación propia. Podemos saber si un objeto es enumerable con
+          <code>propertyIsEnumerable</code>. Saber si tiene alguna propiedad con
+          <code>hasOwnProperty</code>, etc.
+        </p>
+
+        <p>
+          En el siguiente ejemplo se crea una clase llamada
+          <code>Area</code> que posee sus 2 dimensiones y una modificación a su
+          prototype para hacerlo útil en otros contextos.
+        </p>
+
+        <div class="highlight">
+          <pre>
+<span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Area</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">x</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">y</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="nx">get</span><span class="w"> </span><span class="nx">area</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">y</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="nx">Area</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">valueOf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">area</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">area1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Area</span><span class="p">(</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// Área de 25</span><span class="w"></span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">area1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// 25 + 5</span><span class="w"></span>
+</pre>
+        </div>
+
+        <form action="POST">
+          <h3>Comentarios</h3>
+          <div class="input-container">
+            <label for="username">Nombre:</label>
+            <input type="text" name="username" />
+          </div>
+
+          <div class="input-container">
+            <label for="email">Email:</label>
+            <input type="email" name="email" />
+          </div>
+
+          <div class="input-container">
+            <textarea
+              name="body"
+              cols="100"
+              rows="10"
+              placeholder="Comentario..."
+            ></textarea>
+          </div>
+
+          <input type="submit" />
+        </form>
+      </article>
+    </main>
+
+    <!-- El pie de página-->
+    <footer>
+      <ul>
+        <li><a href="../../">Página principal</a></li>
+
+        <li><a href="../../about/">Acerca de</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

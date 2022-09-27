@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../style.css" />
+    <title>jQuery Events</title>
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <div class="nav-menu-container">
+      <nav class="nav-menu">
+        <a class="nav-menu-title" href="../../"
+          >Tutorial JavaScript &amp; jQuery</a
+        >
+
+        <ul>
+          <li><a href="../../javascript/">JavaScript</a></li>
+          <li><a href="../../jquery/">jQuery</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="main-container">
+      <!-- El sidebar-->
+      <div class="sidebar">
+        <aside>
+          <section>
+            <header>Menú</header>
+            <ul>
+              <li><a href="#events">jQuery Events</a></li>
+              <li>
+                <a href="#bind">Enlazar funciones</a>
+                <ul>
+                  <li><a href="#b-click">click()</a></li>
+                  <li><a href="#b-blur">blur()</a></li>
+                  <li><a href="#b-focus">focus()</a></li>
+                  <li><a href="#b-contextmenu">contextmenu()</a></li>
+                  <li><a href="#b-hover">hover()</a></li>
+                  <li><a href="#b-more">Y más...</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#binders">Conectores</a>
+                <ul>
+                  <li><a href="#bi-on">on()</a></li>
+                  <li><a href="#bi-off">off()</a></li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+
+      <!-- El artículo o entrada del blog -->
+      <article itemscope itemtype="https://schema.org/Article">
+        <header>
+          <h1 itemprop="name" id="events">jQuery Events</h1>
+          <div class="article-date">
+            Publicado el
+            <time
+              datetime="2022-09-26T23:50-6:00"
+              pubdate
+              itemprop="datePublished"
+            >
+              26 de septiembre de 2022
+            </time>
+          </div>
+          <p
+            class="article-author"
+            itemscope
+            itemtype="http://schema.org/Person"
+          >
+            por
+            <span itemprop="author">Jezer Mejía</span>
+          </p>
+        </header>
+
+        <p>
+          Al igual que en otras categorías o secciones de jQuery, los eventos de
+          esta librería están diseñados para simplificar la codificación al
+          ofrecer todos los eventos del DOM de JavaScript a través de métodos de
+          un objeto de jQuery.
+        </p>
+
+        <h2 id="bind">Enlazar funciones</h2>
+        <p>
+          jQuery puede enlazar o establecer un binding entre un objeto, su
+          evento y una función.
+        </p>
+
+        <h3 id="b-click">click()</h3>
+        <p>
+          Entre estos métodos de jQuery está el método <code>click</code> que
+          enlaza el evento del Click a una función predefinida por el
+          programador.
+        </p>
+
+        <div class="highlight">
+          <pre>
+<span></span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#target&quot;</span><span class="p">).</span><span class="nx">click</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El elemento #target fue clickeado&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
+</pre>
+        </div>
+
+        <h3 id="b-blur">blur()</h3>
+        <p>
+          También disponemos del método <code>blur</code> que se activa cuando
+          un elemento HTMl pierde su atención o focus.
+        </p>
+
+        <div class="highlight">
+          <pre>
+<span></span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">).</span><span class="nx">blur</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El botón ya no tiene el focus&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
+</pre>
+        </div>
+
+        <h3 id="b-focus">focus()</h3>
+        <p>
+          El evento se activa cuando el evento <code>focus</code> del DOM es
+          ejecutado, o sea cuando un elemento obtiene la atención o focus del
+          del usuario.
+        </p>
+
+        <div class="highlight">
+          <pre>
+<span></span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">).</span><span class="nx">focus</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El botón tiene la atención :D&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
+</pre>
+        </div>
+
+        <h3 id="b-contextmenu">contextmenu()</h3>
+        <p>
+          Este método enlaza una función al evento <code>contextmenu</code> del
+          DOM, o sea cuando se hace un <kbd>CTRL+Click</kbd> ó un click derecho.
+        </p>
+
+        <div class="highlight">
+          <pre>
+<span></span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">).</span><span class="nx">contextmenu</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Hiciste click derecho en el párrafo&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">});</span><span class="w"></span>
+</pre>
+        </div>
+
+        <h3 id="b-hover">hover()</h3>
+        <p>
+          Este evento se ejecuta cuando el mouse entra y sale del elemento.
+          Puede definirse una función a llamar en ambos casos, o una función
+          para cuando entra y otra para cuando se sale.
+        </p>
+        <p>
+          Como tal, es una abreviatura a los métodos <code>mouseenter</code> y
+          <code>mouseleave</code>.
+        </p>
+
+        <div class="highlight">
+          <pre>
+<span></span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;button&quot;</span><span class="p">).</span><span class="nx">hover</span><span class="p">(</span><span class="w"></span>
+<span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;El botón tiene el mouse encima&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Ya no tiene el mouse...&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">);</span><span class="w"></span>
+</pre>
+        </div>
+
+        <h3 id="b-more">Y más...</h3>
+        <p>
+          jQuery provee de tantos métodos de Eventos como Eventos del DOM
+          existen actualmente e inclusive por cada elemento con sus respectivos
+          Eventos únicos. Puede visualizar todos los eventos del DOM en
+          <a href="https://developer.mozilla.org/en-US/docs/Web/Events"
+            >MDN Web Docs | Event reference</a
+          >
+        </p>
+
+        <h2 id="binders">Conectores</h2>
+
+        <h3 id="bi-on">on()</h3>
+        <p>
+          Los métodos anteriores son esencialmente abreviaturas a otros métodos
+          que manejan los eventos, en especial son una abreviatura a el método
+          <code>on</code>. Este método es el encargado de enlazar una función a
+          uno o más eventos de un elemento del DOM. Así, cuando el evento
+          ocurra, la función será ejecutada.
+        </p>
+
+        <h3 id="bi-off">off()</h3>
+        <p>
+          Este método desenlaza o elimina el enlace de un evento y una función.
+        </p>
+
+        <form action="POST">
+          <h3>Comentarios</h3>
+          <div class="input-container">
+            <label for="username">Nombre:</label>
+            <input type="text" name="username" />
+          </div>
+
+          <div class="input-container">
+            <label for="email">Email:</label>
+            <input type="email" name="email" />
+          </div>
+
+          <div class="input-container">
+            <textarea
+              name="body"
+              cols="100"
+              rows="10"
+              placeholder="Comentario..."
+            ></textarea>
+          </div>
+
+          <input type="submit" />
+        </form>
+      </article>
+    </main>
+
+    <!-- El pie de página-->
+    <footer>
+      <ul>
+        <li><a href="../../">Página principal</a></li>
+
+        <li><a href="../../about/">Acerca de</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
