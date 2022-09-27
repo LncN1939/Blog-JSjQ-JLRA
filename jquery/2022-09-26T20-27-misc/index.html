@@ -27,8 +27,13 @@
           <section>
             <header>Menú</header>
             <ul>
-              <li><a href="../../javascript/">JavaScript</a></li>
-              <li><a href="../../jquery/">jQuery</a></li>
+              <li><a href="#data">data()</a></li>
+              <li><a href="#get">get()</a></li>
+              <li><a href="#index">index()</a></li>
+              <li><a href="#noconflict">$.noConflict()</a></li>
+              <li><a href="#param">$.param()</a></li>
+              <li><a href="#removedata">removeData()</a></li>
+              <li><a href="#toarray">toArray()</a></li>
             </ul>
           </section>
         </aside>
@@ -60,7 +65,7 @@
 
         <h2>Métodos Misceláneos de jQuery</h2>
         <!-- DATA -->
-        <h3>data()</h3>
+        <h3 id="data">data()</h3>
         <p>Agrega u obtiene datos de los elementos seleccionados</p>
         <div class="highlight">
           <pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div.data&quot;</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="mf">1</span><span class="p">);</span>
@@ -70,7 +75,7 @@
 </pre>
         </div>
         <!-- GET -->
-        <h3>get()</h3>
+        <h3 id="get">get()</h3>
         <p>Obtiene el elemento del DOM definido por el selector</p>
         <div class="highlight">
           <pre><span></span><span class="c1">// &lt;p&gt;0&lt;/p&gt;</span>
@@ -83,7 +88,7 @@
 </pre>
         </div>
         <!-- INDEX -->
-        <h3>index()</h3>
+        <h3 id="index">index()</h3>
         <p>
           Retorna el índice de posición de un elemento específico en relación a
           otros
@@ -98,7 +103,7 @@
 </pre>
         </div>
         <!-- NOCONFLICT -->
-        <h3>$.noConflict()</h3>
+        <h3 id="noconflict">$.noConflict()</h3>
         <p>
           Libera el control de jquery sobre la variable '$', puede usarse para
           especificar otro nombre para la variable jquery
@@ -109,7 +114,7 @@
 </pre>
         </div>
         <!-- PARAM -->
-        <h3>$.param()</h3>
+        <h3 id="param">$.param()</h3>
         <p>Crea una representación serializada de un array o un objeto.</p>
         <div class="highlight">
           <pre><span></span><span class="kd">const</span> <span class="nx">persona</span> <span class="o">=</span> 
@@ -120,7 +125,7 @@
 </pre>
         </div>
         <!-- REMOVEDATA -->
-        <h3>removeData()</h3>
+        <h3 id="removedata">removeData()</h3>
         <p>Elimina datos almacenados previamente con data()</p>
         <div class="highlight">
           <pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div.data&quot;</span><span class="p">).</span><span class="nx">data</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="mf">1</span><span class="p">);</span>
@@ -132,7 +137,7 @@
 </pre>
         </div>
         <!-- TOARRAY -->
-        <h3>toArray()</h3>
+        <h3 id="toarray">toArray()</h3>
         <p>
           Retorna los elementos DOM contenidos en un conjunto de jQuery en forma
           de array.

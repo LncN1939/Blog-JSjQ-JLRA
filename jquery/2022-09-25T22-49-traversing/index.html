@@ -27,8 +27,31 @@
           <section>
             <header>Menú</header>
             <ul>
-              <li><a href="../../javascript/">JavaScript</a></li>
-              <li><a href="../../jquery/">jQuery</a></li>
+              <li><a href="#add">add()</a></li>
+              <li><a href="#children">children()</a></li>
+              <li><a href="#closest">closest()</a></li>
+              <li><a href="#contents">contents()</a></li>
+              <li><a href="#each">each()</a></li>
+              <li><a href="#eq">eq()</a></li>
+              <li><a href="#filter">filter()</a></li>
+              <li><a href="#find">find()</a></li>
+              <li><a href="#first">first()</a></li>
+              <li><a href="#has">has()</a></li>
+              <li><a href="#is">is()</a></li>
+              <li><a href="#last">last()</a></li>
+              <li><a href="#map">map()</a></li>
+              <li><a href="#next">next()</a></li>
+              <li><a href="#nextall">nextAll()</a></li>
+              <li><a href="#nextuntil">nextUntil()</a></li>
+              <li><a href="#not">not()</a></li>
+              <li><a href="#parent">parent()</a></li>
+              <li><a href="#parents">parents()</a></li>
+              <li><a href="#parentsuntil">parentsUntil()</a></li>
+              <li><a href="#prev">prev()</a></li>
+              <li><a href="#prevall">prevAll()</a></li>
+              <li><a href="#prevuntil">prevUntil()</a></li>
+              <li><a href="#siblings">siblings()</a></li>
+              <li><a href="#slice">slice()</a></li>
             </ul>
           </section>
         </aside>
@@ -65,7 +88,7 @@
 
         <h2>Métodos Traversing de jQuery</h2>
         <!-- ADD -->
-        <h3>add()</h3>
+        <h3 id="add">add()</h3>
         <p>Añade elementos al conjunto de elementos seleccionados</p>
         <div class="highlight">
           <pre><span></span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">).</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;h1&quot;</span><span class="p">).</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">);</span>
@@ -78,7 +101,7 @@
         </div>
 
         <!-- CHILDREN -->
-        <h3>children()</h3>
+        <h3 id="children">children()</h3>
         <p>Retorna todos los hijos directos del elemento seleccionado</p>
         <div class="highlight">
           <pre>
@@ -92,7 +115,7 @@
 </pre>
         </div>
         <!-- CLOSEST -->
-        <h3>closest()</h3>
+        <h3 id="closest">closest()</h3>
         <p>
           Retorna el primer ancestro del elemento seleccionado, basado en la
           selección.
@@ -113,7 +136,7 @@
           </pre>
         </div>
         <!-- CONTENTS -->
-        <h3>contents()</h3>
+        <h3 id="contents">contents()</h3>
         <p>
           Retorna todos los hijos directos del elemento seleccionado, incluyendo
           el contenido de texto y comentarios
@@ -137,7 +160,7 @@
 </pre>
         </div>
         <!-- EACH -->
-        <h3>each()</h3>
+        <h3 id="each">each()</h3>
         <p>Ejecuta una función por cada elemento seleccionado.</p>
         <div class="highlight">
           <pre><span></span><span class="c1">// &lt;div&gt;</span>
@@ -153,7 +176,7 @@
 </pre>
         </div>
         <!-- EQ -->
-        <h3>eq()</h3>
+        <h3 id="eq">eq()</h3>
         <p>Retorna un elemento con el índice especificado.</p>
         <div class="highlight">
           <pre><span></span><span class="c1">// &lt;div&gt;</span>
@@ -166,7 +189,7 @@
 </pre>
         </div>
         <!-- FILTER -->
-        <h3>filter()</h3>
+        <h3 id="filter">filter()</h3>
         <p>
           Reduce el conjunto de elementos seleccionados a aquellos que cumplen
           cierta condición.
@@ -183,7 +206,7 @@
         </div>
 
         <!-- FIND -->
-        <h3>find()</h3>
+        <h3 id="find">find()</h3>
         <p>Retorna los elementos descendientes del elemento seleccionado</p>
         <div class="highlight">
           <pre><span></span><span class="c1">// &lt;div&gt;</span>
@@ -196,7 +219,7 @@
 </pre>
         </div>
         <!-- FIRST -->
-        <h3>first()</h3>
+        <h3 id="first">first()</h3>
         <p>Retorna el primer elemento de los seleccionados</p>
         <div class="highlight">
           <pre><span></span><span class="c1">// &lt;div&gt;</span>
@@ -210,7 +233,7 @@
         </div>
 
         <!-- HAS -->
-        <h3>has()</h3>
+        <h3 id="has">has()</h3>
         <p>
           Retorna todos los elementos que tienen uno o más elementos dentro de
           ellos.
@@ -230,7 +253,7 @@
         </div>
 
         <!-- IS -->
-        <h3>is()</h3>
+        <h3 id="is">is()</h3>
         <p>
           Chequea los elementos seleccionados por un selector, y retorna true si
           al menos uno de estos cumple con los argumentos dados
@@ -244,7 +267,7 @@
         </div>
 
         <!-- LAST -->
-        <h3>last()</h3>
+        <h3 id="last">last()</h3>
         <p>Retorna el último elemento de los seleccionados.</p>
         <div class="highlight">
           <pre><span></span><span class="c1">// &lt;div&gt;</span>
@@ -257,7 +280,7 @@
 </pre>
         </div>
         <!-- MAP -->
-        <h3>map()</h3>
+        <h3 id="map">map()</h3>
         <p>
           Retorna un nuevo objeto jQuery conteniendo los elementos que retorna
           la función pasada como argumento.
@@ -276,7 +299,7 @@
 </pre>
         </div>
         <!-- NEXT -->
-        <h3>next()</h3>
+        <h3 id="next">next()</h3>
         <p>Retorna el siguiente elemento hermano del elemento seleccionado.</p>
         <div class="highlight">
           <pre><span></span><span class="c1">// &lt;div&gt;</span>
@@ -289,7 +312,7 @@
 </pre>
         </div>
         <!-- NEXTALL -->
-        <h3>nextAll()</h3>
+        <h3 id="nextall">nextAll()</h3>
         <p>
           Retorna todos los elementos hermanos siguientes del elemento
           seleccionado.
@@ -311,7 +334,7 @@
 </pre>
         </div>
         <!-- NEXTUNTIL -->
-        <h3>nextUntil()</h3>
+        <h3 id="nextuntil">nextUntil()</h3>
         <p>
           Retorna todos los elementos hermanos siguientes entre dos argumentos
           dados.
@@ -333,7 +356,7 @@
 </pre>
         </div>
         <!-- NOT -->
-        <h3>not()</h3>
+        <h3 id="not">not()</h3>
         <p>Retorna los elementos que no cumplen cierta condición.</p>
         <div class="highlight">
           <pre><span></span><span class="c1">// &lt;div&gt;</span>
@@ -352,7 +375,7 @@
 </pre>
         </div>
         <!-- PARENT -->
-        <h3>parent()</h3>
+        <h3 id="parent">parent()</h3>
         <p>
           Retorna el primer elemento padre directo del elemento seleccionado.
         </p>
@@ -369,7 +392,7 @@
 </pre>
         </div>
         <!-- PARENTS -->
-        <h3>parents()</h3>
+        <h3 id="parents">parents()</h3>
         <p>Retorna todos los ancestros del elemento seleccionado.</p>
         <div class="highlight">
           <pre><span></span><span class="c1">// &lt;div class=&quot;grandparent&quot;&gt;</span>
@@ -387,7 +410,7 @@
 </pre>
         </div>
         <!-- PARENTSUNTIL -->
-        <h3>parentsUntil()</h3>
+        <h3 id="parentsuntil">parentsUntil()</h3>
         <p>Retorna todos los ancestros entre dos argumentos dados.</p>
         <div class="highlight">
           <pre><span></span><span class="c1">// &lt;div class=&quot;stop&quot;&gt;</span>
@@ -407,7 +430,7 @@
 </pre>
         </div>
         <!-- PREV -->
-        <h3>prev()</h3>
+        <h3 id="prev">prev()</h3>
         <p>
           Retorna todos los elementos hermanos anteriores del elemento
           seleccionado
@@ -423,7 +446,7 @@
 </pre>
         </div>
         <!-- PREVALL -->
-        <h3>prevAll()</h3>
+        <h3 id="prevall">prevAll()</h3>
         <p>
           Retorna todos los elementos hermanos anteriores del elemento
           seleccionado.
@@ -445,7 +468,7 @@
 </pre>
         </div>
         <!-- PREVUNTIL -->
-        <h3>prevUntil()</h3>
+        <h3 id="prevuntil">prevUntil()</h3>
         <p>
           Retorna todos los elementos hermanos anteriores entre dos argumentos
           dados.
@@ -466,7 +489,7 @@
 </pre>
         </div>
         <!-- SIBLINGS -->
-        <h3>siblings()</h3>
+        <h3 id="siblings">siblings()</h3>
         <p>Retorna todos los elementos hermanos del elemento seleccionado.</p>
         <div class="highlight">
           <pre><span></span><span class="c1">// &lt;div&gt;</span>
@@ -485,7 +508,7 @@
 </pre>
         </div>
         <!-- SLICE -->
-        <h3>slice()</h3>
+        <h3 id="slice">slice()</h3>
         <p>
           Reduce el conjunto de elementos seleccionados a un conjunto
           especificado por un rango de índices
